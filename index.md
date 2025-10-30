@@ -15,6 +15,8 @@ Having done some easy research, I began to compile more information than I knew 
 
 This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration.
 
+[Link to another page.](Historial.md)
+
 ### Header 2
 
 > This is a blockquote following a header.
