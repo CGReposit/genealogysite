@@ -15,13 +15,17 @@ Having done some easy research, I began to compile more information than I knew 
 
 This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration.
 
-[Link to another page.](Historial.md)
+[List of family members]
+[Etymology](Historial.md)
+[Historically relevant information]
 
 ### Header 2
 
 > This is a blockquote following a header.
 
-When something is important enough, you do it even if the odds are not in your favor.
+“Remember, remember always, that all of us, and you and I especially, are descended from immigrants and revolutionists.”
+
+- Franklin D. Roosevelt 
 
 ### Header 3
 
