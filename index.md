@@ -2,6 +2,9 @@
 layout: default
 title: Merlot Theme
 ---
+### There's a horizontal rule below this.
+
+* * *
 > Remember, remember always, that all of us, and you and I especially, are descended from immigrants and revolutionists
 
 - Franklin D. Roosevelt 
