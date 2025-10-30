@@ -3,6 +3,10 @@ layout: default
 title: Merlot Theme
 ---
 
+> Remember, remember always, that all of us, and you and I especially, are descended from immigrants and revolutionists
+
+- Franklin D. Roosevelt 
+
 ### Introduction
 
 Let me preface this by saying I always thought family trees were <ins>dumb</ins> 
@@ -15,17 +19,15 @@ Having done some easy research, I began to compile more information than I knew 
 
 This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration.
 
-[List of family members]
-[Etymology](Historial.md)
-[Historically relevant information]
+*   [List of family members]
+*   [Etymology](Historial.md)
+*   [Historically relevant information]
+
+
+
 
 ### Header 2
 
-> This is a blockquote following a header.
-
-“Remember, remember always, that all of us, and you and I especially, are descended from immigrants and revolutionists.”
-
-- Franklin D. Roosevelt 
 
 ### Header 3
 
