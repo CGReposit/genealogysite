@@ -18,7 +18,7 @@ Having done some easy research, I began to compile more information than I knew 
 
 This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration.
 
-*   [List of family members]
+*   [List of family members] (family-directory.html)
 *   [Etymology](etymology.md)
 *   [Historically relevant information]
 
