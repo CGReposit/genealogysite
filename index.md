@@ -25,9 +25,7 @@ This is a normal paragraph following a header. GitHub is a code hosting platform
 
 
 
-### Header 2
-
-Resources used for research:
+### Resources used for research:
 
 FamilySearch - is a free website sponsored by The Church of Jesus Christ of Latter-day Saints (the Mormons) that provides genealogical software to help people discover their family history. It is one of the world's largest genealogical resources, with millions of historical records and a vast, collaborative family tree that helps users establush a lineage. The service is free for the public to use (log in required). 
 
