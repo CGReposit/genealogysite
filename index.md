@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Merlot Theme
+title:
 ---
 
 > _Remember, remember always, that all of us, and you and I especially, are descended from immigrants and revolutionists"_
