@@ -1,8 +1,8 @@
-# Maria "Mary" Favini Malcuit
-**1901 – 1986**
-
-[← Home](https://cgreposit.github.io/genealogysite/) | [← Family Directory](family-directory.html)
-
+---
+layout: profile
+title: Mary Malcuit
+name: Maria "Mary" Favini Malcuit
+dates: 1901 – 1986
 ---
 
 ## Personal Information
@@ -14,8 +14,6 @@
 - **Death Place:** Harrington Park, New Jersey, USA 🇺🇸
 - **Lifespan:** ~85 years
 
----
-
 ## Family Relationships
 
 - **Father:** [Guiseppe Favini](guiseppe-favini.html) (b. Varallo-Pombia, Italy)
@@ -24,8 +22,6 @@
 - **Children:**
   - [Jeannette Angela Commerford (née Malcuit)](jeannette-angela-commerford.html) (1926–2020)
   - [John Malcuit](john-malcuit.html) (dates unknown)
-
----
 
 ## Historical Notes
 
@@ -38,7 +34,3 @@ Her immigration records indicate that her father, **Guiseppe Favini**, was her l
 She married **Maurice Malcuit**, a French immigrant originally from the Paris region, and settled in New Jersey. Together they had at least two children: **Jeannette Angela Malcuit** (later Commerford) and **John Malcuit**.
 
 Records describe her as a *"house woman"* in her immigration manifest. Her listed height was 5 ft 1 in (155 cm), with brown hair and brown eyes — details that provide a vivid glimpse into her early life as an Italian immigrant to America in the early 20th century.
-
----
-
-[View Full Family Directory](family-directory.html)
