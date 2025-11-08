@@ -30,13 +30,21 @@
         .stats { text-align:center; margin:30px 0; padding:20px; background:rgba(255,255,255,0.4); border-radius:3px; border:1px solid #b9b9b9; }
         .stats span { color:#76323f; font-weight:bold; font-size:24px; }
 
-        /* Simplified, larger reference-note styling */
+        /* Adjusted reference-note styling */
         .reference-note {
-            font-size: 20px;
+            font-size: 16px;               /* slightly smaller font */
             color: #4a3c38;
-            text-align: center;
-            margin: 50px 0 70px 0; /* more vertical space */
-            line-height: 1.8;
+            text-align: left;              /* align text to the left */
+            margin: 30px 0 20px 30px;      /* indentation and spacing */
+            line-height: 1.7;
+        }
+
+        /* Optional body-info area below the note */
+        .reference-info {
+            font-size: 15px;
+            color: #2e2e2e;
+            margin: 10px 0 60px 30px;      /* same left indent */
+            line-height: 1.6;
         }
 
         .generation-section { margin-bottom:50px; }
@@ -48,8 +56,16 @@
         .family-card h3 { color:#76323f; font-size:20px; margin:0 0 15px 0; padding-bottom:10px; border-bottom:1px solid rgba(185,185,185,0.5); font-weight:bold; }
         .detail { margin:8px 0; color:#666; font-size:14px; line-height:1.6; }
         .detail strong { color:#474747; font-weight:600; }
-        @media screen and (max-width:768px){ .container{width:95%;padding:25px;} .generation-title{font-size:24px;} .family-grid{grid-template-columns:1fr;} }
-        @media screen and (max-width:480px){ h1{font-size:28px;} .generation-title{font-size:20px;} }
+
+        @media screen and (max-width:768px){ 
+            .container{width:95%;padding:25px;} 
+            .generation-title{font-size:24px;} 
+            .family-grid{grid-template-columns:1fr;} 
+        }
+        @media screen and (max-width:480px){ 
+            h1{font-size:28px;} 
+            .generation-title{font-size:20px;} 
+        }
     </style>
 </head>
 <body>
@@ -63,10 +79,17 @@
 
 <div class="stats"><p>Total Family Members: <span>26</span></p></div>
 
+<!-- Updated reference note section -->
 <div class="reference-note">
-    <p>This lineage begins with <strong>Dad</strong> as the reference point: </p>
-    <p>Dad → Parents → Grandparents → Great Grandparents → etc. </p>
+    <p> This directory contains all the ancestors identified in our lineage.  </p>
+  &nbsp;
+    <p>This lineage begins with <strong>Dad</strong> as the reference point:</p>
+    <p>Dad → Parents → Grandparents → Great Grandparents → etc.</p>
 </div>
+
+
+
+
 <!-- Parents -->
 <div class="generation-section">
 <h2 class="generation-title">Parents</h2>
@@ -74,21 +97,22 @@
 
 <div class="family-card" onclick="window.location.href='jeannette-commerford.html'">
 <h3>Jeannette Angela Commerford</h3>
-<div class="detail"><strong>Born:</strong> 26 Oct 1926, New Jersey 🇺🇸</div>
+<div class="detail"><strong>Born:</strong> 26 Oct 1926</div>
 <div class="detail"><strong>Died:</strong> 11 Apr 2020</div>
-<div class="detail"><strong>Parents:</strong> Maurice Malcuit & Maria “Mary” Favini</div>
+<div class="detail"><strong>Parents:</strong> Maurice Malcuit & Mary Malcuit</div>
 <div class="detail"><strong>Spouse:</strong> Edward Bradley Commerford</div>
 </div>
 
 <div class="family-card" onclick="window.location.href='edward-bradley-commerford.html'">
 <h3>Edward Bradley “Pali” Commerford</h3>
-<div class="detail"><strong>Born:</strong> 17 Jul 1918, Jersey City, NJ 🇺🇸</div>
+<div class="detail"><strong>Born:</strong> 17 Jul 1918</div>
 <div class="detail"><strong>Died:</strong> 5 Jun 1999 (age 80)</div>
 <div class="detail"><strong>Parents:</strong> John Rowe Commerford & Ellen Mae “Ella” Youmans</div>
-<div class="detail"><strong>Spouse:</strong> Jeannette Angela Commerford</div>
+<div class="detail"><strong>Spouse:</strong> Jeannette Commerford</div>
 </div>
 </div>
 </div>
+
 
 <!-- Grandparents -->
 <div class="generation-section">
@@ -96,22 +120,22 @@
 <div class="family-grid">
 
 <div class="family-card" onclick="window.location.href='maria-malcuit.html'">
-<h3>Maria “Mary” Favini Malcuit</h3>
-<div class="detail"><strong>Born:</strong> 1901, Varallo Pombia, Novara, Italy 🇮🇹</div>
-<div class="detail"><strong>Died:</strong> 1986, Harrington Park, NJ 🇺🇸</div>
+<h3>Maria Favini </h3>
+<div class="detail"><strong>Born:</strong> 1901</div>
+<div class="detail"><strong>Died:</strong> 1986</div>
 <div class="detail"><strong>Spouse:</strong> Maurice Malcuit</div>
 </div>
 
 <div class="family-card" onclick="window.location.href='maurice-malcuit.html'">
 <h3>Maurice Malcuit</h3>
-<div class="detail"><strong>Born:</strong> 1897, Paris Region, France 🇫🇷</div>
-<div class="detail"><strong>Died:</strong> 1966, United States 🇺🇸</div>
+<div class="detail"><strong>Born:</strong> 1897</div>
+<div class="detail"><strong>Died:</strong> 1966</div>
 <div class="detail"><strong>Parents:</strong> Henri (Jean) Malcuit & Maria Malcuit</div>
 <div class="detail"><strong>Spouse:</strong> Maria “Mary” Favini</div>
 </div>
 
 <div class="family-card" onclick="window.location.href='ellen-mae-commerford.html'">
-<h3>Ellen Mae “Ella” Youmans Commerford</h3>
+<h3>Ellen Mae “Ella”  Commerford</h3>
 <div class="detail"><strong>Born:</strong> 1892</div>
 <div class="detail"><strong>Died:</strong> 1973</div>
 <div class="detail"><strong>Parents:</strong> George E. Youmans & Fanny O’Neill</div>
@@ -135,17 +159,17 @@
 <div class="family-grid">
 
 <div class="family-card" onclick="window.location.href='fanny-o-neill.html'">
-<h3>Fanny O’Neill Youmans</h3>
-<div class="detail"><strong>Born:</strong> 20 Dec 1864, Bergen, NJ 🇺🇸</div>
-<div class="detail"><strong>Died:</strong> 1939, Westwood, NJ 🇺🇸</div>
+<h3>Fanny O’Neill </h3>
+<div class="detail"><strong>Born:</strong> 20 Dec 1864</div>
+<div class="detail"><strong>Died:</strong> 1939</div>
 <div class="detail"><strong>Parents:</strong> Dennis O’Neill & Mary Jane Ring</div>
 <div class="detail"><strong>Spouse:</strong> George E. Youmans</div>
 </div>
 
 <div class="family-card" onclick="window.location.href='george-e-youmans.html'">
 <h3>George E. Youmans</h3>
-<div class="detail"><strong>Born:</strong> 21 Jan 1866, Jersey City, NJ 🇺🇸</div>
-<div class="detail"><strong>Died:</strong> 21 Jan 1899, Jersey City, NJ 🇺🇸 (age 33)</div>
+<div class="detail"><strong>Born:</strong> 21 Jan 1866</div>
+<div class="detail"><strong>Died:</strong> 21 Jan 1899 (age 33)</div>
 <div class="detail"><strong>Parents:</strong> Aaron W Youmans & Rachel Silker</div>
 <div class="detail"><strong>Spouse:</strong> Fanny O’Neill</div>
 </div>
@@ -170,33 +194,33 @@
 <!-- Great Great Grandparents -->
 <div class="generation-section">
 <h2 class="generation-title">Great Great Grandparents</h2>
-<p class="generation-note">16 total; 8 identified</p>
+<p class="generation-note">A person has a total of 16 great great Grandparents. In our case, 8 have been (partially) identified</p>
 <div class="family-grid">
 
 <div class="family-card" onclick="window.location.href='mary-jane-o-neill.html'">
-<h3>Mary Jane Ring O’Neill</h3>
-<div class="detail"><strong>Born:</strong> Aug 1832, County Kilkenny, Ireland 🇮🇪</div>
-<div class="detail"><strong>Died:</strong> 2 Feb 1926, Westwood, NJ 🇺🇸</div>
+<h3>Mary Jane Ring</h3>
+<div class="detail"><strong>Born:</strong> Aug 1832</div>
+<div class="detail"><strong>Died:</strong> 2 Feb 1926</div>
 <div class="detail"><strong>Spouse:</strong> Dennis O’Neill</div>
 </div>
 
 <div class="family-card" onclick="window.location.href='dennis-o-neill.html'">
 <h3>Dennis O’Neill</h3>
-<div class="detail"><strong>Born:</strong> 9 Jun 1840, Ireland 🇮🇪</div>
-<div class="detail"><strong>Died:</strong> 25 Jan 1906, Hackensack, NJ 🇺🇸</div>
+<div class="detail"><strong>Born:</strong> 9 Jun 1840</div>
+<div class="detail"><strong>Died:</strong> 25 Jan 1906</div>
 <div class="detail"><strong>Parents:</strong> Joseph O’Neill & Mary Byrnes</div>
 <div class="detail"><strong>Spouse:</strong> Mary Jane Ring</div>
 </div>
 
 <div class="family-card" onclick="window.location.href='rachel-silker.html'">
 <h3>Rachel Silker</h3>
-<div class="detail"><strong>Born:</strong> 13 Sep 1842, Pleasant Grove, NJ 🇺🇸</div>
+<div class="detail"><strong>Born:</strong> 13 Sep 1842</div>
 <div class="detail"><strong>Spouse:</strong> Aaron W Youmans</div>
 </div>
 
 <div class="family-card" onclick="window.location.href='aaron-youmans.html'">
 <h3>Aaron W Youmans</h3>
-<div class="detail"><strong>Born:</strong> 1842, New York 🇺🇸</div>
+<div class="detail"><strong>Born:</strong> 1842</div>
 <div class="detail"><strong>Parents:</strong> George Youmans & Margaret Stryker</div>
 <div class="detail"><strong>Spouse:</strong> Rachel Silker</div>
 </div>
@@ -216,13 +240,13 @@
 
 <div class="family-card" onclick="window.location.href='henri-malcuit.html'">
 <h3>Henri (Jean) Malcuit</h3>
-<div class="detail"><strong>Born:</strong> Unnamed (France 🇫🇷)</div>
+<div class="detail"><strong>Born:</strong> </div>
 <div class="detail"><strong>Spouse:</strong> Maria Malcuit</div>
 </div>
 
 <div class="family-card" onclick="window.location.href='maria-malcuit-elder.html'">
 <h3>Maria Malcuit</h3>
-<div class="detail"><strong>Born:</strong> France 🇫🇷</div>
+<div class="detail"><strong>Born:</strong> </div>
 <div class="detail"><strong>Profession:</strong> Cook (Ellis Island records)</div>
 <div class="detail"><strong>Spouse:</strong> Henri (Jean) Malcuit</div>
 </div>
@@ -238,38 +262,38 @@
 
 <div class="family-card" onclick="window.location.href='margaret-stryker.html'">
 <h3>Margaret Stryker</h3>
-<div class="detail"><strong>Born:</strong> 1827, New Jersey 🇺🇸</div>
+<div class="detail"><strong>Born:</strong> 1827</div>
 <div class="detail"><strong>Died:</strong> 1880</div>
 <div class="detail"><strong>Spouse:</strong> George Youmans</div>
 </div>
 
 <div class="family-card" onclick="window.location.href='george-youmans.html'">
 <h3>George Youmans</h3>
-<div class="detail"><strong>Born:</strong> Aug 1823, Rockland, NY 🇺🇸</div>
-<div class="detail"><strong>Died:</strong> 2 Jul 1902, Jersey City, NJ 🇺🇸</div>
+<div class="detail"><strong>Born:</strong> Aug 1823</div>
+<div class="detail"><strong>Died:</strong> 2 Jul 1902</div>
 <div class="detail"><strong>Spouse:</strong> Margaret Stryker</div>
 </div>
 
 <div class="family-card" onclick="window.location.href='mary-byrnes.html'">
 <h3>Mary Byrnes</h3>
-<div class="detail"><strong>Born:</strong> Ireland 🇮🇪</div>
+<div class="detail"><strong>Born:</strong></div>
 <div class="detail"><strong>Spouse:</strong> Joseph O’Neill</div>
 </div>
 
 <div class="family-card" onclick="window.location.href='joseph-o-neill.html'">
 <h3>Joseph O’Neill</h3>
-<div class="detail"><strong>Born:</strong> Ireland 🇮🇪</div>
+<div class="detail"><strong>Born:</strong></div>
 <div class="detail"><strong>Spouse:</strong> Mary Byrnes</div>
 </div>
 
 <div class="family-card">
 <h3>Unnamed Youmans</h3>
-<div class="detail"><strong>Origin:</strong> New York 🇺🇸</div>
+<div class="detail"><strong>Origin:</strong> New York</div>
 </div>
 
 <div class="family-card">
 <h3>Unnamed Commerford</h3>
-<div class="detail"><strong>Origin:</strong> New Jersey 🇺🇸</div>
+<div class="detail"><strong>Origin:</strong> New Jersey</div>
 </div>
 
 </div>
