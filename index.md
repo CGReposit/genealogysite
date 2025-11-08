@@ -52,6 +52,11 @@ FamilySearch - is a free website sponsored by The Church of Jesus Christ of Latt
 
 Ellis Island records - The Statue of Liberty-Ellis Island Foundation maintains a searchable database of approximately 65 million passenger records for the Port of New York from 1820 to 1957. The records include ship manifests with details like name, age, nationality, and port of departure, as well other details of interest. This repository is open to the public (but requires making a free account). 
 
+<p align="center">
+  <img src="/genealogysite/assets/images/statueicon.png" alt="Ellis Island Icon" width="100" style="margin-top: 10px;" />
+</p>
+
+
 US Census Data - Since 1790, the US census has been significant for its role in apportioning political representation, federal funding allocation, and (most importantly in this case) as a rich genealogical and demographic record of the American people. Census data is collected every 10 years, once 72 years have passed, the census records become publicly accessible. The 1950 census is the most recent one to be made public.
 
 ### Header 3
