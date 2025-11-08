@@ -7,20 +7,32 @@ title:
 
 - _Franklin D. Roosevelt (1938)_
 
+
 ![Statue of Liberty](/genealogysite/assets/images/statue-of-liberty.jpg)
+
 
 
 ### Intro
 
 Let me preface this by saying I always thought family trees were <ins>dumb</ins> 
 
-I never felt compelled to create one. It's something I always though of as cringy. However, times have changed, and technological advancements have made it considerably easier to trace one’s lineage by simply conducting a search by last name 🔎🕵🏻‍♂️ and I can't deny it's quite cool to be able to look all of this up.
+I never felt compelled to create one. It's something I always thought of as cringy. 
 
-Having done some easy research, I began to compile more information than I knew what to do with; tracking the lineages of people you don't know through multiple sources is incredibly tedious. Most websites that I found for geneaology-tracking didn't really have a mechanism to fully show all the information I was collecting from different sources. To that end, I decided to get creative and create my own repository of information.
+Thanks to modern technology, however, tracing one’s lineage has become considerably easier; often requiring nothing more than a simple search of the last name in the correct database 🕵🏻‍♂️ 
 
-## Lineage and surname etymology
+For all of my cynicism, I have to admit that to now have a family tree made is quite cool - especially because what I found out about my lineage and the people who comprise it is not what I had expected.
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration.
+Part of the reason I had no interest in geneaology is because I believed (and still do) that it has no practical effect on the present. Life does not change simply because you found out what year your ancestor entered through Ellis Island 🗽 
+
+Nonetheless, researching personal family history connects you to wider historical events, like wars, migrations, or social movements. This a personal, human-scale perspective on the past that is entirely different to reading about it in textbooks.
+
+Easy research quickly yielded an unmanageable volume of data. Since existing genealogy-tracking websites couldn't fully integrate all the information I was gathering from multiple sources, I decided to get creative and just build my own repository for this information. 
+
+Mainly, this webpage served as an enormous personal project to learn the HTML coding basics behind creating a website - and to give my Dad and siblings this repository of information I believe they should also have access to. 
+
+## Index
+
+This project yielded unexpected volumes of information: both on family history and American History. Highly interesting shit. 
 
 *   [List of family members](family-directory.html)
 *   [Etymology](etymology.md)
