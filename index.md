@@ -12,8 +12,9 @@ title:
 
 
 
-### Intro
+### Personal Note 📝
 
+```js
 Let me preface this by saying I always thought family trees were <ins>dumb</ins> 
 
 I never felt compelled to create one. It's something I always thought of as cringy. 
@@ -28,7 +29,10 @@ Nonetheless, researching personal family history connects you to wider historica
 
 Easy research quickly yielded an unmanageable volume of data. Since existing genealogy-tracking websites couldn't fully integrate all the information I was gathering from multiple sources, I decided to get creative and just build my own repository for this information. 
 
-Mainly, this webpage served as an enormous personal project to learn the HTML coding basics behind creating a website - and to give my Dad and siblings this repository of information I believe they should also have access to. 
+Mainly, this webpage served as an enormous personal project to learn the HTML coding basics behind creating a website - and to give my Dad and siblings this repository of information I believe they should also have access to.
+
+```
+
 
 ## Index
 
