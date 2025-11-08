@@ -3,11 +3,12 @@ layout: default
 title: Merlot Theme
 ---
 
+> _Remember, remember always, that all of us, and you and I especially, are descended from immigrants and revolutionists"_
+
+- Franklin D. Roosevelt (1938)
+
 ![Statue of Liberty](/genealogysite/assets/images/statue-of-liberty.jpg)
 
-> Remember, remember always, that all of us, and you and I especially, are descended from immigrants and revolutionists"
-
-- _Franklin D. Roosevelt (1938)_
 
 ### Intro
 
