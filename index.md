@@ -3,9 +3,9 @@ layout: default
 title:
 ---
 
-> _Remember, remember always, that all of us, and you and I especially, are descended from immigrants and revolutionists"_
+> Remember, remember always, that all of us, and you and I especially, are descended from immigrants and revolutionists"
 
-- Franklin D. Roosevelt (1938)
+- _Franklin D. Roosevelt (1938)_
 
 ![Statue of Liberty](/genealogysite/assets/images/statue-of-liberty.jpg)
 
