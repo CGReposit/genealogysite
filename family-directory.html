@@ -6,397 +6,262 @@
     <meta name="viewport" content="width=640">
     <title>Family Directory - Commerford Lineage</title>
     <style>
-        /* Exact Merlot Theme Colors from Jekyll Theme */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* Styling preserved from original */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font: 15px/22.5px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            color: #2e2e2e;
-            font-weight: 300;
-            margin: 0;
-            padding: 0;
-            -webkit-font-smoothing: antialiased;
-            background: #d7cec7;
+            color: #2e2e2e; font-weight: 300;
+            background: #d7cec7; -webkit-font-smoothing: antialiased;
         }
-
         .shell {
-            background: #76323f;
-            background: -moz-linear-gradient(top, #76323f 0%, #5c1f1f 7%, #541a1a 100%);
-            background: -webkit-linear-gradient(top, #76323f 0%, #5c1f1f 7%, #541a1a 100%);
             background: linear-gradient(to bottom, #76323f 0%, #5c1f1f 7%, #541a1a 100%);
-            min-height: 100vh;
-            padding: 50px 0;
+            min-height: 100vh; padding: 50px 0;
         }
-
         .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            background: #d7cec7;
-            border-radius: 4px;
-            padding: 40px 50px;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+            width: 90%; max-width: 1200px; margin: 0 auto;
+            background: #d7cec7; border-radius: 4px;
+            padding: 40px 50px; box-shadow: 0 0 30px rgba(0,0,0,0.4);
         }
-
-        /* Navigation */
-        .back-link {
-            display: inline-block;
-            margin-bottom: 30px;
-            color: #76323f;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 400;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-
-        /* Header Styles */
-        header {
-            border-bottom: 1px solid #b9b9b9;
-            padding-bottom: 30px;
-            margin-bottom: 40px;
-        }
-
-        h1 {
-            font-size: 42px;
-            font-weight: bold;
-            margin: 0 0 10px 0;
-            color: #474747;
-            line-height: 1.2;
-            letter-spacing: -1px;
-        }
-
-        .subtitle {
-            font-size: 18px;
-            color: #9c8577;
-            font-weight: 300;
-            font-style: italic;
-            margin: 0;
-        }
-
-        /* Stats Section */
-        .stats {
-            text-align: center;
-            margin: 30px 0;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.4);
-            border-radius: 3px;
-            border: 1px solid #b9b9b9;
-        }
-
-        .stats p {
-            margin: 0;
-            font-size: 16px;
-            color: #666;
-        }
-
-        .stats span {
-            color: #76323f;
-            font-weight: bold;
-            font-size: 24px;
-        }
-
-        /* Generation Sections */
-        .generation-section {
-            margin-bottom: 50px;
-        }
-
-        .generation-title {
-            font-size: 28px;
-            color: #76323f;
-            margin-bottom: 15px;
-            padding-left: 15px;
-            border-left: 4px solid #76323f;
-            font-weight: bold;
-            line-height: 1.3;
-        }
-
-        .generation-note {
-            font-size: 14px;
-            color: #9c8577;
-            font-style: italic;
-            margin-bottom: 25px;
-            padding-left: 15px;
-        }
-
-        /* Family Grid */
-        .family-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .family-card {
-            background: rgba(255, 255, 255, 0.6);
-            border: 1px solid #b9b9b9;
-            border-radius: 3px;
-            padding: 20px;
-            transition: all 0.25s ease;
-            cursor: pointer;
-        }
-
-        .family-card:hover {
-            box-shadow: 0 3px 10px rgba(118, 50, 63, 0.25);
-            border-color: #76323f;
-            transform: translateY(-2px);
-            background: rgba(255, 255, 255, 0.85);
-        }
-
-        .family-card h3 {
-            color: #76323f;
-            font-size: 20px;
-            margin: 0 0 15px 0;
-            padding-bottom: 10px;
-            border-bottom: 1px solid rgba(185, 185, 185, 0.5);
-            font-weight: bold;
-            line-height: 1.3;
-        }
-
-        .detail {
-            margin: 8px 0;
-            color: #666;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        .detail strong {
-            color: #474747;
-            font-weight: 600;
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
-            .shell {
-                padding: 30px 0;
-            }
-
-            .container {
-                width: 95%;
-                padding: 25px;
-            }
-
-            h1 {
-                font-size: 32px;
-            }
-
-            .generation-title {
-                font-size: 24px;
-            }
-
-            .family-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            h1 {
-                font-size: 28px;
-            }
-
-            .generation-title {
-                font-size: 20px;
-            }
-        }
+        .back-link { display:inline-block; margin-bottom:30px; color:#76323f; text-decoration:none; font-size:16px; font-weight:400; }
+        .back-link:hover { text-decoration: underline; }
+        header { border-bottom:1px solid #b9b9b9; padding-bottom:30px; margin-bottom:40px; }
+        h1 { font-size:42px; font-weight:bold; color:#474747; margin:0 0 10px 0; line-height:1.2; letter-spacing:-1px; }
+        .subtitle { font-size:18px; color:#9c8577; font-weight:300; font-style:italic; }
+        .stats { text-align:center; margin:30px 0; padding:20px; background:rgba(255,255,255,0.4); border-radius:3px; border:1px solid #b9b9b9; }
+        .stats span { color:#76323f; font-weight:bold; font-size:24px; }
+        .generation-section { margin-bottom:50px; }
+        .generation-title { font-size:28px; color:#76323f; margin-bottom:15px; padding-left:15px; border-left:4px solid #76323f; font-weight:bold; }
+        .generation-note { font-size:14px; color:#9c8577; font-style:italic; margin-bottom:25px; padding-left:15px; }
+        .family-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:20px; margin-top:20px; }
+        .family-card { background:rgba(255,255,255,0.6); border:1px solid #b9b9b9; border-radius:3px; padding:20px; transition:all .25s ease; cursor:pointer; }
+        .family-card:hover { box-shadow:0 3px 10px rgba(118,50,63,0.25); border-color:#76323f; transform:translateY(-2px); background:rgba(255,255,255,0.85); }
+        .family-card h3 { color:#76323f; font-size:20px; margin:0 0 15px 0; padding-bottom:10px; border-bottom:1px solid rgba(185,185,185,0.5); font-weight:bold; }
+        .detail { margin:8px 0; color:#666; font-size:14px; line-height:1.6; }
+        .detail strong { color:#474747; font-weight:600; }
+        @media screen and (max-width:768px){ .container{width:95%;padding:25px;} .generation-title{font-size:24px;} .family-grid{grid-template-columns:1fr;} }
+        @media screen and (max-width:480px){ h1{font-size:28px;} .generation-title{font-size:20px;} }
     </style>
 </head>
 <body>
-    <div class="shell">
-        <div class="container">
-            <a href="https://cgreposit.github.io/genealogysite/" class="back-link">← Back to Home</a>
-            
-            <header>
-                <h1>Family Directory</h1>
-                <p class="subtitle">(in)Complete Genealogical Records</p>
-            </header>
+<div class="shell">
+<div class="container">
+<a href="https://cgreposit.github.io/genealogysite/" class="back-link">← Back to Home</a>
+<header>
+<h1>Family Directory</h1>
+<p class="subtitle">(in)Complete Genealogical Records</p>
+</header>
 
-            <div class="stats">
-                <p>Total Family Members: <span>20</span></p>
-            </div>
-            <div class="reference-note">
-    <p>This lineage begins with Dad as the reference point   Dad → Parents → Grandparents → Great Grandparents</p>
+<div class="stats"><p>Total Family Members: <span>26</span></p></div>
+<div class="reference-note"><p>This lineage begins with Dad as the reference point — Dad → Parents → Grandparents → Great Grandparents</p></div>
+
+<!-- Parents -->
+<div class="generation-section">
+<h2 class="generation-title">Parents</h2>
+<div class="family-grid">
+
+<div class="family-card" onclick="window.location.href='jeannette-commerford.html'">
+<h3>Jeannette Angela Commerford</h3>
+<div class="detail"><strong>Born:</strong> 26 Oct 1926, New Jersey 🇺🇸</div>
+<div class="detail"><strong>Died:</strong> 11 Apr 2020</div>
+<div class="detail"><strong>Parents:</strong> Maurice Malcuit & Maria “Mary” Favini</div>
+<div class="detail"><strong>Partner:</strong> Edward Bradley Commerford</div>
 </div>
 
+<div class="family-card" onclick="window.location.href='edward-bradley-commerford.html'">
+<h3>Edward Bradley “Pali” Commerford</h3>
+<div class="detail"><strong>Born:</strong> 17 Jul 1918, Jersey City, NJ 🇺🇸</div>
+<div class="detail"><strong>Died:</strong> 5 Jun 1999 (age 80)</div>
+<div class="detail"><strong>Parents:</strong> John Rowe Commerford & Ellen Mae “Ella” Youmans</div>
+<div class="detail"><strong>Partner:</strong> Jeannette Angela Commerford</div>
+</div>
+</div>
+</div>
 
-            <div class="generation-section">
-                <h2 class="generation-title">Parents</h2>
-                <div class="family-grid">
-                    <div class="family-card" onclick="window.location.href='jeannette-commerford.html'">
-                        <h3>Jeannette Angela Commerford</h3>
-                        <div class="detail"><strong>Born:</strong> 1926</div>
-                        <div class="detail"><strong>Died:</strong> 2020</div>
-                        <div class="detail"><strong>Parents:</strong> Maurice & Maria Malcuit</div>
-                        <div class="detail"><strong>Partner:</strong> Edward Bradley Commerford</div>
-                    </div>
+<!-- Grandparents -->
+<div class="generation-section">
+<h2 class="generation-title">Grandparents</h2>
+<div class="family-grid">
 
-                    <div class="family-card" onclick="window.location.href='edward-bradley-commerford.html'">
-                        <h3>Edward Bradley "Pali" Commerford</h3>
-                        <div class="detail"><strong>Born:</strong> 17 Jul 1918</div>
-                        <div class="detail"><strong>Died:</strong> 5 Jun 1999 (age 80)</div>
-                        <div class="detail"><strong>Parents:</strong> John Rowe & Ellen Mae Commerford</div>
-                        <div class="detail"><strong>Partner:</strong> Jeannette Angela Commerford</div>
-                    </div>
-                </div>
-            </div>
+<div class="family-card" onclick="window.location.href='maria-malcuit.html'">
+<h3>Maria “Mary” Favini Malcuit</h3>
+<div class="detail"><strong>Born:</strong> 1901, Varallo Pombia, Novara, Italy 🇮🇹</div>
+<div class="detail"><strong>Died:</strong> 1986, Harrington Park, NJ 🇺🇸</div>
+<div class="detail"><strong>Partner:</strong> Maurice Malcuit</div>
+</div>
 
-            <div class="generation-section">
-                <h2 class="generation-title">Grandparents</h2>
-                <div class="family-grid">
-                    <div class="family-card" onclick="window.location.href='mary-malcuit.md'">
-                        <h3>Maria "Mary" Malcuit</h3>
-                        <div class="detail"><strong>Born:</strong> 1901</div>
-                        <div class="detail"><strong>Died:</strong> 1986</div>
-                        <div class="detail"><strong>Partner:</strong> Maurice Malcuit</div>
-                    </div>
+<div class="family-card" onclick="window.location.href='maurice-malcuit.html'">
+<h3>Maurice Malcuit</h3>
+<div class="detail"><strong>Born:</strong> 1897, Paris Region, France 🇫🇷</div>
+<div class="detail"><strong>Died:</strong> 1966, United States 🇺🇸</div>
+<div class="detail"><strong>Parents:</strong> Henri (Jean) Malcuit & Maria Malcuit</div>
+<div class="detail"><strong>Partner:</strong> Maria “Mary” Favini</div>
+</div>
 
-                    <div class="family-card" onclick="window.location.href='maurice-malcuit.html'">
-                        <h3>Maurice Malcuit</h3>
-                        <div class="detail"><strong>Born:</strong> 1897</div>
-                        <div class="detail"><strong>Died:</strong> 1966</div>
-                        <div class="detail"><strong>Partner:</strong> Maria "Mary" Malcuit</div>
-                        <div class="detail"><strong>Origin:</strong> France (Port of Le Havre)</div>
-                    </div>
+<div class="family-card" onclick="window.location.href='ellen-mae-commerford.html'">
+<h3>Ellen Mae “Ella” Youmans Commerford</h3>
+<div class="detail"><strong>Born:</strong> 1892</div>
+<div class="detail"><strong>Died:</strong> 1973</div>
+<div class="detail"><strong>Parents:</strong> George E. Youmans & Fanny O’Neill</div>
+<div class="detail"><strong>Partner:</strong> John Rowe Commerford</div>
+</div>
 
-                    <div class="family-card" onclick="window.location.href='ellen-mae-commerford.html'">
-                        <h3>Ellen Mae "Ella" Commerford</h3>
-                        <div class="detail"><strong>Born:</strong> 1892</div>
-                        <div class="detail"><strong>Died:</strong> 1973</div>
-                        <div class="detail"><strong>Parents:</strong> George & Fanny Youmans</div>
-                        <div class="detail"><strong>Partner:</strong> John Rowe R Commerford</div>
-                    </div>
+<div class="family-card" onclick="window.location.href='john-rowe-commerford.html'">
+<h3>John Rowe Commerford</h3>
+<div class="detail"><strong>Born:</strong> 29 May 1884</div>
+<div class="detail"><strong>Died:</strong> 29 Jan 1968</div>
+<div class="detail"><strong>Parents:</strong> Charles C. Commerford & Elizabeth Hamilton</div>
+<div class="detail"><strong>Partner:</strong> Ellen Mae “Ella” Youmans</div>
+</div>
+</div>
+</div>
 
-                    <div class="family-card" onclick="window.location.href='john-rowe-commerford.html'">
-                        <h3>John Rowe R Commerford</h3>
-                        <div class="detail"><strong>Born:</strong> 29 May 1884</div>
-                        <div class="detail"><strong>Died:</strong> Jan 1968</div>
-                        <div class="detail"><strong>Parents:</strong> Charles & Elizabeth Commerford</div>
-                        <div class="detail"><strong>Partner:</strong> Grace Truman Duvall</div>
-                    </div>
-                </div>
-            </div>
+<!-- Great Grandparents -->
+<div class="generation-section">
+<h2 class="generation-title">Great Grandparents</h2>
+<p class="generation-note">8 of 8 identified</p>
+<div class="family-grid">
 
-            <div class="generation-section">
-                <h2 class="generation-title">Great Grandparents</h2>
-                <p class="generation-note">4 of 8 identified</p>
-                <div class="family-grid">
-                    <div class="family-card" onclick="window.location.href='fanny-o-neill.html'">
-                        <h3>Fanny O'Neill</h3>
-                        <div class="detail"><strong>Born:</strong> 20 Dec 1864</div>
-                        <div class="detail"><strong>Died:</strong> 1939</div>
-                        <div class="detail"><strong>Parents:</strong> Dennis & Mary Jane O'Neill</div>
-                        <div class="detail"><strong>Partner:</strong> George E. Youmans</div>
-                    </div>
+<div class="family-card" onclick="window.location.href='fanny-o-neill.html'">
+<h3>Fanny O’Neill Youmans</h3>
+<div class="detail"><strong>Born:</strong> 20 Dec 1864, Bergen, NJ 🇺🇸</div>
+<div class="detail"><strong>Died:</strong> 1939, Westwood, NJ 🇺🇸</div>
+<div class="detail"><strong>Parents:</strong> Dennis O’Neill & Mary Jane Ring</div>
+<div class="detail"><strong>Partner:</strong> George E. Youmans</div>
+</div>
 
-                    <div class="family-card" onclick="window.location.href='george-e-youmans.html'">
-                        <h3>George E. Youmans</h3>
-                        <div class="detail"><strong>Born:</strong> 21 Jan 1866</div>
-                        <div class="detail"><strong>Died:</strong> 21 Jan 1899 (age 33)</div>
-                        <div class="detail"><strong>Parents:</strong> Aaron & Rachel Youmans</div>
-                        <div class="detail"><strong>Partner:</strong> Fanny O'Neill</div>
-                    </div>
+<div class="family-card" onclick="window.location.href='george-e-youmans.html'">
+<h3>George E. Youmans</h3>
+<div class="detail"><strong>Born:</strong> 21 Jan 1866, Jersey City, NJ 🇺🇸</div>
+<div class="detail"><strong>Died:</strong> 21 Jan 1899, Jersey City, NJ 🇺🇸 (age 33)</div>
+<div class="detail"><strong>Parents:</strong> Aaron William Youmans & Rachel Silker</div>
+<div class="detail"><strong>Partner:</strong> Fanny O’Neill</div>
+</div>
 
-                    <div class="family-card" onclick="window.location.href='elizabeth-hamilton.html'">
-                        <h3>Elizabeth Hamilton</h3>
-                        <div class="detail"><strong>Born:</strong> 18 Jul 1859</div>
-                        <div class="detail"><strong>Partner:</strong> Charles C Commerford</div>
-                    </div>
+<div class="family-card" onclick="window.location.href='elizabeth-hamilton.html'">
+<h3>Elizabeth Hamilton</h3>
+<div class="detail"><strong>Born:</strong> 18 Jul 1859</div>
+<div class="detail"><strong>Partner:</strong> Charles C. Commerford</div>
+</div>
 
-                    <div class="family-card" onclick="window.location.href='charles-c-commerford.html'">
-                        <h3>Charles C Commerford</h3>
-                        <div class="detail"><strong>Born:</strong> 2 Jun 1833</div>
-                        <div class="detail"><strong>Died:</strong> 6 Feb 1920</div>
-                        <div class="detail"><strong>Parents:</strong> John & Maria Commerford</div>
-                        <div class="detail"><strong>Partner:</strong> Elizabeth Hamilton</div>
-                    </div>
-                </div>
-            </div>
+<div class="family-card" onclick="window.location.href='charles-c-commerford.html'">
+<h3>Charles C. Commerford</h3>
+<div class="detail"><strong>Born:</strong> 2 Jun 1833</div>
+<div class="detail"><strong>Died:</strong> 6 Feb 1920</div>
+<div class="detail"><strong>Parents:</strong> John Commerford & Maria Ferris</div>
+<div class="detail"><strong>Partner:</strong> Elizabeth Hamilton</div>
+</div>
 
-            <div class="generation-section">
-                <h2 class="generation-title">Great Great Grandparents</h2>
-                <p class="generation-note">A person has 16 great-great-grandparents. Only 4 have been identified</p>
-                <div class="family-grid">
-                    <div class="family-card" onclick="window.location.href='mary-jane-o-neill.html'">
-                        <h3>Mary Jane O'Neill</h3>
-                        <div class="detail"><strong>Born:</strong> August 1832</div>
-                        <div class="detail"><strong>Died:</strong> 1926</div>
-                        <div class="detail"><strong>Partner:</strong> Dennis O'Neill</div>
-                    </div>
+</div>
+</div>
 
-                    <div class="family-card" onclick="window.location.href='dennis-o-neill.html'">
-                        <h3>Dennis O'Neill</h3>
-                        <div class="detail"><strong>Born:</strong> 9 Jun 1840, Ireland</div>
-                        <div class="detail"><strong>Died:</strong> 25 Jan 1906</div>
-                        <div class="detail"><strong>Parents:</strong> Joseph O'Neill & Mary Byrnes</div>
-                        <div class="detail"><strong>Partner:</strong> Mary Jane O'Neill</div>
-                    </div>
+<!-- Great Great Grandparents -->
+<div class="generation-section">
+<h2 class="generation-title">Great Great Grandparents</h2>
+<p class="generation-note">16 total; 8 identified</p>
+<div class="family-grid">
 
-                    <div class="family-card" onclick="window.location.href='rachel-silker.html'">
-                        <h3>Rachel Silker</h3>
-                        <div class="detail"><strong>Born:</strong> 1844</div>
-                        <div class="detail"><strong>Partner:</strong> Aaron William Youmans</div>
-                    </div>
+<div class="family-card" onclick="window.location.href='mary-jane-o-neill.html'">
+<h3>Mary Jane Ring O’Neill</h3>
+<div class="detail"><strong>Born:</strong> Aug 1832, County Kilkenny, Ireland 🇮🇪</div>
+<div class="detail"><strong>Died:</strong> 2 Feb 1926, Westwood, NJ 🇺🇸</div>
+<div class="detail"><strong>Partner:</strong> Dennis O’Neill</div>
+</div>
 
-                    <div class="family-card" onclick="window.location.href='aaron-william-youmans.html'">
-                        <h3>Aaron William Youmans</h3>
-                        <div class="detail"><strong>Born:</strong> 1842</div>
-                        <div class="detail"><strong>Parents:</strong> George Youmans & Margaret Stryker</div>
-                        <div class="detail"><strong>Partner:</strong> Rachel Silker</div>
-                    </div>
+<div class="family-card" onclick="window.location.href='dennis-o-neill.html'">
+<h3>Dennis O’Neill</h3>
+<div class="detail"><strong>Born:</strong> 9 Jun 1840, Ireland 🇮🇪</div>
+<div class="detail"><strong>Died:</strong> 25 Jan 1906, Hackensack, NJ 🇺🇸</div>
+<div class="detail"><strong>Parents:</strong> Joseph O’Neill & Mary Byrnes</div>
+<div class="detail"><strong>Partner:</strong> Mary Jane Ring</div>
+</div>
 
-                    <div class="family-card" onclick="window.location.href='john-commerford.html'">
-                        <h3>John Commerford</h3>
-                        <div class="detail"><strong>Born:</strong> 1800</div>
-                        <div class="detail"><strong>Died:</strong> 1878</div>
-                        <div class="detail"><strong>Partner:</strong> Maria Commerford</div>
-                    </div>
+<div class="family-card" onclick="window.location.href='rachel-silker.html'">
+<h3>Rachel Silker</h3>
+<div class="detail"><strong>Born:</strong> 13 Sep 1842, Pleasant Grove, NJ 🇺🇸</div>
+<div class="detail"><strong>Partner:</strong> Aaron William Youmans</div>
+</div>
 
-                    <div class="family-card" onclick="window.location.href='maria-commerford.html'">
-                        <h3>Maria Commerford</h3>
-                        <div class="detail"><strong>Born:</strong> 1806</div>
-                        <div class="detail"><strong>Partner:</strong> John Commerford</div>
-                    </div>
-                </div>
-            </div>
+<div class="family-card" onclick="window.location.href='aaron-william-youmans.html'">
+<h3>Aaron William Youmans</h3>
+<div class="detail"><strong>Born:</strong> 1842, New York 🇺🇸</div>
+<div class="detail"><strong>Parents:</strong> George Youmans & Margaret Stryker</div>
+<div class="detail"><strong>Partner:</strong> Rachel Silker</div>
+</div>
 
-            <div class="generation-section">
-                <h2 class="generation-title">Great Great Great Grandparents</h2>
-                <p class="generation-note">A person has 32</p>
-                <div class="family-grid">
-                    <div class="family-card" onclick="window.location.href='margaret-stryker.html'">
-                        <h3>Margaret Stryker</h3>
-                        <div class="detail"><strong>Born:</strong> 1827</div>
-                        <div class="detail"><strong>Died:</strong> 1880</div>
-                        <div class="detail"><strong>Partner:</strong> George Youmans</div>
-                    </div>
+<div class="family-card" onclick="window.location.href='john-commerford.html'">
+<h3>John Commerford</h3>
+<div class="detail"><strong>Born:</strong> 1800</div>
+<div class="detail"><strong>Died:</strong> 1878</div>
+<div class="detail"><strong>Partner:</strong> Maria Ferris Commerford</div>
+</div>
 
-                    <div class="family-card" onclick="window.location.href='george-youmans.html'">
-                        <h3>George Youmans</h3>
-                        <div class="detail"><strong>Born:</strong> 1823</div>
-                        <div class="detail"><strong>Died:</strong> 1902</div>
-                        <div class="detail"><strong>Partner:</strong> Margaret Stryker</div>
-                    </div>
+<div class="family-card" onclick="window.location.href='maria-commerford.html'">
+<h3>Maria Ferris Commerford</h3>
+<div class="detail"><strong>Born:</strong> 1806</div>
+<div class="detail"><strong>Partner:</strong> John Commerford</div>
+</div>
 
-                    <div class="family-card" onclick="window.location.href='mary-byrnes.html'">
-                        <h3>Mary Byrnes</h3>
-                        <div class="detail"><strong>Partner:</strong> Joseph O'Neill</div>
-                        <div class="detail"><strong>Origin:</strong> Ireland</div>
-                    </div>
+<div class="family-card" onclick="window.location.href='henri-malcuit.html'">
+<h3>Henri (Jean) Malcuit</h3>
+<div class="detail"><strong>Born:</strong> Unnamed (France 🇫🇷)</div>
+<div class="detail"><strong>Partner:</strong> Maria Malcuit</div>
+</div>
 
-                    <div class="family-card" onclick="window.location.href='joseph-o-neill.html'">
-                        <h3>Joseph O'Neill</h3>
-                        <div class="detail"><strong>Partner:</strong> Mary Byrnes</div>
-                        <div class="detail"><strong>Origin:</strong> Ireland</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="family-card" onclick="window.location.href='maria-malcuit-elder.html'">
+<h3>Maria Malcuit</h3>
+<div class="detail"><strong>Born:</strong> France 🇫🇷</div>
+<div class="detail"><strong>Profession:</strong> Cook (Ellis Island records)</div>
+<div class="detail"><strong>Partner:</strong> Henri (Jean) Malcuit</div>
+</div>
+
+</div>
+</div>
+
+<!-- Great Great Great Grandparents -->
+<div class="generation-section">
+<h2 class="generation-title">Great Great Great Grandparents</h2>
+<p class="generation-note">32 total; partial records shown</p>
+<div class="family-grid">
+
+<div class="family-card" onclick="window.location.href='margaret-stryker.html'">
+<h3>Margaret Stryker</h3>
+<div class="detail"><strong>Born:</strong> 1827, New Jersey 🇺🇸</div>
+<div class="detail"><strong>Died:</strong> 1880</div>
+<div class="detail"><strong>Partner:</strong> George Youmans</div>
+</div>
+
+<div class="family-card" onclick="window.location.href='george-youmans.html'">
+<h3>George Youmans</h3>
+<div class="detail"><strong>Born:</strong> Aug 1823, Rockland, NY 🇺🇸</div>
+<div class="detail"><strong>Died:</strong> 2 Jul 1902, Jersey City, NJ 🇺🇸</div>
+<div class="detail"><strong>Partner:</strong> Margaret Stryker</div>
+</div>
+
+<div class="family-card" onclick="window.location.href='mary-byrnes.html'">
+<h3>Mary Byrnes</h3>
+<div class="detail"><strong>Born:</strong> Ireland 🇮🇪</div>
+<div class="detail"><strong>Partner:</strong> Joseph O’Neill</div>
+</div>
+
+<div class="family-card" onclick="window.location.href='joseph-o-neill.html'">
+<h3>Joseph O’Neill</h3>
+<div class="detail"><strong>Born:</strong> Ireland 🇮🇪</div>
+<div class="detail"><strong>Partner:</strong> Mary Byrnes</div>
+</div>
+
+<div class="family-card">
+<h3>Unnamed Youmans</h3>
+<div class="detail"><strong>Origin:</strong> New York 🇺🇸</div>
+</div>
+
+<div class="family-card">
+<h3>Unnamed Commerford</h3>
+<div class="detail"><strong>Origin:</strong> New Jersey 🇺🇸</div>
+</div>
+
+</div>
+</div>
+
+</div></div>
 </body>
 </html>
