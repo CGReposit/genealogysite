@@ -3,7 +3,7 @@ layout: default
 title: Merlot Theme
 ---
 
-![Statue of Liberty](assets/images/statue-of-liberty.jpg)
+![Statue of Liberty](/genealogysite/assets/images/statue-of-liberty.jpg)
 
 > Remember, remember always, that all of us, and you and I especially, are descended from immigrants and revolutionists"
 
