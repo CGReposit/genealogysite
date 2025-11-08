@@ -18,6 +18,6 @@ Bearers of the surname began appearing in New World records from the 18th centur
 
 In England the name derives from a medieval place-name formed from Old English elements (a personal/ethnic name or topographical element combined with ford, meaning a river crossing). Early spellings recorded in various documents include forms like Comberford, Quemerford and related variants; these reflect regional pronunciation and medieval orthographic instability. Habitational surnames—those taken from the name of a village, manor or small locality—are common in England, and Commerford/Comerford fits that pattern.
 
-**Early history and presence in Ireland 🇮🇪 **
+**Early history and presence in Ireland 🇮🇪**
 
 Comerford/Commerford families appear in Irish sources from the medieval and early modern periods. The family is commonly associated with the Norman influx into Ireland (late 12th–13th centuries) and settled principally in counties Kilkenny, Waterford and later Tipperary and Wexford. Over generations the originally Anglo-Norman family became integrated into Irish society, adopting Gaelic customs and, in some branches, Gaelicized versions of the name. Scholarly and antiquarian pedigrees (19th century) trace notable branches — for example the Comerfords of Ballyburley and other landed lines in Kilkenny — and record arms and genealogical trees for local elites.
