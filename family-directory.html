@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=640">
     <title>Family Directory - Commerford Lineage</title>
     <style>
-        /* Styling preserved from original, readability enhanced */
+        /* Styling preserved from original */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font: 15px/22.5px 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -36,32 +36,10 @@
         .family-card { background:rgba(255,255,255,0.6); border:1px solid #b9b9b9; border-radius:3px; padding:20px; transition:all .25s ease; cursor:pointer; }
         .family-card:hover { box-shadow:0 3px 10px rgba(118,50,63,0.25); border-color:#76323f; transform:translateY(-2px); background:rgba(255,255,255,0.85); }
         .family-card h3 { color:#76323f; font-size:20px; margin:0 0 15px 0; padding-bottom:10px; border-bottom:1px solid rgba(185,185,185,0.5); font-weight:bold; }
-        .detail { margin:8px 0; color:#444; font-size:15px; line-height:1.7; }
-        .detail strong { color:#2c2c2c; font-weight:600; }
-        
-        /* Improved reference note readability */
-        .reference-note {
-            font-size: 18px;
-            color: #2c2c2c;
-            font-weight: 500;
-            background: rgba(255, 255, 255, 0.85);
-            border-left: 4px solid #76323f;
-            padding: 15px 20px;
-            border-radius: 4px;
-            margin: 25px 0;
-            line-height: 1.6;
-        }
-        .reference-note p { margin: 0; }
-
-        @media screen and (max-width:768px){
-            .container{width:95%;padding:25px;}
-            .generation-title{font-size:24px;}
-            .family-grid{grid-template-columns:1fr;}
-        }
-        @media screen and (max-width:480px){
-            h1{font-size:28px;}
-            .generation-title{font-size:20px;}
-        }
+        .detail { margin:8px 0; color:#666; font-size:14px; line-height:1.6; }
+        .detail strong { color:#474747; font-weight:600; }
+        @media screen and (max-width:768px){ .container{width:95%;padding:25px;} .generation-title{font-size:24px;} .family-grid{grid-template-columns:1fr;} }
+        @media screen and (max-width:480px){ h1{font-size:28px;} .generation-title{font-size:20px;} }
     </style>
 </head>
 <body>
@@ -74,17 +52,216 @@
 </header>
 
 <div class="stats"><p>Total Family Members: <span>26</span></p></div>
+<div class="reference-note"><p>This lineage begins with Dad as the reference point — Dad → Parents → Grandparents → Great Grandparents</p></div>
 
-<div class="reference-note">
-  <p>This lineage begins with <strong>Dad</strong> as the reference point — 
-  <strong>Dad → Parents → Grandparents → Great Grandparents</strong></p>
+<!-- Parents -->
+<div class="generation-section">
+<h2 class="generation-title">Parents</h2>
+<div class="family-grid">
+
+<div class="family-card" onclick="window.location.href='jeannette-commerford.html'">
+<h3>Jeannette Angela Commerford</h3>
+<div class="detail"><strong>Born:</strong> 26 Oct 1926, New Jersey 🇺🇸</div>
+<div class="detail"><strong>Died:</strong> 11 Apr 2020</div>
+<div class="detail"><strong>Parents:</strong> Maurice Malcuit & Maria “Mary” Favini</div>
+<div class="detail"><strong>Spouse:</strong> Edward Bradley Commerford</div>
 </div>
 
-<!-- (All the rest of your ancestor sections remain the same as before) -->
-<!-- ... including Parents, Grandparents, Great Grandparents, etc. -->
-<!-- Each uses <strong>Spouse:</strong> instead of Partner and same layout. -->
+<div class="family-card" onclick="window.location.href='edward-bradley-commerford.html'">
+<h3>Edward Bradley “Pali” Commerford</h3>
+<div class="detail"><strong>Born:</strong> 17 Jul 1918, Jersey City, NJ 🇺🇸</div>
+<div class="detail"><strong>Died:</strong> 5 Jun 1999 (age 80)</div>
+<div class="detail"><strong>Parents:</strong> John Rowe Commerford & Ellen Mae “Ella” Youmans</div>
+<div class="detail"><strong>Spouse:</strong> Jeannette Angela Commerford</div>
+</div>
+</div>
+</div>
+
+<!-- Grandparents -->
+<div class="generation-section">
+<h2 class="generation-title">Grandparents</h2>
+<div class="family-grid">
+
+<div class="family-card" onclick="window.location.href='maria-malcuit.html'">
+<h3>Maria “Mary” Favini Malcuit</h3>
+<div class="detail"><strong>Born:</strong> 1901, Varallo Pombia, Novara, Italy 🇮🇹</div>
+<div class="detail"><strong>Died:</strong> 1986, Harrington Park, NJ 🇺🇸</div>
+<div class="detail"><strong>Spouse:</strong> Maurice Malcuit</div>
+</div>
+
+<div class="family-card" onclick="window.location.href='maurice-malcuit.html'">
+<h3>Maurice Malcuit</h3>
+<div class="detail"><strong>Born:</strong> 1897, Paris Region, France 🇫🇷</div>
+<div class="detail"><strong>Died:</strong> 1966, United States 🇺🇸</div>
+<div class="detail"><strong>Parents:</strong> Henri (Jean) Malcuit & Maria Malcuit</div>
+<div class="detail"><strong>Spouse:</strong> Maria “Mary” Favini</div>
+</div>
+
+<div class="family-card" onclick="window.location.href='ellen-mae-commerford.html'">
+<h3>Ellen Mae “Ella” Youmans Commerford</h3>
+<div class="detail"><strong>Born:</strong> 1892</div>
+<div class="detail"><strong>Died:</strong> 1973</div>
+<div class="detail"><strong>Parents:</strong> George E. Youmans & Fanny O’Neill</div>
+<div class="detail"><strong>Spouse:</strong> John Rowe Commerford</div>
+</div>
+
+<div class="family-card" onclick="window.location.href='john-rowe-commerford.html'">
+<h3>John Rowe Commerford</h3>
+<div class="detail"><strong>Born:</strong> 29 May 1884</div>
+<div class="detail"><strong>Died:</strong> 29 Jan 1968</div>
+<div class="detail"><strong>Parents:</strong> Charles C. Commerford & Elizabeth Hamilton</div>
+<div class="detail"><strong>Spouse:</strong> Ellen Mae “Ella” Youmans</div>
+</div>
+</div>
+</div>
+
+<!-- Great Grandparents -->
+<div class="generation-section">
+<h2 class="generation-title">Great Grandparents</h2>
+<p class="generation-note">8 of 8 identified</p>
+<div class="family-grid">
+
+<div class="family-card" onclick="window.location.href='fanny-o-neill.html'">
+<h3>Fanny O’Neill Youmans</h3>
+<div class="detail"><strong>Born:</strong> 20 Dec 1864, Bergen, NJ 🇺🇸</div>
+<div class="detail"><strong>Died:</strong> 1939, Westwood, NJ 🇺🇸</div>
+<div class="detail"><strong>Parents:</strong> Dennis O’Neill & Mary Jane Ring</div>
+<div class="detail"><strong>Spouse:</strong> George E. Youmans</div>
+</div>
+
+<div class="family-card" onclick="window.location.href='george-e-youmans.html'">
+<h3>George E. Youmans</h3>
+<div class="detail"><strong>Born:</strong> 21 Jan 1866, Jersey City, NJ 🇺🇸</div>
+<div class="detail"><strong>Died:</strong> 21 Jan 1899, Jersey City, NJ 🇺🇸 (age 33)</div>
+<div class="detail"><strong>Parents:</strong> Aaron W Youmans & Rachel Silker</div>
+<div class="detail"><strong>Spouse:</strong> Fanny O’Neill</div>
+</div>
+
+<div class="family-card" onclick="window.location.href='elizabeth-hamilton.html'">
+<h3>Elizabeth Hamilton</h3>
+<div class="detail"><strong>Born:</strong> 18 Jul 1859</div>
+<div class="detail"><strong>Spouse:</strong> Charles C. Commerford</div>
+</div>
+
+<div class="family-card" onclick="window.location.href='charles-c-commerford.html'">
+<h3>Charles C. Commerford</h3>
+<div class="detail"><strong>Born:</strong> 2 Jun 1833</div>
+<div class="detail"><strong>Died:</strong> 6 Feb 1920</div>
+<div class="detail"><strong>Parents:</strong> John Commerford & Maria Ferris</div>
+<div class="detail"><strong>Spouse:</strong> Elizabeth Hamilton</div>
+</div>
 
 </div>
 </div>
+
+<!-- Great Great Grandparents -->
+<div class="generation-section">
+<h2 class="generation-title">Great Great Grandparents</h2>
+<p class="generation-note">16 total; 8 identified</p>
+<div class="family-grid">
+
+<div class="family-card" onclick="window.location.href='mary-jane-o-neill.html'">
+<h3>Mary Jane Ring O’Neill</h3>
+<div class="detail"><strong>Born:</strong> Aug 1832, County Kilkenny, Ireland 🇮🇪</div>
+<div class="detail"><strong>Died:</strong> 2 Feb 1926, Westwood, NJ 🇺🇸</div>
+<div class="detail"><strong>Spouse:</strong> Dennis O’Neill</div>
+</div>
+
+<div class="family-card" onclick="window.location.href='dennis-o-neill.html'">
+<h3>Dennis O’Neill</h3>
+<div class="detail"><strong>Born:</strong> 9 Jun 1840, Ireland 🇮🇪</div>
+<div class="detail"><strong>Died:</strong> 25 Jan 1906, Hackensack, NJ 🇺🇸</div>
+<div class="detail"><strong>Parents:</strong> Joseph O’Neill & Mary Byrnes</div>
+<div class="detail"><strong>Spouse:</strong> Mary Jane Ring</div>
+</div>
+
+<div class="family-card" onclick="window.location.href='rachel-silker.html'">
+<h3>Rachel Silker</h3>
+<div class="detail"><strong>Born:</strong> 13 Sep 1842, Pleasant Grove, NJ 🇺🇸</div>
+<div class="detail"><strong>Spouse:</strong> Aaron W Youmans</div>
+</div>
+
+<div class="family-card" onclick="window.location.href='aaron-youmans.html'">
+<h3>Aaron W Youmans</h3>
+<div class="detail"><strong>Born:</strong> 1842, New York 🇺🇸</div>
+<div class="detail"><strong>Parents:</strong> George Youmans & Margaret Stryker</div>
+<div class="detail"><strong>Spouse:</strong> Rachel Silker</div>
+</div>
+
+<div class="family-card" onclick="window.location.href='john-commerford.html'">
+<h3>John Commerford</h3>
+<div class="detail"><strong>Born:</strong> 1800</div>
+<div class="detail"><strong>Died:</strong> 1878</div>
+<div class="detail"><strong>Spouse:</strong> Maria Ferris Commerford</div>
+</div>
+
+<div class="family-card" onclick="window.location.href='maria-commerford.html'">
+<h3>Maria Ferris Commerford</h3>
+<div class="detail"><strong>Born:</strong> 1806</div>
+<div class="detail"><strong>Spouse:</strong> John Commerford</div>
+</div>
+
+<div class="family-card" onclick="window.location.href='henri-malcuit.html'">
+<h3>Henri (Jean) Malcuit</h3>
+<div class="detail"><strong>Born:</strong> Unnamed (France 🇫🇷)</div>
+<div class="detail"><strong>Spouse:</strong> Maria Malcuit</div>
+</div>
+
+<div class="family-card" onclick="window.location.href='maria-malcuit-elder.html'">
+<h3>Maria Malcuit</h3>
+<div class="detail"><strong>Born:</strong> France 🇫🇷</div>
+<div class="detail"><strong>Profession:</strong> Cook (Ellis Island records)</div>
+<div class="detail"><strong>Spouse:</strong> Henri (Jean) Malcuit</div>
+</div>
+
+</div>
+</div>
+
+<!-- Great Great Great Grandparents -->
+<div class="generation-section">
+<h2 class="generation-title">Great Great Great Grandparents</h2>
+<p class="generation-note">32 total; partial records shown</p>
+<div class="family-grid">
+
+<div class="family-card" onclick="window.location.href='margaret-stryker.html'">
+<h3>Margaret Stryker</h3>
+<div class="detail"><strong>Born:</strong> 1827, New Jersey 🇺🇸</div>
+<div class="detail"><strong>Died:</strong> 1880</div>
+<div class="detail"><strong>Spouse:</strong> George Youmans</div>
+</div>
+
+<div class="family-card" onclick="window.location.href='george-youmans.html'">
+<h3>George Youmans</h3>
+<div class="detail"><strong>Born:</strong> Aug 1823, Rockland, NY 🇺🇸</div>
+<div class="detail"><strong>Died:</strong> 2 Jul 1902, Jersey City, NJ 🇺🇸</div>
+<div class="detail"><strong>Spouse:</strong> Margaret Stryker</div>
+</div>
+
+<div class="family-card" onclick="window.location.href='mary-byrnes.html'">
+<h3>Mary Byrnes</h3>
+<div class="detail"><strong>Born:</strong> Ireland 🇮🇪</div>
+<div class="detail"><strong>Spouse:</strong> Joseph O’Neill</div>
+</div>
+
+<div class="family-card" onclick="window.location.href='joseph-o-neill.html'">
+<h3>Joseph O’Neill</h3>
+<div class="detail"><strong>Born:</strong> Ireland 🇮🇪</div>
+<div class="detail"><strong>Spouse:</strong> Mary Byrnes</div>
+</div>
+
+<div class="family-card">
+<h3>Unnamed Youmans</h3>
+<div class="detail"><strong>Origin:</strong> New York 🇺🇸</div>
+</div>
+
+<div class="family-card">
+<h3>Unnamed Commerford</h3>
+<div class="detail"><strong>Origin:</strong> New Jersey 🇺🇸</div>
+</div>
+
+</div>
+</div>
+
+</div></div>
 </body>
 </html>
