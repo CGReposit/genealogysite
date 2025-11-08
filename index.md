@@ -48,7 +48,7 @@ This project yielded unexpected volumes of information: both on family history a
 
 ### Resources used for research:
 
-FamilySearch - is a free website sponsored by The Church of Jesus Christ of Latter-day Saints (the Mormons) that provides genealogical software to help people discover their family history. It is one of the world's largest genealogical resources, with millions of historical records and a vast, collaborative family tree that helps users establush a lineage. The service is free for the public to use (log in required). 
+**FamilySearch** - is a free website sponsored by The Church of Jesus Christ of Latter-day Saints (the Mormons) that provides genealogical software to help people discover their family history. It is one of the world's largest genealogical resources, with millions of historical records and a vast, collaborative family tree that helps users establush a lineage. The service is free for the public to use (log in required). 
 
 <div style="overflow: auto;">
   <img src="/genealogysite/assets/images/statueicon.png" alt="Ellis Island Icon" width="120" style="float: right; margin: 10px 0 10px 20px; border-radius: 6px;" />
@@ -58,7 +58,7 @@ FamilySearch - is a free website sponsored by The Church of Jesus Christ of Latt
 </div>
 
 
-US Census Data - Since 1790, the US census has been significant for its role in apportioning political representation, federal funding allocation, and (most importantly in this case) as a rich genealogical and demographic record of the American people. Census data is collected every 10 years, once 72 years have passed, the census records become publicly accessible. The 1950 census is the most recent one to be made public.
+**US Census Data** - Since 1790, the US census has been significant for its role in apportioning political representation, federal funding allocation, and (most importantly in this case) as a rich genealogical and demographic record of the American people. Census data is collected every 10 years, once 72 years have passed, the census records become publicly accessible. The 1950 census is the most recent one to be made public.
 
 ### Header 3
 
