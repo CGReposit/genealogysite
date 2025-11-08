@@ -14,7 +14,7 @@ title:
 
 ### Personal Note 📝
 
-```js
+
 Let me preface this by saying I always thought family trees were <ins>dumb</ins> 
 
 I never felt compelled to create one. It's something I always thought of as cringy. 
@@ -31,7 +31,6 @@ Easy research quickly yielded an unmanageable volume of data. Since existing gen
 
 Mainly, this webpage served as an enormous personal project to learn the HTML coding basics behind creating a website - and to give my Dad and siblings this repository of information I believe they should also have access to.
 
-```
 
 
 ## Index
