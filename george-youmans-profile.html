@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>George E. Youmans - Family Profile</title>
+<style>
+    :root {
+        --blue-dark: #4B5E82;
+        --blue-light: #7D95B3;
+        --beige: #EDE1BB;
+        --peach: #E4B27C;
+        --terracotta: #C4876A;
+        --text-dark: #2C2C2C;
+        --background: #FAF9F7;
+        --success-green: #4CAF50;
+        --muted-gray: #999;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Georgia', serif;
+        background: var(--background);
+        color: var(--text-dark);
+        min-height: 100vh;
+        padding: 20px;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .navigation {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .nav-link {
+        display: inline-block;
+        margin: 5px 10px;
+        color: var(--blue-dark);
+        text-decoration: none;
+        font-size: 1.05em;
+        transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: var(--terracotta);
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 30px;
+        border-bottom: 3px solid var(--peach);
+        padding-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        color: var(--blue-dark);
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .dates {
+        font-size: 1.2em;
+        color: var(--terracotta);
+        font-style: italic;
+    }
+
+    .info-section {
+        background: var(--beige);
+        border-left: 6px solid var(--blue-light);
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+
+    .info-section h2 {
+        color: var(--blue-dark);
+        font-size: 1.6em;
+        margin-bottom: 15px;
+        border-bottom: 2px solid var(--peach);
+        padding-bottom: 8px;
+    }
+
+    .info-row {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .info-label {
+        font-weight: bold;
+        color: var(--terracotta);
+    }
+
+    .info-value {
+        color: var(--blue-dark);
+    }
+
+    .info-value a {
+        color: var(--blue-dark);
+        text-decoration: underline;
+        transition: color 0.3s ease;
+    }
+
+    .info-value a:hover {
+        color: var(--terracotta);
+    }
+
+    .notes {
+        background: rgba(255,255,255,0.8);
+        border-left: 4px solid var(--blue-light);
+        padding: 15px;
+        border-radius: 5px;
+        color: var(--text-dark);
+    }
+
+    .notes p {
+        margin-bottom: 12px;
+    }
+
+    /* Historical Records Section Links */
+    .notes a {
+        color: var(--blue-light);
+        text-decoration: underline;
+        transition: color 0.3s ease;
+    }
+
+    .notes a:hover {
+        color: var(--terracotta);
+    }
+
+    .family-tree-link {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .tree-button {
+        display: inline-block;
+        padding: 12px 25px;
+        background: var(--blue-dark);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 1.05em;
+        transition: all 0.3s ease;
+    }
+
+    .tree-button:hover {
+        background: var(--terracotta);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 600px) {
+        .info-row {
+            grid-template-columns: 1fr;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <nav class="navigation">
+        <a href="https://cgreposit.github.io/genealogysite/" class="nav-link">← Home</a>
+        <a href="family-directory.html" class="nav-link">← Family Directory</a>
+    </nav>
+
+    <header>
+        <h1>George E. Youmans</h1>
+        <p class="dates">21 January 1866 – 21 January 1899</p>
+    </header>
+
+    <div class="info-section">
+        <h2>Personal Information</h2>
+        <div class="info-row"><div class="info-label">Date of Birth:</div><div class="info-value">21 January 1866</div></div>
+        <div class="info-row"><div class="info-label">Birth Place:</div><div class="info-value">Jersey City, Hudson County, New Jersey, United States</div></div>
+        <div class="info-row"><div class="info-label">Date of Death:</div><div class="info-value">21 January 1899</div></div>
+        <div class="info-row"><div class="info-label">Death Place:</div><div class="info-value">Jersey City, Hudson County, New Jersey, United States</div></div>
+        <div class="info-row"><div class="info-label">Burial Place:</div><div class="info-value">Pascack Cemetery, Park Ridge, Bergen County, New Jersey, United States</div></div>
+        <div class="info-row"><div class="info-label">Age:</div><div class="info-value">33 years (died on his birthday)</div></div>
+    </div>
+
+    <div class="info-section">
+        <h2>Family Relationships</h2>
+        <div class="info-row"><div class="info-label">Father:</div><div class="info-value"><a href="aaron-youmans.html">Aaron William Youmans</a> (b. 1842)</div></div>
+        <div class="info-row"><div class="info-label">Mother:</div><div class="info-value"><a href="rachel-sliker.html">Rachel Sliker</a> (b. 1842)</div></div>
+        <div class="info-row"><div class="info-label">Spouse:</div><div class="info-value"><a href="fanny-oneill.html">Fanny O'Neill</a> (1864–1939)</div></div>
+        <div class="info-row"><div class="info-label">Children:</div><div class="info-value">
+            <a href="ellen-youmans.html">Ellen Mae "Ella" Youmans</a> (1892–1973)<br>
+            At least 2 sons and 1 daughter total
+        </div></div>
+        <div class="info-row"><div class="info-label">Siblings:</div><div class="info-value">
+            <a href="elmer-youmans.html">Elmer Elsworth Youmans</a> (b. 1862)
+        </div></div>
+        <div class="info-row"><div class="info-label">Paternal Grandfather:</div><div class="info-value"><a href="george-youmans-sr.html">George Youmans</a> (1823–1902)</div></div>
+        <div class="info-row"><div class="info-label">Paternal Grandmother:</div><div class="info-value"><a href="margaret-stryker.html">Margaret Stryker</a> (1827–1880)</div></div>
+    </div>
+
+    <div class="info-section">
+        <h2>Historical Notes</h2>
+        <div class="notes">
+            <p>George E. Youmans was born on 21 January 1866 in Jersey City, Hudson County, New Jersey. His father, Aaron William Youmans, was 23 years old at the time, and his mother, Rachel Sliker, was also 23. George was born into a family with deep roots in the furniture finishing and varnishing trade—his father and grandfather both worked as wood varnishers and finishers.</p>
+            
+            <p><strong>Family Life:</strong> George married Fanny O'Neill in 1889. Together they had at least three children: two sons and one daughter, including their daughter Ellen Mae "Ella" Youmans, who was born on 17 May 1892. Ella would later marry John Rowe Commerford and become the matriarch of the Commerford line.</p>
+            
+            <p><strong>Residences:</strong> Throughout his life, George lived in various locations within the Hudson and Bergen County area. In 1870, the family resided in Bergen Township, Hudson County. By 1880, they had moved to Washington Township in Bergen County. Records show the family later returned to Jersey City, where they lived at 9 Waverly Street by the time of the 1900 Census (shortly after George's death).</p>
+            
+            <p><strong>Tragic Early Death:</strong> George E. Youmans died on 21 January 1899 in Jersey City, exactly on his 33rd birthday. His untimely death left his wife Fanny a widow with young children to raise. The youngest, Ellen, was only about 6 or 7 years old at the time of her father's death. George was laid to rest at Pascack Cemetery in Park Ridge, Bergen County, New Jersey.</p>
+            
+            <p><strong>Legacy:</strong> After George's death, his widow Fanny would later remarry Perry Edward Bradley, a widower with three sons from his previous marriage. Despite his short life, George's descendants would continue the family line through his daughter Ellen, who had five children with John Rowe Commerford, ensuring the Youmans name lived on through future generations.</p>
+        </div>
+    </div>
+
+    <!-- ✅ Original Historical Records Section Preserved -->
+    <div class="info-section">
+        <h2>Historical Records & Documentation</h2>
+        <div class="notes">
+            <p><strong>U.S. Census Records:</strong></p>
+            <ul style="list-style: none; padding-left: 0; margin-top: 10px; margin-bottom: 25px;">
+                <li style="margin: 8px 0;"><span style="color: var(--muted-gray); margin-right: 8px;">☐</span><span style="color: var(--muted-gray);">1900 Census (died January 1899)</span></li>
+                <li style="margin: 8px 0;"><span style="color: var(--muted-gray); margin-right: 8px;">☐</span><span style="color: var(--muted-gray);">1890 Census (destroyed by fire)</span></li>
+                <li style="margin: 8px 0;"><span style="color: var(--muted-gray); margin-right: 8px;">☐</span><span style="color: var(--muted-gray);">1880 Census (not yet searched)</span></li>
+                <li style="margin: 8px 0;"><span style="color: var(--muted-gray); margin-right: 8px;">☐</span><span style="color: var(--muted-gray);">1870 Census (not yet searched)</span></li>
+            </ul>
+
+            <p><strong>Other Records:</strong></p>
+            <ul style="list-style: none; padding-left: 0; margin-top: 10px; margin-bottom: 25px;">
+                <li style="margin: 8px 0;"><span style="color: var(--muted-gray); margin-right: 8px;">☐</span><span style="color: var(--muted-gray);">Birth Certificate (not yet located)</span></li>
+                <li style="margin: 8px 0;"><span style="color: var(--success-green); margin-right: 8px;">✓</span>Marriage Certificate to Fanny O'Neill (1889)</li>
+                <li style="margin: 8px 0;"><span style="color: var(--muted-gray); margin-right: 8px;">☐</span><span style="color: var(--muted-gray);">Death Certificate (not yet located)</span></li>
+                <li style="margin: 8px 0;"><span style="color: var(--muted-gray); margin-right: 8px;">☐</span><span style="color: var(--muted-gray);">Burial Records - Pascack Cemetery (not yet located)</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="family-tree-link">
+        <a href="family-directory.html" class="tree-button">View Full Family Directory</a>
+    </div>
+</div>
+</body>
+</html>
