@@ -1,322 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[NAME] - Family Profile</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[NAME] - Family Profile</title>
+<style>
+    :root {
+        --blue-dark: #4B5E82;
+        --blue-light: #7D95B3;
+        --beige: #EDE1BB;
+        --peach: #E4B27C;
+        --terracotta: #C4876A;
+        --text-dark: #2C2C2C;
+        --background: #FAF9F7;
+    }
 
-        body {
-            font-family: 'Georgia', serif;
-            background: #e8e8e8;
-            color: #222;
-            min-height: 100vh;
-            padding: 20px;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Georgia', serif;
+        background: var(--background);
+        color: var(--text-dark);
+        min-height: 100vh;
+        padding: 20px;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .navigation {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .nav-link {
+        display: inline-block;
+        margin: 5px 10px;
+        color: var(--blue-dark);
+        text-decoration: none;
+        font-size: 1.05em;
+        transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: var(--terracotta);
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 30px;
+        border-bottom: 3px solid var(--peach);
+        padding-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        color: var(--blue-dark);
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .dates {
+        font-size: 1.2em;
+        color: var(--terracotta);
+        font-style: italic;
+    }
+
+    .info-section {
+        background: var(--beige);
+        border-left: 6px solid var(--blue-light);
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+
+    .info-section h2 {
+        color: var(--blue-dark);
+        font-size: 1.6em;
+        margin-bottom: 15px;
+        border-bottom: 2px solid var(--peach);
+        padding-bottom: 8px;
+    }
+
+    .info-row {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .info-label {
+        font-weight: bold;
+        color: var(--terracotta);
+    }
+
+    .info-value {
+        color: var(--blue-dark);
+    }
+
+    .info-value a {
+        color: var(--blue-dark);
+        text-decoration: underline;
+        transition: color 0.3s ease;
+    }
+
+    .info-value a:hover {
+        color: var(--terracotta);
+    }
+
+    .notes {
+        background: rgba(255,255,255,0.8);
+        border-left: 4px solid var(--blue-light);
+        padding: 15px;
+        border-radius: 5px;
+        color: var(--text-dark);
+    }
+
+    .notes p {
+        margin-bottom: 12px;
+    }
+
+    .family-tree-link {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .tree-button {
+        display: inline-block;
+        padding: 12px 25px;
+        background: var(--blue-dark);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 1.05em;
+        transition: all 0.3s ease;
+    }
+
+    .tree-button:hover {
+        background: var(--terracotta);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 600px) {
+        .info-row {
+            grid-template-columns: 1fr;
         }
 
         .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: #faf7f4;
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .navigation {
-            margin-bottom: 30px;
-        }
-
-        .nav-link {
-            display: inline-block;
-            margin-right: 20px;
-            color: #57728a;
-            text-decoration: none;
-            font-size: 1.1em;
-            transition: color 0.3s;
-        }
-
-        .nav-link:hover {
-            color: #7a1f35;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            border-bottom: 3px solid #7a1f35;
-            padding-bottom: 30px;
+            padding: 20px;
         }
 
         h1 {
-            font-size: 3em;
-            color: #7a1f35;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            margin-bottom: 15px;
+            font-size: 2em;
         }
-
-        .dates {
-            font-size: 1.3em;
-            color: #7a1f35;
-            font-style: italic;
-        }
-
-        .info-section {
-            background: rgba(87, 114, 138, 0.1);
-            border: 2px solid #7a1f35;
-            border-radius: 10px;
-            padding: 25px;
-            margin-bottom: 30px;
-        }
-
-        .info-section h2 {
-            color: #7a1f35;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-            padding-bottom: 10px;
-        }
-
-        .info-row {
-            display: grid;
-            grid-template-columns: 200px 1fr;
-            margin: 15px 0;
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(245, 230, 211, 0.1);
-        }
-
-        .info-row:last-child {
-            border-bottom: none;
-        }
-
-        .info-label {
-            color: #7a1f35;
-            font-weight: bold;
-        }
-
-        .info-value {
-            color: #7a1f35;
-        }
-
-        .info-value a {
-            color: #7a1f35;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .info-value a:hover {
-            color: #7a1f35;
-        }
-
-        .notes {
-            background: rgba(0, 0, 0, 0.3);
-            border-left: 4px solid #7a1f35;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 5px;
-        }
-
-        .notes p {
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-
-        .family-tree-link {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            background: rgba(87, 114, 138, 0.1);
-            border-radius: 10px;
-        }
-
-        .tree-button {
-            display: inline-block;
-            padding: 15px 30px;
-            background: #57728a;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1.1em;
-            transition: all 0.3s;
-        }
-
-        .tree-button:hover {
-            background: #7a1f35;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(122, 31, 53, 0.4);
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
-    <div class="container">
-        <nav class="navigation">
-            <a href="https://cgreposit.github.io/genealogysite/" class="nav-link">← Home</a>
-            <a href="family-directory.html" class="nav-link">← Family Directory</a>
-        </nav>
+<div class="container">
+    <nav class="navigation">
+        <a href="https://cgreposit.github.io/genealogysite/" class="nav-link">← Home</a>
+        <a href="family-directory.html" class="nav-link">← Family Directory</a>
+    </nav>
 
-        <header>
-            <h1>[FULL NAME]</h1>
-            <p class="dates">[BIRTH DATE] – [DEATH DATE]</p>
-        </header>
+    <header>
+        <h1>[FULL NAME]</h1>
+        <p class="dates">[BIRTH DATE] – [DEATH DATE]</p>
+    </header>
 
-        <div class="info-section">
-            <h2>Personal Information</h2>
-            <div class="info-row">
-                <div class="info-label">Date of Birth:</div>
-                <div class="info-value">[DATE]</div>
-            </div>
-            <div class="info-row">
-                <div class="info-label"></div>
-                <div class="info-value">[Birth Place]</div>
-            </div>
-            <div class="info-row">
-                <div class="info-label">Date of Death:</div>
-                <div class="info-value">[DATE]</div>
-            </div>
-            <div class="info-row">
-                <div class="info-label"></div>
-                <div class="info-value">[Death Place]</div>
-            </div>
-            <div class="info-row">
-                <div class="info-label">Age:</div>
-                <div class="info-value">[AGE] years</div>
-            </div>
-        </div>
-
-        <div class="info-section">
-            <h2>Family Relationships</h2>
-            <div class="info-row">
-                <div class="info-label">Father:</div>
-                <div class="info-value"><a href="[filename].html">[NAME]</a> ([DATES])</div>
-            </div>
-            <div class="info-row">
-                <div class="info-label">Mother:</div>
-                <div class="info-value"><a href="[filename].html">[NAME]</a> ([DATES])</div>
-            </div>
-            <div class="info-row">
-                <div class="info-label">Spouse:</div>
-                <div class="info-value"><a href="[filename].html">[NAME]</a> ([DATES])</div>
-            </div>
-            <div class="info-row">
-                <div class="info-label">Children:</div>
-                <div class="info-value">
-                    <a href="[filename].html">[CHILD 1 NAME]</a> ([DATES])<br>
-                    <a href="[filename].html">[CHILD 2 NAME]</a> ([DATES])<br>
-                    <!-- Add more children as needed -->
-                </div>
-            </div>
-            <div class="info-row">
-                <div class="info-label">Siblings:</div>
-                <div class="info-value">
-                    <a href="[filename].html">[SIBLING 1 NAME]</a> ([DATES])<br>
-                    <a href="[filename].html">[SIBLING 2 NAME]</a> ([DATES])<br>
-                    <!-- Add more siblings as needed -->
-                </div>
-            </div>
-        </div>
-
-        <div class="info-section">
-            <h2>Historical Notes</h2>
-            <div class="notes">
-                <p>[Add biographical information, life events, historical context, and family stories here.]</p>
-                <p><strong>[Section Title if needed]:</strong> [Additional details about career, achievements, or important life events.]</p>
-                <p>[Continue with additional paragraphs as needed to tell their story.]</p>
-               
-
-            </div>
-        </div>
-<div class="info-section">
-            <h2>Historical Records & Documentation</h2>
-            <div class="notes">
-                <p><strong>U.S. Census Records:</strong></p>
-                <ul style="list-style: none; padding-left: 0; margin-top: 10px; margin-bottom: 25px;">
-                    <li style="margin: 8px 0;">
-                        <span style="color: #4CAF50; margin-right: 8px;">✓</span>
-                        <a href="[URL_TO_1950_CENSUS]" target="_blank" style="color: #57728a; text-decoration: underline;">1950 Census</a>
-                    </li>
-                    <li style="margin: 8px 0;">
-                        <span style="color: #4CAF50; margin-right: 8px;">✓</span>
-                        <a href="[URL_TO_1940_CENSUS]" target="_blank" style="color: #57728a; text-decoration: underline;">1940 Census</a>
-                    </li>
-                    <li style="margin: 8px 0;">
-                        <span style="color: #4CAF50; margin-right: 8px;">✓</span>
-                        <a href="[URL_TO_1930_CENSUS]" target="_blank" style="color: #57728a; text-decoration: underline;">1930 Census</a>
-                    </li>
-                    <li style="margin: 8px 0;">
-                        <span style="color: #4CAF50; margin-right: 8px;">✓</span>
-                        <a href="[URL_TO_1920_CENSUS]" target="_blank" style="color: #57728a; text-decoration: underline;">1920 Census</a>
-                    </li>
-                    <li style="margin: 8px 0;">
-                        <span style="color: #4CAF50; margin-right: 8px;">✓</span>
-                        <a href="[URL_TO_1910_CENSUS]" target="_blank" style="color: #57728a; text-decoration: underline;">1910 Census</a>
-                    </li>
-                    <li style="margin: 8px 0;">
-                        <span style="color: #4CAF50; margin-right: 8px;">✓</span>
-                        <a href="[URL_TO_1900_CENSUS]" target="_blank" style="color: #57728a; text-decoration: underline;">1900 Census</a>
-                    </li>
-                    <li style="margin: 8px 0;">
-                        <span style="color: #999; margin-right: 8px;">☐</span>
-                        <span style="color: #999;">1890 Census (not found - most records destroyed by fire)</span>
-                    </li>
-                    <li style="margin: 8px 0;">
-                        <span style="color: #999; margin-right: 8px;">☐</span>
-                        <span style="color: #999;">1880 Census (not found)</span>
-                    </li>
-                </ul>
-
-                <p><strong>Immigration Records: [IF APPLICABLE]</strong></p>
-                <ul style="list-style: none; padding-left: 0; margin-top: 10px; margin-bottom: 25px;">
-                    <li style="margin: 8px 0;">
-                        <span style="color: #4CAF50; margin-right: 8px;">✓</span>
-                        <a href="[URL_TO_ELLIS_ISLAND]" target="_blank" style="color: #57728a; text-decoration: underline;">Ellis Island Passenger Record ([YEAR])</a>
-                    </li>
-                    <li style="margin: 8px 0;">
-                        <span style="color: #4CAF50; margin-right: 8px;">✓</span>
-                        <a href="[URL_TO_SHIP_MANIFEST]" target="_blank" style="color: #57728a; text-decoration: underline;">Ship Manifest - [SHIP NAME] ([DATE])</a>
-                    </li>
-                    <li style="margin: 8px 0;">
-                        <span style="color: #4CAF50; margin-right: 8px;">✓</span>
-                        <a href="[URL_TO_NATURALIZATION]" target="_blank" style="color: #57728a; text-decoration: underline;">Naturalization Papers ([YEAR])</a>
-                    </li>
-                    <li style="margin: 8px 0;">
-                        <span style="color: #999; margin-right: 8px;">☐</span>
-                        <span style="color: #999;">Passport/Travel Documents (not found)</span>
-                    </li>
-                </ul>
-
-                <p><strong>Other Records:</strong></p>
-                <ul style="list-style: none; padding-left: 0; margin-top: 10px; margin-bottom: 25px;">
-                    <li style="margin: 8px 0;">
-                        <span style="color: #4CAF50; margin-right: 8px;">✓</span>
-                        <a href="[URL_TO_BIRTH_CERTIFICATE]" target="_blank" style="color: #57728a; text-decoration: underline;">Birth Certificate</a>
-                    </li>
-                    <li style="margin: 8px 0;">
-                        <span style="color: #4CAF50; margin-right: 8px;">✓</span>
-                        <a href="[URL_TO_MARRIAGE_CERTIFICATE]" target="_blank" style="color: #57728a; text-decoration: underline;">Marriage Certificate ([YEAR])</a>
-                    </li>
-                    <li style="margin: 8px 0;">
-                        <span style="color: #4CAF50; margin-right: 8px;">✓</span>
-                        <a href="[URL_TO_DEATH_CERTIFICATE]" target="_blank" style="color: #57728a; text-decoration: underline;">Death Certificate</a>
-                    </li>
-                    <li style="margin: 8px 0;">
-                        <span style="color: #4CAF50; margin-right: 8px;">✓</span>
-                        <a href="[URL_TO_MILITARY_RECORD]" target="_blank" style="color: #57728a; text-decoration: underline;">Military Service Records</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-    
-        
-        <div class="family-tree-link">
-            <a href="family-directory.html" class="tree-button">View Full Family Directory</a>
-        </div>
-        
+    <div class="info-section">
+        <h2>Personal Information</h2>
+        <div class="info-row"><div class="info-label">Date of Birth:</div><div class="info-value">[DATE]</div></div>
+        <div class="info-row"><div class="info-label">Birth Place:</div><div class="info-value">[PLACE]</div></div>
+        <div class="info-row"><div class="info-label">Date of Death:</div><div class="info-value">[DATE]</div></div>
+        <div class="info-row"><div class="info-label">Death Place:</div><div class="info-value">[PLACE]</div></div>
+        <div class="info-row"><div class="info-label">Age:</div><div class="info-value">[AGE] years</div></div>
     </div>
+
+    <div class="info-section">
+        <h2>Family Relationships</h2>
+        <div class="info-row"><div class="info-label">Father:</div><div class="info-value"><a href="[filename].html">[NAME]</a> ([DATES])</div></div>
+        <div class="info-row"><div class="info-label">Mother:</div><div class="info-value"><a href="[filename].html">[NAME]</a> ([DATES])</div></div>
+        <div class="info-row"><div class="info-label">Spouse:</div><div class="info-value"><a href="[filename].html">[NAME]</a> ([DATES])</div></div>
+        <div class="info-row"><div class="info-label">Children:</div><div class="info-value"><a href="[filename].html">[CHILD 1]</a><br><a href="[filename].html">[CHILD 2]</a></div></div>
+        <div class="info-row"><div class="info-label">Siblings:</div><div class="info-value"><a href="[filename].html">[SIBLING 1]</a><br><a href="[filename].html">[SIBLING 2]</a></div></div>
+    </div>
+
+    <div class="info-section">
+        <h2>Historical Notes</h2>
+        <div class="notes">
+            <p>[Add life story, events, and historical context here.]</p>
+            <p><strong>[Section Title if needed]:</strong> [Career, achievements, or key events.]</p>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <h2>Historical Records & Documentation</h2>
+        <div class="notes">
+            <p><strong>U.S. Census Records:</strong></p>
+            <ul style="list-style:none; padding-left:0;">
+                <li>✓ <a href="[URL_TO_1950_CENSUS]" target="_blank">1950 Census</a></li>
+                <li>✓ <a href="[URL_TO_1940_CENSUS]" target="_blank">1940 Census</a></li>
+                <li>☐ 1890 Census (not found - destroyed by fire)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="family-tree-link">
+        <a href="family-directory.html" class="tree-button">View Full Family Directory</a>
+    </div>
+</div>
 </body>
 </html>
