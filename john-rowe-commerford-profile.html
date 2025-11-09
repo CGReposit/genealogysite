@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>John Rowe Commerford - Family Profile</title>
+<style>
+    :root {
+        --blue-dark: #4B5E82;
+        --blue-light: #7D95B3;
+        --beige: #EDE1BB;
+        --peach: #E4B27C;
+        --terracotta: #C4876A;
+        --text-dark: #2C2C2C;
+        --background: #FAF9F7;
+        --success-green: #4CAF50;
+        --muted-gray: #999;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Georgia', serif;
+        background: var(--background);
+        color: var(--text-dark);
+        min-height: 100vh;
+        padding: 20px;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .navigation {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .nav-link {
+        display: inline-block;
+        margin: 5px 10px;
+        color: var(--blue-dark);
+        text-decoration: none;
+        font-size: 1.05em;
+        transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: var(--terracotta);
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 30px;
+        border-bottom: 3px solid var(--peach);
+        padding-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        color: var(--blue-dark);
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .dates {
+        font-size: 1.2em;
+        color: var(--terracotta);
+        font-style: italic;
+    }
+
+    .info-section {
+        background: var(--beige);
+        border-left: 6px solid var(--blue-light);
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+
+    .info-section h2 {
+        color: var(--blue-dark);
+        font-size: 1.6em;
+        margin-bottom: 15px;
+        border-bottom: 2px solid var(--peach);
+        padding-bottom: 8px;
+    }
+
+    .info-row {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .info-label {
+        font-weight: bold;
+        color: var(--terracotta);
+    }
+
+    .info-value {
+        color: var(--blue-dark);
+    }
+
+    .info-value a {
+        color: var(--blue-dark);
+        text-decoration: underline;
+        transition: color 0.3s ease;
+    }
+
+    .info-value a:hover {
+        color: var(--terracotta);
+    }
+
+    .notes {
+        background: rgba(255,255,255,0.8);
+        border-left: 4px solid var(--blue-light);
+        padding: 15px;
+        border-radius: 5px;
+        color: var(--text-dark);
+    }
+
+    .notes p {
+        margin-bottom: 12px;
+    }
+
+    .notes a {
+        color: var(--blue-light);
+        text-decoration: underline;
+        transition: color 0.3s ease;
+    }
+
+    .notes a:hover {
+        color: var(--terracotta);
+    }
+
+    .family-tree-link {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .tree-button {
+        display: inline-block;
+        padding: 12px 25px;
+        background: var(--blue-dark);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 1.05em;
+        transition: all 0.3s ease;
+    }
+
+    .tree-button:hover {
+        background: var(--terracotta);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 600px) {
+        .info-row {
+            grid-template-columns: 1fr;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <nav class="navigation">
+        <a href="https://cgreposit.github.io/genealogysite/" class="nav-link">← Home</a>
+        <a href="family-directory.html" class="nav-link">← Family Directory</a>
+    </nav>
+
+    <header>
+        <h1>John Rowe Commerford</h1>
+        <p class="dates">29 May 1884 – 29 January 1968</p>
+    </header>
+
+    <div class="info-section">
+        <h2>Personal Information</h2>
+        <div class="info-row"><div class="info-label">Date of Birth:</div><div class="info-value">29 May 1884</div></div>
+        <div class="info-row"><div class="info-label">Birth Place:</div><div class="info-value">New Jersey, United States</div></div>
+        <div class="info-row"><div class="info-label">Date of Death:</div><div class="info-value">29 January 1968</div></div>
+        <div class="info-row"><div class="info-label">Death Place:</div><div class="info-value">Bergen County, New Jersey, United States</div></div>
+        <div class="info-row"><div class="info-label">Burial Place:</div><div class="info-value">Pascack Cemetery, Park Ridge, Bergen County, New Jersey, USA</div></div>
+        <div class="info-row"><div class="info-label">Age:</div><div class="info-value">83 years</div></div>
+    </div>
+
+    <div class="info-section">
+        <h2>Family Relationships</h2>
+        <div class="info-row"><div class="info-label">Father:</div><div class="info-value"><a href="charles-commerford.html">Charles C Commerford</a> (1833–1920)</div></div>
+        <div class="info-row"><div class="info-label">Mother:</div><div class="info-value"><a href="elizabeth-hamilton.html">Elizabeth Hamilton</a> (b. 1859)</div></div>
+        <div class="info-row"><div class="info-label">First Spouse:</div><div class="info-value"><a href="grace-truman.html">Grace Truman Duvall</a> (1882–1911)</div></div>
+        <div class="info-row"><div class="info-label">Second Spouse:</div><div class="info-value"><a href="ellen-youmans.html">Ellen Mae "Ella" Youmans</a> (1892–1973)</div></div>
+        <div class="info-row"><div class="info-label">Children:</div><div class="info-value">
+            <a href="carol-commerford.html">Carol Commerford</a> (1914–1989)<br>
+            <a href="ruth-commerford.html">Ruth Commerford</a> (b. 1914)<br>
+            <a href="john-commerford-jr.html">John "Jack" R Commerford Jr.</a> (1917–2002)<br>
+            <a href="edward-commerford.html">Edward Bradley "Pali" Commerford</a> (1918–1999)<br>
+            <a href="robert-commerford.html">Robert Cleves "Bob" Commerford</a> (1926–2019)
+        </div></div>
+    </div>
+
+    <div class="info-section">
+        <h2>Historical Notes</h2>
+        <div class="notes">
+            <p>John Rowe Commerford was born on 29 May 1884 in New Jersey to Charles C Commerford, who was 50 years old at the time, and Elizabeth Hamilton, who was approximately 25. He was the son of a notable father—Charles was a former professional baseball player for the New York Gothams and later became postmaster, appointed by President Grover Cleveland in 1886.</p>
+            
+            <p><strong>First Marriage and Ohio Years:</strong> On 3 October 1907, John married Grace Truman Duvall in Muskingum County, Ohio. Grace was from Ohio, and John relocated to the state following their marriage. Tragically, Grace passed away in 1911 at the age of 29, leaving John a widower after just four years of marriage.</p>
+            
+            <p><strong>Second Marriage and Family Life:</strong> John later married Ellen Mae "Ella" Youmans (born 17 May 1892), and together they built a large family. When their son Edward Bradley was born on 17 July 1918 in Jersey City, Hudson County, New Jersey, John was 34 years old and Ellen was 26. The couple had five children together: Carol (1914–1989), Ruth (b. 1914), John "Jack" Jr. (1917–2002), Edward "Pali" (1918–1999), and Robert "Bob" (1926–2019).</p>
+            
+            <p><strong>Military Service:</strong> John served his country during World War I from 1917 to 1918, contributing to the war effort during a pivotal time in American history.</p>
+            
+            <p><strong>Business Career:</strong> By the time of the 1920 Census, John had established himself as a successful businessman. He listed his occupation as President of his own Lithography Company, demonstrating entrepreneurial achievement and leadership in the printing industry.</p>
+            
+            <p><strong>Residence:</strong> The Commerford family lived at 5 Park Avenue in Westwood, Bergen County, New Jersey—a testament to John's professional success and social standing in the community.</p>
+            
+            <p>John Rowe Commerford passed away on 29 January 1968 at the age of 83, having lived through two world wars, the Great Depression, and remarkable social change. He was laid to rest at Pascack Cemetery in Park Ridge, Bergen County, New Jersey, alongside other members of the Commerford and Youmans families.</p>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <h2>Historical Records & Documentation</h2>
+        <div class="notes">
+            <p><strong>U.S. Census Records:</strong></p>
+            <ul style="list-style: none; padding-left: 0; margin-top: 10px; margin-bottom: 25px;">
+                <li style="margin: 8px 0;"><span style="color: var(--muted-gray); margin-right: 8px;">☐</span><span style="color: var(--muted-gray);">1950 Census (not yet searched)</span></li>
+                <li style="margin: 8px 0;"><span style="color: var(--muted-gray); margin-right: 8px;">☐</span><span style="color: var(--muted-gray);">1940 Census (not yet searched)</span></li>
+                <li style="margin: 8px 0;"><span style="color: var(--muted-gray); margin-right: 8px;">☐</span><span style="color: var(--muted-gray);">1930 Census (not yet searched)</span></li>
+                <li style="margin: 8px 0;"><span style="color: var(--success-green); margin-right: 8px;">✓</span>1920 Census (found - listed as Lithography Co. President)</li>
+                <li style="margin: 8px 0;"><span style="color: var(--muted-gray); margin-right: 8px;">☐</span><span style="color: var(--muted-gray);">1910 Census (not yet searched)</span></li>
+                <li style="margin: 8px 0;"><span style="color: var(--muted-gray); margin-right: 8px;">☐</span><span style="color: var(--muted-gray);">1900 Census (not yet searched)</span></li>
+                <li style="margin: 8px 0;"><span style="color: var(--muted-gray); margin-right: 8px;">☐</span><span style="color: var(--muted-gray);">1890 Census (destroyed by fire)</span></li>
+            </ul>
+
+            <p><strong>Military Records:</strong></p>
+            <ul style="list-style: none; padding-left: 0; margin-top: 10px; margin-bottom: 25px;">
+                <li style="margin: 8px 0;"><span style="color: var(--success-green); margin-right: 8px;">✓</span>World War I Service Records (1917–1918)</li>
+                <li style="margin: 8px 0;"><span style="color: var(--muted-gray); margin-right: 8px;">☐</span><span style="color: var(--muted-gray);">Draft Registration Card (not yet located)</span></li>
+            </ul>
+
+            <p><strong>Other Records:</strong></p>
+            <ul style="list-style: none; padding-left: 0; margin-top: 10px; margin-bottom: 25px;">
+                <li style="margin: 8px 0;"><span style="color: var(--muted-gray); margin-right: 8px;">☐</span><span style="color: var(--muted-gray);">Birth Certificate (not yet located)</span></li>
+                <li style="margin: 8px 0;"><span style="color: var(--success-green); margin-right: 8px;">✓</span>Marriage Certificate to Grace Truman Duvall (3 October 1907, Muskingum County, Ohio)</li>
+                <li style="margin: 8px 0;"><span style="color: var(--muted-gray); margin-right: 8px;">☐</span><span style="color: var(--muted-gray);">Marriage Certificate to Ellen Mae Youmans (not yet located)</span></li>
+                <li style="margin: 8px 0;"><span style="color: var(--muted-gray); margin-right: 8px;">☐</span><span style="color: var(--muted-gray);">Death Certificate (not yet located)</span></li>
+                <li style="margin: 8px 0;"><span style="color: var(--muted-gray); margin-right: 8px;">☐</span><span style="color: var(--muted-gray);">Business Records - Lithography Company (not yet located)</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="family-tree-link">
+        <a href="family-directory.html" class="tree-button">View Full Family Directory</a>
+    </div>
+</div>
+</body>
+</html>
