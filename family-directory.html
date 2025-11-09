@@ -1,101 +1,183 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=640">
-    <title>Family Directory - Commerford Lineage</title>
-    <style>
-        /* Styling preserved from original */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font: 15px/22.5px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            color: #2e2e2e; font-weight: 300;
-            background: #d7cec7; -webkit-font-smoothing: antialiased;
-        }
-        .shell {
-            background: linear-gradient(to bottom, #76323f 0%, #5c1f1f 7%, #541a1a 100%);
-            min-height: 100vh; padding: 50px 0;
-        }
-        .container {
-            width: 90%; max-width: 1200px; margin: 0 auto;
-            background: #d7cec7; border-radius: 4px;
-            padding: 40px 50px; box-shadow: 0 0 30px rgba(0,0,0,0.4);
-        }
-        .back-link { display:inline-block; margin-bottom:30px; color:#76323f; text-decoration:none; font-size:16px; font-weight:400; }
-        .back-link:hover { text-decoration: underline; }
-        header { border-bottom:1px solid #b9b9b9; padding-bottom:30px; margin-bottom:40px; }
-        h1 { font-size:42px; font-weight:bold; color:#474747; margin:0 0 10px 0; line-height:1.2; letter-spacing:-1px; }
-        .subtitle { font-size:18px; color:#9c8577; font-weight:300; font-style:italic; }
-        .stats { text-align:center; margin:30px 0; padding:20px; background:rgba(255,255,255,0.4); border-radius:3px; border:1px solid #b9b9b9; }
-        .stats span { color:#76323f; font-weight:bold; font-size:24px; }
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Family Directory - Commerford Lineage</title>
+<style>
+:root {
+    --blue-dark: #4B5E82;
+    --blue-light: #7D95B3;
+    --beige: #EDE1BB;
+    --peach: #E4B27C;
+    --terracotta: #C4876A;
+    --text-dark: #2C2C2C;
+    --background: #FAF9F7;
+}
 
-        /* Adjusted reference-note styling */
-        .reference-note {
-            font-size: 16px;               /* slightly smaller font */
-            color: #4a3c38;
-            text-align: left;              /* align text to the left */
-            margin: 30px 0 20px 30px;      /* indentation and spacing */
-            line-height: 1.7;
-        }
+/* Reset & Base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Georgia', serif;
+    background: var(--background);
+    color: var(--text-dark);
+    line-height: 1.7;
+    padding: 40px 0;
+    -webkit-font-smoothing: antialiased;
+}
 
-        /* Optional body-info area below the note */
-        .reference-info {
-            font-size: 15px;
-            color: #2e2e2e;
-            margin: 10px 0 60px 30px;      /* same left indent */
-            line-height: 1.6;
-        }
+/* Layout Containers */
+.shell {
+    background: linear-gradient(to bottom, var(--blue-dark) 0%, var(--blue-light) 100%);
+    min-height: 100vh;
+    padding: 40px 0;
+}
 
-        .generation-section { margin-bottom:50px; }
-        .generation-title { font-size:28px; color:#76323f; margin-bottom:15px; padding-left:15px; border-left:4px solid #76323f; font-weight:bold; }
-        .generation-note { font-size:14px; color:#9c8577; font-style:italic; margin-bottom:25px; padding-left:15px; }
-        .family-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:20px; margin-top:20px; }
-        .family-card { background:rgba(255,255,255,0.6); border:1px solid #b9b9b9; border-radius:3px; padding:20px; transition:all .25s ease; cursor:pointer; }
-        .family-card:hover { box-shadow:0 3px 10px rgba(118,50,63,0.25); border-color:#76323f; transform:translateY(-2px); background:rgba(255,255,255,0.85); }
-        .family-card h3 { color:#76323f; font-size:20px; margin:0 0 15px 0; padding-bottom:10px; border-bottom:1px solid rgba(185,185,185,0.5); font-weight:bold; }
-        .detail { margin:8px 0; color:#666; font-size:14px; line-height:1.6; }
-        .detail strong { color:#474747; font-weight:600; }
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    padding: 40px 50px;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.1);
+}
 
-        @media screen and (max-width:768px){ 
-            .container{width:95%;padding:25px;} 
-            .generation-title{font-size:24px;} 
-            .family-grid{grid-template-columns:1fr;} 
-        }
-        @media screen and (max-width:480px){ 
-            h1{font-size:28px;} 
-            .generation-title{font-size:20px;} 
-        }
-    </style>
+/* Header + Navigation */
+.back-link {
+    display: inline-block;
+    margin-bottom: 30px;
+    color: var(--blue-dark);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+.back-link:hover { color: var(--terracotta); }
+
+header {
+    border-bottom: 3px solid var(--peach);
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+h1 {
+    font-size: 2.5em;
+    color: var(--blue-dark);
+}
+.subtitle {
+    font-size: 18px;
+    color: var(--terracotta);
+    font-style: italic;
+}
+
+/* Stats Box */
+.stats {
+    text-align: center;
+    margin: 30px 0;
+    padding: 20px;
+    background: var(--beige);
+    border-left: 5px solid var(--blue-light);
+    border-radius: 8px;
+}
+.stats span { color: var(--blue-dark); font-weight: bold; font-size: 1.4em; }
+
+/* Reference Note */
+.reference-note {
+    font-size: 16px;
+    color: var(--text-dark);
+    background: rgba(255,255,255,0.8);
+    border-left: 5px solid var(--blue-light);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+/* Section Titles */
+.generation-section { margin-bottom: 50px; }
+.generation-title {
+    font-size: 1.8em;
+    color: var(--blue-dark);
+    margin-bottom: 15px;
+    padding-left: 15px;
+    border-left: 5px solid var(--terracotta);
+}
+.generation-note {
+    font-size: 0.9em;
+    color: var(--blue-light);
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* Family Cards */
+.family-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+.family-card {
+    background: var(--beige);
+    border-left: 6px solid var(--blue-light);
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+.family-card:hover {
+    background: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.family-card h3 {
+    color: var(--blue-dark);
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--peach);
+    padding-bottom: 8px;
+}
+.detail {
+    font-size: 0.95em;
+    margin: 6px 0;
+}
+.detail strong {
+    color: var(--terracotta);
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .container { width: 95%; padding: 25px; }
+    .generation-title { font-size: 1.4em; }
+}
+@media screen and (max-width: 480px) {
+    h1 { font-size: 1.8em; }
+}
+</style>
 </head>
 <body>
 <div class="shell">
 <div class="container">
+
 <a href="https://cgreposit.github.io/genealogysite/" class="back-link">← Back to Home</a>
+
 <header>
-<h1>Family Directory</h1>
-<p class="subtitle">(in)Complete Genealogical Records</p>
+    <h1>Family Directory</h1>
+    <p class="subtitle">(in)Complete Genealogical Records</p>
 </header>
 
 <div class="stats"><p>Total ancestors fully or partially identified: <span>33</span></p></div>
 
-<!-- Updated reference note section -->
 <div class="reference-note">
-    <p> This directory contains all the ancestors identified in our lineage.  </p>
-  &nbsp;
+    <p>This directory contains all the ancestors identified in our lineage.</p>
     <p>This lineage begins with <strong>Dad</strong> as the reference point:</p>
     <p>Dad → Parents → Grandparents → Great Grandparents → etc.</p>
 </div>
-
-
-
 
 <!-- Parents -->
 <div class="generation-section">
 <h2 class="generation-title">Parents</h2>
 <div class="family-grid">
 
-<div class="family-card" onclick="window.location.href='jeannette-commerford.html'">
+<div class="family-card" onclick="window.location.href='ancestors/jeannette-commerford.html'">
 <h3>Jeannette A Malcuit</h3>
 <div class="detail"><strong>Born:</strong> 26 Oct 1926</div>
 <div class="detail"><strong>Died:</strong> 11 Apr 2020 (age 93)</div>
@@ -103,23 +185,23 @@
 <div class="detail"><strong>Spouse:</strong> Edward Bradley "Pali" Commerford</div>
 </div>
 
-<div class="family-card" onclick="window.location.href='edward-bradley-commerford.html'">
+<div class="family-card" onclick="window.location.href='ancestors/edward-bradley-commerford.html'">
 <h3>Edward Bradley "Pali" Commerford</h3>
 <div class="detail"><strong>Born:</strong> 17 Jul 1918</div>
 <div class="detail"><strong>Died:</strong> 5 Jun 1999 (age 80)</div>
 <div class="detail"><strong>Parents:</strong> John Rowe Commerford & Ellen Mae "Ella" Youmans</div>
 <div class="detail"><strong>Spouse:</strong> Jeannette Angela Commerford</div>
 </div>
-</div>
-</div>
 
+</div>
+</div>
 
 <!-- Grandparents -->
 <div class="generation-section">
 <h2 class="generation-title">Grandparents</h2>
 <div class="family-grid">
 
-<div class="family-card" onclick="window.location.href='maria-malcuit.html'">
+<div class="family-card" onclick="window.location.href='ancestors/maria-malcuit.html'">
 <h3>Maria Favini</h3>
 <div class="detail"><strong>Born:</strong> 1901</div>
 <div class="detail"><strong>Died:</strong> 1986 (age 85)</div>
@@ -127,7 +209,7 @@
 <div class="detail"><strong>Spouse:</strong> Maurice Malcuit</div>
 </div>
 
-<div class="family-card" onclick="window.location.href='maurice-malcuit.html'">
+<div class="family-card" onclick="window.location.href='ancestors/maurice-malcuit.html'">
 <h3>Maurice Malcuit</h3>
 <div class="detail"><strong>Born:</strong> 1897</div>
 <div class="detail"><strong>Died:</strong> 1966 (age 69)</div>
@@ -135,7 +217,7 @@
 <div class="detail"><strong>Spouse:</strong> Mary Malcuit</div>
 </div>
 
-<div class="family-card" onclick="window.location.href='ellen-mae-commerford.html'">
+<div class="family-card" onclick="window.location.href='ancestors/ellen-commerford.html'">
 <h3>Ellen Mae "Ella" Youmans</h3>
 <div class="detail"><strong>Born:</strong> 17 May 1892</div>
 <div class="detail"><strong>Died:</strong> 21 Jan 1973 (age 80)</div>
@@ -143,51 +225,51 @@
 <div class="detail"><strong>Spouse:</strong> John Rowe Commerford</div>
 </div>
 
-<div class="family-card" onclick="window.location.href='john-rowe-commerford.html'">
+<div class="family-card" onclick="window.location.href='ancestors/john-r-commerford.html'">
 <h3>John Rowe Commerford</h3>
 <div class="detail"><strong>Born:</strong> 29 May 1884</div>
 <div class="detail"><strong>Died:</strong> 29 Jan 1968 (age 83)</div>
 <div class="detail"><strong>Parents:</strong> Charles C. Commerford & Elizabeth Hamilton</div>
 <div class="detail"><strong>Spouse:</strong> Ellen Mae "Ella" Commerford</div>
 </div>
+
 </div>
 </div>
 
 <!-- Great Grandparents -->
 <div class="generation-section">
 <h2 class="generation-title">Great Grandparents</h2>
-<p class="generation-note">8 of 8 identified</p>
 <div class="family-grid">
 
-<div class="family-card" onclick="window.location.href='fanny-o-neill.html'">
+<div class="family-card" onclick="window.location.href='ancestors/fanny-o-neill.html'">
 <h3>Fanny O'Neill</h3>
-<div class="detail"><strong>Born:</strong> 20 Dec 1864</div>
-<div class="detail"><strong>Died:</strong> 1939 (age 75)</div>
+<div class="detail"><strong>Born:</strong> 1844</div>
+<div class="detail"><strong>Died:</strong> 1916 (age 72)</div>
 <div class="detail"><strong>Parents:</strong> Dennis O'Neill & Mary Jane Ring</div>
 <div class="detail"><strong>Spouse:</strong> George E. Youmans</div>
 </div>
 
-<div class="family-card" onclick="window.location.href='george-e-youmans.html'">
+<div class="family-card" onclick="window.location.href='ancestors/george-eyoumans-profile.html'">
 <h3>George E. Youmans</h3>
 <div class="detail"><strong>Born:</strong> 21 Jan 1866</div>
 <div class="detail"><strong>Died:</strong> 21 Jan 1899 (age 33)</div>
-<div class="detail"><strong>Parents:</strong> Aaron W Youmans & Rachel Sliker</div>
-<div class="detail"><strong>Spouse:</strong> Fanny Youmans</div>
+<div class="detail"><strong>Parents:</strong> Aaron W. Youmans & Rachel Sliker</div>
+<div class="detail"><strong>Spouse:</strong> Fanny O’Neill</div>
 </div>
 
-<div class="family-card" onclick="window.location.href='elizabeth-hamilton.html'">
+<div class="family-card" onclick="window.location.href='ancestors/elizabeth-hamilton.html'">
 <h3>Elizabeth Hamilton</h3>
 <div class="detail"><strong>Born:</strong> 18 Jul 1859</div>
 <div class="detail"><strong>Parents:</strong> Alexander James Ferris Hamilton & Elize Charlier</div>
 <div class="detail"><strong>Spouse:</strong> Charles C. Commerford</div>
 </div>
 
-<div class="family-card" onclick="window.location.href='charles-c-commerford.html'">
+<div class="family-card" onclick="window.location.href='ancestors/charles-c-commerford.html'">
 <h3>Charles C. Commerford</h3>
 <div class="detail"><strong>Born:</strong> 2 Jun 1833</div>
 <div class="detail"><strong>Died:</strong> 6 Feb 1920 (age 86)</div>
 <div class="detail"><strong>Parents:</strong> John Commerford & Maria Ferris</div>
-<div class="detail"><strong>Spouse:</strong> Elizabeth Commerford</div>
+<div class="detail"><strong>Spouse:</strong> Elizabeth Hamilton</div>
 </div>
 
 </div>
@@ -196,17 +278,17 @@
 <!-- Great Great Grandparents -->
 <div class="generation-section">
 <h2 class="generation-title">Great Great Grandparents</h2>
-<p class="generation-note">A person has a total of 16 great great Grandparents. In our case, 8 have been (partially) identified</p>
+<p class="generation-note">A person has a total of 16 great great grandparents. In our case, 8 have been (partially) identified.</p>
 <div class="family-grid">
 
-<div class="family-card" onclick="window.location.href='mary-jane-o-neill.html'">
+<div class="family-card" onclick="window.location.href='ancestors/mary-jane-o-neill.html'">
 <h3>Mary Jane Ring</h3>
 <div class="detail"><strong>Born:</strong> Aug 1832</div>
 <div class="detail"><strong>Died:</strong> 2 Feb 1926 (age 93)</div>
 <div class="detail"><strong>Spouse:</strong> Dennis O'Neill</div>
 </div>
 
-<div class="family-card" onclick="window.location.href='dennis-o-neill.html'">
+<div class="family-card" onclick="window.location.href='ancestors/dennis-o-neill.html'">
 <h3>Dennis O'Neill</h3>
 <div class="detail"><strong>Born:</strong> 9 Jun 1840</div>
 <div class="detail"><strong>Died:</strong> 25 Jan 1906 (age 65)</div>
@@ -214,40 +296,40 @@
 <div class="detail"><strong>Spouse:</strong> Mary Jane O'Neill</div>
 </div>
 
-<div class="family-card" onclick="window.location.href='rachel-silker.html'">
+<div class="family-card" onclick="window.location.href='ancestors/rachel-silker.html'">
 <h3>Rachel Sliker</h3>
 <div class="detail"><strong>Born:</strong> 13 Sep 1842</div>
 <div class="detail"><strong>Parents:</strong> William L Sliker & Elisabeth Swazey</div>
 <div class="detail"><strong>Spouse:</strong> Aaron W Youmans</div>
 </div>
 
-<div class="family-card" onclick="window.location.href='aaron-youmans.html'">
+<div class="family-card" onclick="window.location.href='ancestors/aaron-youmans.html'">
 <h3>Aaron W Youmans</h3>
 <div class="detail"><strong>Born:</strong> 1842</div>
 <div class="detail"><strong>Parents:</strong> George Youmans & Margaret Stryker</div>
 <div class="detail"><strong>Spouse:</strong> Rachel Youmans</div>
 </div>
 
-<div class="family-card" onclick="window.location.href='john-commerford.html'">
+<div class="family-card" onclick="window.location.href='ancestors/john-commerford.html'">
 <h3>John Commerford</h3>
 <div class="detail"><strong>Born:</strong> 1800</div>
 <div class="detail"><strong>Died:</strong> 1878 (age 78)</div>
 <div class="detail"><strong>Spouse:</strong> Maria Commerford</div>
 </div>
 
-<div class="family-card" onclick="window.location.href='maria-commerford.html'">
+<div class="family-card" onclick="window.location.href='ancestors/maria-commerford.html'">
 <h3>Maria Ferris</h3>
 <div class="detail"><strong>Born:</strong> 1806</div>
 <div class="detail"><strong>Spouse:</strong> John Commerford</div>
 </div>
 
-<div class="family-card" onclick="window.location.href='henri-malcuit.html'">
+<div class="family-card" onclick="window.location.href='ancestors/henri-malcuit.html'">
 <h3>Henri (Jean) Malcuit</h3>
 <div class="detail"><strong>Born:</strong> Unknown</div>
 <div class="detail"><strong>Spouse:</strong> Maria Malcuit</div>
 </div>
 
-<div class="family-card" onclick="window.location.href='maria-malcuit-elder.html'">
+<div class="family-card" onclick="window.location.href='ancestors/maria-malcuit-elder.html'">
 <h3>Maria Malcuit</h3>
 <div class="detail"><strong>Born:</strong> Unknown</div>
 <div class="detail"><strong>Spouse:</strong> Henri (Jean) Malcuit</div>
@@ -259,10 +341,10 @@
 <!-- Great Great Great Grandparents -->
 <div class="generation-section">
 <h2 class="generation-title">Great Great Great Grandparents</h2>
-<p class="generation-note">32 total ancestors; many have been either partially or fully idenfitied. This generation was born in the early 1800s (1800-1825) and ended by the early 1900s (1900-1914) before the First World War. This generation witnessed enormous societal, political, scientific changes. </p>
+<p class="generation-note">32 total ancestors; many have been either partially or fully identified.</p>
 <div class="family-grid">
 
-<div class="family-card" onclick="window.location.href='margaret-stryker.html'">
+<div class="family-card" onclick="window.location.href='ancestors/margaret-stryker.html'">
 <h3>Margaret Stryker</h3>
 <div class="detail"><strong>Born:</strong> 1827</div>
 <div class="detail"><strong>Died:</strong> 1880 (age 53)</div>
@@ -270,40 +352,40 @@
 <div class="detail"><strong>Spouse:</strong> George Youmans</div>
 </div>
 
-<div class="family-card" onclick="window.location.href='george-youmans.html'">
+<div class="family-card" onclick="window.location.href='ancestors/george-youmans.html'">
 <h3>George Youmans</h3>
 <div class="detail"><strong>Born:</strong> Aug 1823</div>
 <div class="detail"><strong>Died:</strong> 2 Jul 1902 (age 78)</div>
 <div class="detail"><strong>Spouse:</strong> Margaret Youmans</div>
 </div>
 
-<div class="family-card" onclick="window.location.href='mary-byrnes.html'">
+<div class="family-card" onclick="window.location.href='ancestors/mary-byrnes.html'">
 <h3>Mary Byrnes</h3>
 <div class="detail"><strong>Born:</strong> Unknown</div>
 <div class="detail"><strong>Spouse:</strong> Joseph O'Neill</div>
 </div>
 
-<div class="family-card" onclick="window.location.href='joseph-o-neill.html'">
+<div class="family-card" onclick="window.location.href='ancestors/joseph-o-neill.html'">
 <h3>Joseph O'Neill</h3>
 <div class="detail"><strong>Born:</strong> Unknown</div>
 <div class="detail"><strong>Spouse:</strong> Mary O'Neill</div>
 </div>
 
-<div class="family-card" onclick="window.location.href='william-sliker.html'">
+<div class="family-card" onclick="window.location.href='ancestors/william-sliker.html'">
 <h3>William L Sliker</h3>
 <div class="detail"><strong>Born:</strong> 22 Sep 1803</div>
 <div class="detail"><strong>Died:</strong> 24 Nov 1855 (age 52)</div>
 <div class="detail"><strong>Spouse:</strong> Elisabeth Sliker</div>
 </div>
 
-<div class="family-card" onclick="window.location.href='elisabeth-sliker.html'">
+<div class="family-card" onclick="window.location.href='ancestors/elisabeth-sliker.html'">
 <h3>Elisabeth Swazey</h3>
 <div class="detail"><strong>Born:</strong> 6 Nov 1809</div>
 <div class="detail"><strong>Died:</strong> 27 Feb 1886 (age 76)</div>
 <div class="detail"><strong>Spouse:</strong> William L Sliker</div>
 </div>
 
-<div class="family-card" onclick="window.location.href='alexander-hamilton.html'">
+<div class="family-card" onclick="window.location.href='ancestors/alexander-hamilton.html'">
 <h3>Alexander James Ferris Hamilton</h3>
 <div class="detail"><strong>Born:</strong> 15 Nov 1828</div>
 <div class="detail"><strong>Died:</strong> 2 Jul 1905 (age 76)</div>
@@ -311,34 +393,10 @@
 <div class="detail"><strong>Spouse:</strong> Elize Hamilton</div>
 </div>
 
-<div class="family-card" onclick="window.location.href='elize-charlier.html'">
+<div class="family-card" onclick="window.location.href='ancestors/elize-charlier.html'">
 <h3>Elize Charlier</h3>
 <div class="detail"><strong>Born:</strong> 1836</div>
 <div class="detail"><strong>Spouse:</strong> Alexander James Ferris Hamilton</div>
-</div>
-
-<div class="family-card" onclick="window.location.href='guiseppe-favini.html'">
-<h3>Guiseppe Favini</h3>
-<div class="detail"><strong>Born:</strong> Unknown</div>
-</div>
-
-<div class="family-card">
-<h3>Unnamed Youmans</h3>
-<div class="detail"><strong>Origin:</strong> New York</div>
-</div>
-
-<div class="family-card">
-<h3>Unnamed Commerford</h3>
-<div class="detail"><strong>Origin:</strong> New Jersey</div>
-</div>
-
-<div class="family-card">
-<h3>Unnamed Stryker</h3>
-</div>
-
-<div class="family-card">
-<h3>Elizabeth Striker</h3>
-<div class="detail"><strong>Born:</strong> 1806</div>
 </div>
 
 </div>
@@ -347,10 +405,10 @@
 <!-- Great Great Great Great Grandparents -->
 <div class="generation-section">
 <h2 class="generation-title">Great Great Great Great Grandparents (4x)</h2>
-<p class="generation-note">A person has 64 total ancestors of this kind</p>
+<p class="generation-note">A person has 64 total ancestors of this kind.</p>
 <div class="family-grid">
 
-<div class="family-card" onclick="window.location.href='alexander-hamilton-cranston.html'">
+<div class="family-card" onclick="window.location.href='ancestors/alexander-hamilton-cranston.html'">
 <h3>Alexander James Cranston Hamilton</h3>
 <div class="detail"><strong>Born:</strong> 8 Feb 1788</div>
 <div class="detail"><strong>Died:</strong> 20 Feb 1867 (age 79)</div>
@@ -358,7 +416,7 @@
 <div class="detail"><strong>Spouse:</strong> Elizabeth Ann Hamilton</div>
 </div>
 
-<div class="family-card" onclick="window.location.href='elizabeth-ferris.html'">
+<div class="family-card" onclick="window.location.href='ancestors/elizabeth-ferris.html'">
 <h3>Elizabeth Ann Ferris</h3>
 <div class="detail"><strong>Born:</strong> 1791</div>
 <div class="detail"><strong>Died:</strong> 1877 (age 86)</div>
@@ -371,16 +429,16 @@
 <!-- Great Great Great Great Great Grandparents -->
 <div class="generation-section">
 <h2 class="generation-title">Great Great Great Great Great Grandparents (5x)</h2>
-<p class="generation-note">A person has 128 total ancestors in this category. This is the generation that witnessed the American Revolution and the Declaration of Independence of the United States in 1776 from a British colony to independent nation</p>
+<p class="generation-note">This generation witnessed the American Revolution and the formation of the United States.</p>
 <div class="family-grid">
 
-<div class="family-card" onclick="window.location.href='alexander-hamilton-sr.html'">
+<div class="family-card" onclick="window.location.href='ancestors/alexander-hamilton-sr.html'">
 <h3>Alexander James Hamilton</h3>
 <div class="detail"><strong>Born:</strong> Unknown</div>
 <div class="detail"><strong>Spouse:</strong> Mary Hamilton</div>
 </div>
 
-<div class="family-card" onclick="window.location.href='mary-deane.html'">
+<div class="family-card" onclick="window.location.href='ancestors/mary-deane.html'">
 <h3>Mary Deane</h3>
 <div class="detail"><strong>Born:</strong> 22 Sep 1759</div>
 <div class="detail"><strong>Died:</strong> 8 May 1851 (age 91)</div>
@@ -394,17 +452,17 @@
 <!-- Great Great Great Great Great Great Grandparents -->
 <div class="generation-section">
 <h2 class="generation-title">Great Great Great Great Great Great Grandparents (6x)</h2>
-<p class="generation-note">A total 256 ancestors for this category. It would be practically imppossible to identify them all</p>
+<p class="generation-note">A total of 256 ancestors for this category — born during the colonial and early independence eras.</p>
 <div class="family-grid">
 
-<div class="family-card" onclick="window.location.href='richard-dean.html'">
+<div class="family-card" onclick="window.location.href='ancestors/richard-dean.html'">
 <h3>Richard Dean</h3>
 <div class="detail"><strong>Born:</strong> 1730</div>
 <div class="detail"><strong>Died:</strong> 4 Dec 1787 (age 57)</div>
 <div class="detail"><strong>Spouse:</strong> Mary Dean</div>
 </div>
 
-<div class="family-card" onclick="window.location.href='mary-dolum.html'">
+<div class="family-card" onclick="window.location.href='ancestors/mary-dolum.html'">
 <h3>Mary Dolum</h3>
 <div class="detail"><strong>Born:</strong> Unknown</div>
 <div class="detail"><strong>Spouse:</strong> Richard Dean</div>
@@ -413,6 +471,7 @@
 </div>
 </div>
 
-</div></div>
+</div>
+</div>
 </body>
 </html>
