@@ -58,8 +58,9 @@ This project yielded unexpected volumes of information: both on family history a
   This repository is open to the public (but requires making a free account).
 </div>
 
+
 <div style="overflow: auto;">
-  <img src="/genealogysite/assets/images/clipboard.png" alt="US Census Icon" width="120" style="float: left; margin: 10px 20px 10px 0; border-radius: 6px;" />
+  <img src="/genealogysite/assets/images/clipboard.png" alt="US Census Icon" width="100" style="float: left; margin: 10px 20px 10px 0; border-radius: 6px;" />
   <strong>US Census Data</strong> — Since 1790, the US census has been significant for its role in apportioning political representation, federal funding allocation, and (most importantly in this case) as a rich genealogical and demographic record of the American people. Census data is collected every 10 years. Once 72 years have passed, the census records become publicly accessible. The 1950 census is the most recent one to be made public.
 </div>
 
