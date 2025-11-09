@@ -13,6 +13,8 @@
         --terracotta: #C4876A;
         --text-dark: #2C2C2C;
         --background: #FAF9F7;
+        --success-green: #4CAF50;
+        --muted-gray: #999;
     }
 
     * {
@@ -130,6 +132,17 @@
         margin-bottom: 12px;
     }
 
+    /* Historical Records Section Links */
+    .notes a {
+        color: var(--blue-light);
+        text-decoration: underline;
+        transition: color 0.3s ease;
+    }
+
+    .notes a:hover {
+        color: var(--terracotta);
+    }
+
     .family-tree-link {
         text-align: center;
         margin-top: 30px;
@@ -207,14 +220,36 @@
         </div>
     </div>
 
+    <!-- ✅ Original Historical Records Section Preserved -->
     <div class="info-section">
         <h2>Historical Records & Documentation</h2>
         <div class="notes">
             <p><strong>U.S. Census Records:</strong></p>
-            <ul style="list-style:none; padding-left:0;">
-                <li>✓ <a href="[URL_TO_1950_CENSUS]" target="_blank">1950 Census</a></li>
-                <li>✓ <a href="[URL_TO_1940_CENSUS]" target="_blank">1940 Census</a></li>
-                <li>☐ 1890 Census (not found - destroyed by fire)</li>
+            <ul style="list-style: none; padding-left: 0; margin-top: 10px; margin-bottom: 25px;">
+                <li style="margin: 8px 0;"><span style="color: var(--success-green); margin-right: 8px;">✓</span><a href="[URL_TO_1950_CENSUS]" target="_blank">1950 Census</a></li>
+                <li style="margin: 8px 0;"><span style="color: var(--success-green); margin-right: 8px;">✓</span><a href="[URL_TO_1940_CENSUS]" target="_blank">1940 Census</a></li>
+                <li style="margin: 8px 0;"><span style="color: var(--success-green); margin-right: 8px;">✓</span><a href="[URL_TO_1930_CENSUS]" target="_blank">1930 Census</a></li>
+                <li style="margin: 8px 0;"><span style="color: var(--success-green); margin-right: 8px;">✓</span><a href="[URL_TO_1920_CENSUS]" target="_blank">1920 Census</a></li>
+                <li style="margin: 8px 0;"><span style="color: var(--success-green); margin-right: 8px;">✓</span><a href="[URL_TO_1910_CENSUS]" target="_blank">1910 Census</a></li>
+                <li style="margin: 8px 0;"><span style="color: var(--success-green); margin-right: 8px;">✓</span><a href="[URL_TO_1900_CENSUS]" target="_blank">1900 Census</a></li>
+                <li style="margin: 8px 0;"><span style="color: var(--muted-gray); margin-right: 8px;">☐</span><span style="color: var(--muted-gray);">1890 Census (not found - destroyed by fire)</span></li>
+                <li style="margin: 8px 0;"><span style="color: var(--muted-gray); margin-right: 8px;">☐</span><span style="color: var(--muted-gray);">1880 Census (not found)</span></li>
+            </ul>
+
+            <p><strong>Immigration Records: [IF APPLICABLE]</strong></p>
+            <ul style="list-style: none; padding-left: 0; margin-top: 10px; margin-bottom: 25px;">
+                <li style="margin: 8px 0;"><span style="color: var(--success-green); margin-right: 8px;">✓</span><a href="[URL_TO_ELLIS_ISLAND]" target="_blank">Ellis Island Passenger Record ([YEAR])</a></li>
+                <li style="margin: 8px 0;"><span style="color: var(--success-green); margin-right: 8px;">✓</span><a href="[URL_TO_SHIP_MANIFEST]" target="_blank">Ship Manifest - [SHIP NAME] ([DATE])</a></li>
+                <li style="margin: 8px 0;"><span style="color: var(--success-green); margin-right: 8px;">✓</span><a href="[URL_TO_NATURALIZATION]" target="_blank">Naturalization Papers ([YEAR])</a></li>
+                <li style="margin: 8px 0;"><span style="color: var(--muted-gray); margin-right: 8px;">☐</span><span style="color: var(--muted-gray);">Passport/Travel Documents (not found)</span></li>
+            </ul>
+
+            <p><strong>Other Records:</strong></p>
+            <ul style="list-style: none; padding-left: 0; margin-top: 10px; margin-bottom: 25px;">
+                <li style="margin: 8px 0;"><span style="color: var(--success-green); margin-right: 8px;">✓</span><a href="[URL_TO_BIRTH_CERTIFICATE]" target="_blank">Birth Certificate</a></li>
+                <li style="margin: 8px 0;"><span style="color: var(--success-green); margin-right: 8px;">✓</span><a href="[URL_TO_MARRIAGE_CERTIFICATE]" target="_blank">Marriage Certificate ([YEAR])</a></li>
+                <li style="margin: 8px 0;"><span style="color: var(--success-green); margin-right: 8px;">✓</span><a href="[URL_TO_DEATH_CERTIFICATE]" target="_blank">Death Certificate</a></li>
+                <li style="margin: 8px 0;"><span style="color: var(--success-green); margin-right: 8px;">✓</span><a href="[URL_TO_MILITARY_RECORD]" target="_blank">Military Service Records</a></li>
             </ul>
         </div>
     </div>
