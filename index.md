@@ -1,6 +1,6 @@
 ---
 layout: default
-title:
+title: Commerford Lineage
 ---
 
 > Remember, remember always, that all of us, and you and I especially, are descended from immigrants and revolutionists"
