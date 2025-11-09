@@ -52,6 +52,7 @@ This project yielded unexpected volumes of information: both on family history a
 
 <div style="overflow: auto;">
   <img src="/genealogysite/assets/images/statueicon.png" alt="Ellis Island Icon" width="120" style="float: right; margin: 10px 0 10px 20px; border-radius: 6px;" />
+  
   <strong>Ellis Island records</strong> — The Statue of Liberty-Ellis Island Foundation maintains a searchable database of approximately 65 million passenger records for the Port of New York from 1820 to 1957.  
   The records include ship manifests with details like name, age, nationality, and port of departure, as well as other details of interest.  
   This repository is open to the public (but requires making a free account).
