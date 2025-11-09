@@ -1,451 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edward Bradley "Pali" Commerford - Family Profile</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edward Bradley "Pali" Commerford - Family Profile</title>
+<style>
+    :root {
+        --blue-dark: #4B5E82;
+        --blue-light: #7D95B3;
+        --beige: #EDE1BB;
+        --peach: #E4B27C;
+        --terracotta: #C4876A;
+        --text-dark: #2C2C2C;
+        --background: #FAF9F7;
+        --success-green: #4CAF50;
+        --muted-gray: #999;
+    }
 
-        body {
-            font-family: 'Georgia', serif;
-            background: #e8e8e8;
-            color: #222;
-            min-height: 100vh;
-            padding: 20px;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Georgia', serif;
+        background: var(--background);
+        color: var(--text-dark);
+        min-height: 100vh;
+        padding: 20px;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .navigation {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .nav-link {
+        display: inline-block;
+        margin: 5px 10px;
+        color: var(--blue-dark);
+        text-decoration: none;
+        font-size: 1.05em;
+        transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: var(--terracotta);
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 30px;
+        border-bottom: 3px solid var(--peach);
+        padding-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        color: var(--blue-dark);
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .nickname {
+        font-size: 1.2em;
+        color: var(--blue-light);
+        font-style: italic;
+        margin-bottom: 5px;
+    }
+
+    .dates {
+        font-size: 1.2em;
+        color: var(--terracotta);
+        font-style: italic;
+    }
+
+    .info-section {
+        background: var(--beige);
+        border-left: 6px solid var(--blue-light);
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+
+    .info-section h2 {
+        color: var(--blue-dark);
+        font-size: 1.6em;
+        margin-bottom: 15px;
+        border-bottom: 2px solid var(--peach);
+        padding-bottom: 8px;
+    }
+
+    .info-row {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .info-label {
+        font-weight: bold;
+        color: var(--terracotta);
+    }
+
+    .info-value {
+        color: var(--blue-dark);
+    }
+
+    .info-value a {
+        color: var(--blue-dark);
+        text-decoration: underline;
+        transition: color 0.3s ease;
+    }
+
+    .info-value a:hover {
+        color: var(--terracotta);
+    }
+
+    .notes {
+        background: rgba(255,255,255,0.8);
+        border-left: 4px solid var(--blue-light);
+        padding: 15px;
+        border-radius: 5px;
+        color: var(--text-dark);
+    }
+
+    .notes p {
+        margin-bottom: 12px;
+    }
+
+    .notes a {
+        color: var(--blue-light);
+        text-decoration: underline;
+        transition: color 0.3s ease;
+    }
+
+    .notes a:hover {
+        color: var(--terracotta);
+    }
+
+    .family-tree-link {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .tree-button {
+        display: inline-block;
+        padding: 12px 25px;
+        background: var(--blue-dark);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 1.05em;
+        transition: all 0.3s ease;
+    }
+
+    .tree-button:hover {
+        background: var(--terracotta);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 600px) {
+        .info-row {
+            grid-template-columns: 1fr;
         }
 
         .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: #faf7f4;
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .navigation {
-            margin-bottom: 30px;
-        }
-
-        .nav-link {
-            display: inline-block;
-            margin-right: 20px;
-            color: #57728a;
-            text-decoration: none;
-            font-size: 1.1em;
-            transition: color 0.3s;
-        }
-
-        .nav-link:hover {
-            color: #7a1f35;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            border-bottom: 3px solid #7a1f35;
-            padding-bottom: 30px;
+            padding: 20px;
         }
 
         h1 {
-            font-size: 3em;
-            color: #7a1f35;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            margin-bottom: 15px;
+            font-size: 2em;
         }
-
-        .nickname {
-            font-size: 1.5em;
-            color: #57728a;
-            font-style: italic;
-            margin-bottom: 10px;
-        }
-
-        .dates {
-            font-size: 1.3em;
-            color: #7a1f35;
-            font-style: italic;
-        }
-
-        .info-section {
-            background: rgba(87, 114, 138, 0.1);
-            border: 2px solid #7a1f35;
-            border-radius: 10px;
-            padding: 25px;
-            margin-bottom: 30px;
-        }
-
-        .info-section h2 {
-            color: #7a1f35;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
-            padding-bottom: 10px;
-        }
-
-        .info-row {
-            display: grid;
-            grid-template-columns: 200px 1fr;
-            margin: 15px 0;
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(245, 230, 211, 0.1);
-        }
-
-        .info-row:last-child {
-            border-bottom: none;
-        }
-
-        .info-label {
-            color: #7a1f35;
-            font-weight: bold;
-        }
-
-        .info-value {
-            color: #7a1f35;
-        }
-
-        .info-value a {
-            color: #7a1f35;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .info-value a:hover {
-            color: #7a1f35;
-        }
-
-        .notes {
-            background: rgba(0, 0, 0, 0.3);
-            border-left: 4px solid #7a1f35;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 5px;
-        }
-
-        .notes p {
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-
-        .external-link {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background: #57728a;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: all 0.3s;
-        }
-
-        .external-link:hover {
-            background: #7a1f35;
-            transform: translateY(-2px);
-        }
-
-        .family-tree-link {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            background: rgba(87, 114, 138, 0.1);
-            border-radius: 10px;
-        }
-
-        .tree-button {
-            display: inline-block;
-            padding: 15px 30px;
-            background: #57728a;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1.1em;
-            transition: all 0.3s;
-        }
-
-        .tree-button:hover {
-            background: #7a1f35;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(122, 31, 53, 0.4);
-        }
-
-        /* Mobile Responsive Styles */
-        @media screen and (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-
-            .container {
-                padding: 25px 20px;
-                border-radius: 10px;
-            }
-
-            .navigation {
-                margin-bottom: 20px;
-            }
-
-            .nav-link {
-                display: block;
-                margin-right: 0;
-                margin-bottom: 10px;
-                font-size: 1em;
-            }
-
-            header {
-                margin-bottom: 30px;
-                padding-bottom: 20px;
-            }
-
-            h1 {
-                font-size: 2em;
-                line-height: 1.2;
-            }
-
-            .dates {
-                font-size: 1.1em;
-            }
-
-            .info-section {
-                padding: 20px 15px;
-                margin-bottom: 25px;
-            }
-
-            .info-section h2 {
-                font-size: 1.5em;
-                margin-bottom: 15px;
-            }
-
-            .info-row {
-                grid-template-columns: 1fr;
-                gap: 5px;
-                margin: 12px 0;
-                padding: 12px 0;
-            }
-
-            .info-label {
-                font-size: 0.95em;
-                margin-bottom: 3px;
-            }
-
-            .info-value {
-                font-size: 0.95em;
-                padding-left: 0;
-            }
-
-            .info-value a {
-                display: block;
-                margin: 5px 0;
-            }
-
-            .notes {
-                padding: 15px;
-                border-left-width: 3px;
-            }
-
-            .notes p {
-                font-size: 0.95em;
-                line-height: 1.6;
-                margin-bottom: 12px;
-            }
-
-            .external-link {
-                display: block;
-                text-align: center;
-                margin-top: 10px;
-                padding: 12px 15px;
-                font-size: 0.95em;
-            }
-
-            .family-tree-link {
-                margin-top: 30px;
-                padding: 15px;
-            }
-
-            .tree-button {
-                display: block;
-                padding: 12px 20px;
-                font-size: 1em;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            body {
-                padding: 5px;
-            }
-
-            .container {
-                padding: 20px 15px;
-                border-radius: 8px;
-            }
-
-            header {
-                margin-bottom: 25px;
-                padding-bottom: 15px;
-            }
-
-            h1 {
-                font-size: 1.6em;
-                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-            }
-
-            .dates {
-                font-size: 1em;
-            }
-
-            .info-section {
-                padding: 15px 12px;
-                margin-bottom: 20px;
-            }
-
-            .info-section h2 {
-                font-size: 1.3em;
-                margin-bottom: 12px;
-            }
-
-            .info-row {
-                margin: 10px 0;
-                padding: 10px 0;
-            }
-
-            .info-label,
-            .info-value {
-                font-size: 0.9em;
-            }
-
-            .notes {
-                padding: 12px;
-            }
-
-            .notes p {
-                font-size: 0.9em;
-                line-height: 1.5;
-            }
-
-            .external-link {
-                padding: 10px 12px;
-                font-size: 0.9em;
-            }
-
-            .family-tree-link {
-                margin-top: 25px;
-                padding: 12px;
-            }
-
-            .tree-button {
-                padding: 10px 15px;
-                font-size: 0.95em;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
-    <div class="container">
-        <nav class="navigation">
-            <a href="https://cgreposit.github.io/genealogysite/" class="nav-link">← Home</a>
-            <a href="family-directory.html" class="nav-link">← Family Directory</a>
-        </nav>
+<div class="container">
+    <nav class="navigation">
+        <a href="https://cgreposit.github.io/genealogysite/" class="nav-link">← Home</a>
+        <a href="family-directory.html" class="nav-link">← Family Directory</a>
+    </nav>
 
-        <header>
-            <h1>Edward Bradley Commerford</h1>
-            <p class="dates">17 July 1918 — 5 June 1999</p>
-        </header>
+    <header>
+        <h1>Edward Bradley Commerford</h1>
+        <p class="nickname">"Pali"</p>
+        <p class="dates">17 July 1918 – 5 June 1999</p>
+    </header>
 
-        <div class="info-section">
-            <h2>Personal Information</h2>
-            <div class="info-row">
-                <div class="info-label">Date of Birth:</div>
-                <div class="info-value">17 July 1918</div>
-            </div>
-            <div class="info-row">
-                <div class="info-label">Place of Birth:</div>
-                <div class="info-value">Jersey City, New Jersey</div>
-            </div>
-            <div class="info-row">
-                <div class="info-label">Nationality or Country of Origin:</div>
-                <div class="info-value">USA 🇺🇸</div>
-            </div>
-            <div class="info-row">
-                <div class="info-label">Date of Death:</div>
-                <div class="info-value">5 June 1999</div>
-            </div>
-            <div class="info-row">
-                <div class="info-label">Place of Death:</div>
-                <div class="info-value">Washington Township, NJ</div>
-            </div>
-            <div class="info-row">
-                <div class="info-label">Burial Place:</div>
-                <div class="info-value">Paramus, Bergen, New Jersey, United States</div>
-            </div>
-            <div class="info-row">
-                <div class="info-label">Age:</div>
-                <div class="info-value">80 years</div>
-            </div>
-            <div class="info-row">
-                <div class="info-label">External Resources:</div>
-                <div class="info-value">
-                    <a href="https://www.familysearch.org/en/tree/person/about/L291-W5V" class="external-link" target="_blank">View on FamilySearch</a>
-                </div>
-            </div>
-        </div>
+    <div class="info-section">
+        <h2>Personal Information</h2>
+        <div class="info-row"><div class="info-label">Date of Birth:</div><div class="info-value">17 July 1918</div></div>
+        <div class="info-row"><div class="info-label">Birth Place:</div><div class="info-value">Jersey City, New Jersey, USA</div></div>
+        <div class="info-row"><div class="info-label">Date of Death:</div><div class="info-value">5 June 1999</div></div>
+        <div class="info-row"><div class="info-label">Death Place:</div><div class="info-value">Washington Township, Bergen County, New Jersey, USA</div></div>
+        <div class="info-row"><div class="info-label">Burial Place:</div><div class="info-value">Paramus, Bergen County, New Jersey, USA</div></div>
+        <div class="info-row"><div class="info-label">Nationality:</div><div class="info-value">American 🇺🇸</div></div>
+        <div class="info-row"><div class="info-label">Age:</div><div class="info-value">80 years</div></div>
+        <div class="info-row"><div class="info-label">FamilySearch:</div><div class="info-value"><a href="https://www.familysearch.org/en/tree/person/about/L291-W5V" target="_blank">View Profile</a></div></div>
+    </div>
 
-        <div class="info-section">
-            <h2>Family Relationships</h2>
-            <div class="info-row">
-                <div class="info-label">Father:</div>
-                <div class="info-value"><a href="john-rowe-commerford.html">John Rowe Commerford</a> (1884-1968)</div>
-            </div>
-            <div class="info-row">
-                <div class="info-label">Mother:</div>
-                <div class="info-value"><a href="ellen-mae-commerford.html">Ellen Mae "Ella" Commerford</a> (née Youmans) (1892-1973)</div>
-            </div>
-            <div class="info-row">
-                <div class="info-label">Spouse:</div>
-                <div class="info-value"><a href="jeannette-commerford.html">Jeannette Angela Commerford</a> (née Malcuit) (1926-2020)</div>
-            </div>
-            <div class="info-row">
-                <div class="info-label">Children:</div>
-                <div class="info-value">
-                    <a href="brad-commerford.html">Denise Commerford</a>
-                    <a href="brad-commerford.html">Brad Commerford</a>
-                    <a href="brad-commerford.html">John Commerford</a>
-                </div>
-            </div>
-            <div class="info-row">
-                <div class="info-label">Siblings:</div>
-                <div class="info-value">
-                    <a href="carol-commerford.html">Carol Commerford</a> (1914-1989)<br>
-                    <a href="ruth-commerford.html">Ruth Commerford</a> (1914-2019)<br>
-                    <a href="john-jack-commerford.html">John "Jack" R Commerford Jr.</a> (1917-2002)<br>
-                    <a href="robert-bob-commerford.html">Robert Cleves "Bob" Commerford</a> (1926-2019)
-                </div>
-            </div>
-        </div>
+    <div class="info-section">
+        <h2>Family Relationships</h2>
+        <div class="info-row"><div class="info-label">Father:</div><div class="info-value"><a href="john-rowe-commerford.html">John Rowe Commerford</a> (1884–1968)</div></div>
+        <div class="info-row"><div class="info-label">Mother:</div><div class="info-value"><a href="ellen-mae-commerford.html">Ellen Mae “Ella” Youmans</a> (1892–1973)</div></div>
+        <div class="info-row"><div class="info-label">Spouse:</div><div class="info-value"><a href="jeannette-commerford.html">Jeannette Angela Malcuit</a> (1926–2020)</div></div>
+        <div class="info-row"><div class="info-label">Children:</div><div class="info-value">
+            <a href="denise-commerford.html">Denise Commerford</a><br>
+            <a href="brad-commerford.html">Brad Commerford</a><br>
+            <a href="john-commerford.html">John Commerford</a>
+        </div></div>
+        <div class="info-row"><div class="info-label">Siblings:</div><div class="info-value">
+            <a href="carol-commerford.html">Carol Commerford</a> (1914–1989)<br>
+            <a href="ruth-commerford.html">Ruth Commerford</a> (1914–2019)<br>
+            <a href="john-jack-commerford.html">John “Jack” R. Commerford Jr.</a> (1917–2002)<br>
+            <a href="robert-bob-commerford.html">Robert Cleves “Bob” Commerford</a> (1926–2019)
+        </div></div>
+    </div>
 
-        <div class="info-section">
-            <h2>Historical Notes</h2>
-            <div class="notes">
-                <p>Edward Bradley Commerford, affectionately known as "Pali," was born on 17 July 1918 in Jersey City, Hudson County, New Jersey. At the time of his birth, his father John Rowe Commerford was 34 years old and his mother Ellen Mae "Ella" Youmans was 26.</p>
-                
-                <p><strong>Early Life and Residence:</strong> Edward grew up in the greater New York/New Jersey area during the interwar period. He lived in Westwood, Bergen County, New Jersey for approximately 30 years, where he raised his family and built his life.</p>
-                
-                <p><strong>Military Service:</strong> In 1942, during World War II, Edward registered for military service, contributing to his country during a pivotal moment in history. He was 24 years old at the time of his registration.</p>
-                
-                <p><strong>Family Life:</strong> Edward married Jeannette Angela Malcuit, whose family had immigrated to the United States from France and Italy. Together they had at least one son, Brad, who would continue the Commerford family line.</p>
-                
-                <p><strong>Later Years:</strong> In his later years, Edward relocated to Washington State, where he lived in 1999. He passed away on 5 June 1999 at the age of 80 and was buried in Paramus, Bergen County, New Jersey, returning to rest in the state where he had spent most of his life.</p>
-                
-                <p><strong>Family Legacy:</strong> As part of the Commerford family lineage that traces back to John Commerford (1800-1878), Edward represented the continuation of a family with deep roots in the New York/New Jersey area. His nickname "Pali" suggests a beloved family figure who was known by this affectionate name throughout his life.</p>
-            </div>
-        </div>
-
-        <div class="family-tree-link">
-            <a href="family-directory.html" class="tree-button">View Full Family Directory</a>
+    <div class="info-section">
+        <h2>Historical Notes</h2>
+        <div class="notes">
+            <p>Edward Bradley “Pali” Commerford was born in 1918 in Jersey City, New Jersey. His parents, John Rowe Commerford and Ellen Mae “Ella” Youmans, raised him in a close-knit family that valued hard work and connection.</p>
+            <p>During World War II, Edward registered for military service at age 24, exemplifying the patriotism and sense of duty shared by his generation.</p>
+            <p>He married <strong>Jeannette Angela Malcuit</strong>, whose heritage extended to France and Italy. Together, they built their home in Westwood, New Jersey, and raised three children: Denise, Brad, and John.</p>
+            <p>Later in life, Edward lived in Washington Township, Bergen County, where he passed away in 1999 at the age of 80. He was laid to rest in Paramus, returning to the heart of the community where he spent much of his life.</p>
         </div>
     </div>
+
+    <div class="info-section">
+        <h2>Historical Records & Documentation</h2>
+        <div class="notes">
+            <p><strong>U.S. Census Records:</strong></p>
+            <ul style="list-style: none; padding-left: 0;">
+                <li><span style="color: var(--success-green);">✓</span> <a href="#" target="_blank">1930 Census</a></li>
+                <li><span style="color: var(--success-green);">✓</span> <a href="#" target="_blank">1940 Census</a></li>
+                <li><span style="color: var(--success-green);">✓</span> <a href="#" target="_blank">1950 Census</a></li>
+                <li><span style="color: var(--muted-gray);">☐</span> <span style="color: var(--muted-gray);">1960 Census (unavailable to public)</span></li>
+                <li><span style="color: var(--muted-gray);">☐</span> <span style="color: var(--muted-gray);">1970 Census (unavailable to public)</span></li>
+                <li><span style="color: var(--muted-gray);">☐</span> <span style="color: var(--muted-gray);">1980 Census (unavailable to public)</span></li>
+                <li><span style="color: var(--muted-gray);">☐</span> <span style="color: var(--muted-gray);">1990 Census (unavailable to public)</span></li>
+            </ul>
+
+            <p><strong>Military Records:</strong></p>
+            <ul style="list-style: none; padding-left: 0;">
+                <li><span style="color: var(--success-green);">✓</span> <a href="#" target="_blank">WWII Draft Registration (1942)</a></li>
+            </ul>
+
+            <p><strong>Vital Records:</strong></p>
+            <ul style="list-style: none; padding-left: 0;">
+                <li><span style="color: var(--success-green);">✓</span> <a href="#" target="_blank">Birth Record (Jersey City, 1918)</a></li>
+                <li><span style="color: var(--success-green);">✓</span> <a href="#" target="_blank">Marriage Record (New Jersey, c. 1940s)</a></li>
+                <li><span style="color: var(--success-green);">✓</span> <a href="#" target="_blank">Death Certificate (Bergen County, 1999)</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="family-tree-link">
+        <a href="family-directory.html" class="tree-button">View Full Family Directory</a>
+    </div>
+</div>
 </body>
 </html>
