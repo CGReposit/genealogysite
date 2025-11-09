@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Charles C. Commerford - Family Profile</title>
+<style>
+    :root {
+        --blue-dark: #4B5E82;
+        --blue-light: #7D95B3;
+        --beige: #EDE1BB;
+        --peach: #E4B27C;
+        --terracotta: #C4876A;
+        --text-dark: #2C2C2C;
+        --background: #FAF9F7;
+        --success-green: #4CAF50;
+        --muted-gray: #999;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        font-family: 'Georgia', serif;
+        background: var(--background);
+        color: var(--text-dark);
+        min-height: 100vh;
+        padding: 20px;
+        line-height: 1.6;
+    }
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .navigation { margin-bottom: 25px; text-align: center; }
+    .nav-link {
+        display: inline-block;
+        margin: 5px 10px;
+        color: var(--blue-dark);
+        text-decoration: none;
+        font-size: 1.05em;
+        transition: color 0.3s ease;
+    }
+    .nav-link:hover { color: var(--terracotta); }
+    header {
+        text-align: center;
+        margin-bottom: 30px;
+        border-bottom: 3px solid var(--peach);
+        padding-bottom: 20px;
+    }
+    h1 { font-size: 2.5em; color: var(--blue-dark); text-shadow: 1px 1px 2px rgba(0,0,0,0.1); }
+    .dates { font-size: 1.2em; color: var(--terracotta); font-style: italic; }
+
+    /* --- Photo styling --- */
+    .portrait-container {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .portrait-container img {
+        max-width: 280px;
+        width: 90%;
+        border-radius: 12px;
+        border: 4px solid var(--blue-light);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+    .portrait-container img:hover {
+        transform: scale(1.03);
+        box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+    }
+    .photo-caption {
+        margin-top: 8px;
+        font-style: italic;
+        color: var(--muted-gray);
+    }
+
+    /* Modal for full-size photo */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 99;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.9);
+    }
+    .modal-content {
+        margin: auto;
+        display: block;
+        max-width: 90%;
+        max-height: 90%;
+    }
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .info-section {
+        background: var(--beige);
+        border-left: 6px solid var(--blue-light);
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+    .info-section h2 {
+        color: var(--blue-dark);
+        font-size: 1.6em;
+        margin-bottom: 15px;
+        border-bottom: 2px solid var(--peach);
+        padding-bottom: 8px;
+    }
+    .info-row {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 10px;
+        margin: 10px 0;
+    }
+    .info-label { font-weight: bold; color: var(--terracotta); }
+    .info-value { color: var(--blue-dark); }
+    .info-value a { color: var(--blue-dark); text-decoration: underline; transition: color 0.3s ease; }
+    .info-value a:hover { color: var(--terracotta); }
+    .notes {
+        background: rgba(255,255,255,0.8);
+        border-left: 4px solid var(--blue-light);
+        padding: 15px;
+        border-radius: 5px;
+        color: var(--text-dark);
+    }
+    .notes p { margin-bottom: 12px; }
+    .notes a { color: var(--blue-light); text-decoration: underline; transition: color 0.3s ease; }
+    .notes a:hover { color: var(--terracotta); }
+    .family-tree-link {
+        text-align: center;
+        margin-top: 22px;
+        display:flex;
+        gap:12px;
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+    .tree-button {
+        display: inline-block;
+        padding: 12px 20px;
+        background: var(--blue-dark);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 1.0em;
+        transition: all 0.3s ease;
+    }
+    .tree-button.alt { background: var(--blue-light); color: #123; }
+    .tree-button:hover {
+        background: var(--terracotta);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    @media (max-width: 600px) {
+        .info-row { grid-template-columns: 1fr; }
+        .container { padding: 20px; }
+        h1 { font-size: 2em; }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <nav class="navigation">
+        <a href="https://cgreposit.github.io/genealogysite/" class="nav-link">← Home</a>
+        <a href="family-directory.html" class="nav-link">← Family Directory</a>
+    </nav>
+
+    <header>
+        <h1>Charles C. Commerford</h1>
+        <p class="dates">2 Jun 1833 – 6 Feb 1920</p>
+    </header>
+
+    <!-- 🖼️ Portrait -->
+    <div class="portrait-container">
+        <img id="portrait" src="charles-c-commerford.jpg" alt="Portrait of Charles C. Commerford" />
+        <div class="photo-caption">Portrait of Charles C. Commerford, c. late 19th century</div>
+    </div>
+
+    <!-- Modal for full-size photo -->
+    <div id="photoModal" class="modal">
+        <span class="close" id="closeModal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <div class="info-section">
+        <h2>Personal Information</h2>
+        <div class="info-row"><div class="info-label">Date of Birth:</div><div class="info-value">2 June 1833</div></div>
+        <div class="info-row"><div class="info-label">Birth Place:</div><div class="info-value">New York, United States</div></div>
+        <div class="info-row"><div class="info-label">Date of Death:</div><div class="info-value">6 February 1920</div></div>
+        <div class="info-row"><div class="info-label">Death Place:</div><div class="info-value">New York, United States</div></div>
+        <div class="info-row"><div class="info-label">Age:</div><div class="info-value">86 years</div></div>
+    </div>
+
+    <div class="info-section">
+        <h2>Family Relationships</h2>
+        <div class="info-row"><div class="info-label">Father:</div><div class="info-value"><a href="john-commerford.html">John Commerford</a> (1800–1878)</div></div>
+        <div class="info-row"><div class="info-label">Mother:</div><div class="info-value"><a href="maria-ferris.html">Maria Ferris</a> (1806– )</div></div>
+        <div class="info-row"><div class="info-label">Spouse:</div><div class="info-value"><a href="elizabeth-hamilton.html">Elizabeth Hamilton (Ferris)</a> (1859– )</div></div>
+        <div class="info-row"><div class="info-label">Children:</div><div class="info-value"><a href="john-rowe-commerford.html">John Rowe Commerford</a> (1884–1968)</div></div>
+    </div>
+
+    <div class="info-section">
+        <h2>Historical Notes</h2>
+        <div class="notes">
+            <p><strong>Summary:</strong> Charles C. Commerford was born in 1833 in New York to John Commerford and Maria Ferris. He was a tradesman and property holder, part of a multi-generation family with roots in the New York–New Jersey region. His marriage to <strong>Elizabeth Hamilton (Ferris)</strong> connected the Commerford and Hamilton families.</p>
+            <p>He lived through the industrial rise of New York City and passed away on 6 February 1920, aged 86.</p>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <h2>Historical Records & Documentation</h2>
+        <div class="notes">
+            <p><strong>FamilySearch:</strong> <a href="https://www.familysearch.org/en/search/?query=Charles%20C%20Commerford" target="_blank">Search for Charles C. Commerford</a></p>
+            <p><strong>U.S. Census:</strong> Listed in New York City censuses from 1850 – 1910 under variations of Commerford/Comerford.</p>
+            <p><strong>Burial:</strong> Interred in the Commerford family plot, New York, with wife and parents.</p>
+        </div>
+    </div>
+
+    <div class="family-tree-link">
+        <a href="family-directory.html" class="tree-button">View Full Family Directory</a>
+        <a href="https://www.familysearch.org/en/search/?query=Charles%20C%20Commerford" target="_blank" class="tree-button alt">Search Charles on FamilySearch</a>
+    </div>
+</div>
+
+<!-- JavaScript for modal -->
+<script>
+const modal = document.getElementById("photoModal");
+const img = document.getElementById("portrait");
+const modalImg = document.getElementById("modalImage");
+const closeModal = document.getElementById("closeModal");
+
+img.onclick = function() {
+  modal.style.display = "block";
+  modalImg.src = this.src;
+};
+closeModal.onclick = function() {
+  modal.style.display = "none";
+};
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+</script>
+
+</body>
+</html>
