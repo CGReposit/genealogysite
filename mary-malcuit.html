@@ -1,82 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mary Malcuit - Family Profile</title>
-    <style>
-        /* Same styling from your template */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Georgia', serif; background: #e8e8e8; color: #222; min-height: 100vh; padding: 20px; }
-        .container { max-width: 900px; margin: 0 auto; background: #faf7f4; border-radius: 15px; padding: 40px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); }
-        .navigation { margin-bottom: 30px; }
-        .nav-link { display: inline-block; margin-right: 20px; color: #57728a; text-decoration: none; font-size: 1.1em; transition: color 0.3s; }
-        .nav-link:hover { color: #7a1f35; }
-        header { text-align: center; margin-bottom: 40px; border-bottom: 3px solid #7a1f35; padding-bottom: 30px; }
-        h1 { font-size: 3em; color: #7a1f35; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); margin-bottom: 15px; }
-        .dates { font-size: 1.3em; color: #7a1f35; font-style: italic; }
-        .info-section { background: rgba(87, 114, 138, 0.1); border: 2px solid #7a1f35; border-radius: 10px; padding: 25px; margin-bottom: 30px; }
-        .info-section h2 { color: #7a1f35; font-size: 1.8em; margin-bottom: 20px; border-bottom: 1px solid rgba(212, 175, 55, 0.3); padding-bottom: 10px; }
-        .info-row { display: grid; grid-template-columns: 200px 1fr; margin: 15px 0; padding: 10px 0; border-bottom: 1px solid rgba(245, 230, 211, 0.1); }
-        .info-label { color: #7a1f35; font-weight: bold; }
-        .info-value { color: #7a1f35; }
-        .notes { background: rgba(0, 0, 0, 0.3); border-left: 4px solid #7a1f35; padding: 20px; margin-top: 20px; border-radius: 5px; }
-        .notes p { line-height: 1.8; margin-bottom: 15px; }
-        .family-tree-link { text-align: center; margin-top: 40px; padding: 20px; background: rgba(87, 114, 138, 0.1); border-radius: 10px; }
-        .tree-button { display: inline-block; padding: 15px 30px; background: #57728a; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.1em; transition: all 0.3s; }
-        .tree-button:hover { background: #7a1f35; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(122, 31, 53, 0.4); }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maria "Mary" Favini Malcuit - Family Profile</title>
+<style>
+    :root {
+        --blue-dark: #4B5E82;
+        --blue-light: #7D95B3;
+        --beige: #EDE1BB;
+        --peach: #E4B27C;
+        --terracotta: #C4876A;
+        --text-dark: #2C2C2C;
+        --background: #FAF9F7;
+        --success-green: #4CAF50;
+        --muted-gray: #999;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Georgia', serif;
+        background: var(--background);
+        color: var(--text-dark);
+        min-height: 100vh;
+        padding: 20px;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .navigation {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .nav-link {
+        display: inline-block;
+        margin: 5px 10px;
+        color: var(--blue-dark);
+        text-decoration: none;
+        font-size: 1.05em;
+        transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: var(--terracotta);
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 30px;
+        border-bottom: 3px solid var(--peach);
+        padding-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        color: var(--blue-dark);
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .dates {
+        font-size: 1.2em;
+        color: var(--terracotta);
+        font-style: italic;
+    }
+
+    .info-section {
+        background: var(--beige);
+        border-left: 6px solid var(--blue-light);
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+
+    .info-section h2 {
+        color: var(--blue-dark);
+        font-size: 1.6em;
+        margin-bottom: 15px;
+        border-bottom: 2px solid var(--peach);
+        padding-bottom: 8px;
+    }
+
+    .info-row {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .info-label {
+        font-weight: bold;
+        color: var(--terracotta);
+    }
+
+    .info-value {
+        color: var(--blue-dark);
+    }
+
+    .info-value a {
+        color: var(--blue-dark);
+        text-decoration: underline;
+        transition: color 0.3s ease;
+    }
+
+    .info-value a:hover {
+        color: var(--terracotta);
+    }
+
+    .notes {
+        background: rgba(255,255,255,0.8);
+        border-left: 4px solid var(--blue-light);
+        padding: 15px;
+        border-radius: 5px;
+        color: var(--text-dark);
+    }
+
+    .notes p {
+        margin-bottom: 12px;
+    }
+
+    /* Historical Records Section Links */
+    .notes a {
+        color: var(--blue-light);
+        text-decoration: underline;
+        transition: color 0.3s ease;
+    }
+
+    .notes a:hover {
+        color: var(--terracotta);
+    }
+
+    .family-tree-link {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .tree-button {
+        display: inline-block;
+        padding: 12px 25px;
+        background: var(--blue-dark);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 1.05em;
+        transition: all 0.3s ease;
+    }
+
+    .tree-button:hover {
+        background: var(--terracotta);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 600px) {
+        .info-row {
+            grid-template-columns: 1fr;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+    }
+</style>
 </head>
 <body>
-    <div class="container">
-        <nav class="navigation">
-            <a href="https://cgreposit.github.io/genealogysite/" class="nav-link">← Home</a>
-            <a href="family-directory.html" class="nav-link">← Family Directory</a>
-        </nav>
+<div class="container">
+    <nav class="navigation">
+        <a href="https://cgreposit.github.io/genealogysite/" class="nav-link">← Home</a>
+        <a href="family-directory.html" class="nav-link">← Family Directory</a>
+    </nav>
 
-        <header>
-            <h1>Maria “Mary” Favini Malcuit</h1>
-            <p class="dates">1901 – 1986</p>
-        </header>
+    <header>
+        <h1>Maria "Mary" Favini Malcuit</h1>
+        <p class="dates">1901 – 1986</p>
+    </header>
 
-        <div class="info-section">
-            <h2>Personal Information</h2>
-            <div class="info-row"><div class="info-label">Gender:</div><div class="info-value">Female (deceased)</div></div>
-            <div class="info-row"><div class="info-label">Birth Date:</div><div class="info-value">1901</div></div>
-            <div class="info-row"><div class="info-label">Birth Place:</div><div class="info-value">Varallo Pombia, Provincia di Novara, Piemonte, Italy 🇮🇹</div></div>
-            <div class="info-row"><div class="info-label">Death Date:</div><div class="info-value">1986</div></div>
-            <div class="info-row"><div class="info-label">Death Place:</div><div class="info-value">Harrington Park, New Jersey, USA 🇺🇸</div></div>
-            <div class="info-row"><div class="info-label">Lifespan:</div><div class="info-value">~85 years</div></div>
-        </div>
+    <div class="info-section">
+        <h2>Personal Information</h2>
+        <div class="info-row"><div class="info-label">Date of Birth:</div><div class="info-value">1901</div></div>
+        <div class="info-row"><div class="info-label">Birth Place:</div><div class="info-value">Varallo Pombia, Provincia di Novara, Piemonte, Italy 🇮🇹</div></div>
+        <div class="info-row"><div class="info-label">Date of Death:</div><div class="info-value">1986</div></div>
+        <div class="info-row"><div class="info-label">Death Place:</div><div class="info-value">Harrington Park, New Jersey 🇺🇸</div></div>
+        <div class="info-row"><div class="info-label">Age:</div><div class="info-value">85 years</div></div>
+    </div>
 
-        <div class="info-section">
-            <h2>Family Relationships</h2>
-            <div class="info-row"><div class="info-label">Father:</div><div class="info-value"><a href="guiseppe-favini.html">Guiseppe Favini</a> (b. Varallo-Pombia, Italy)</div></div>
-            <div class="info-row"><div class="info-label">Mother:</div><div class="info-value">PWRTM (details unknown)</div></div>
-            <div class="info-row"><div class="info-label">Spouse:</div><div class="info-value"><a href="maurice-malcuit.html">Maurice Malcuit</a> (1897–1966)</div></div>
-            <div class="info-row"><div class="info-label">Children:</div>
-                <div class="info-value">
-                    <a href="jeannette-angela-commerford.html">Jeannette Angela Commerford (née Malcuit)</a> (1926–2020)<br>
-                    <a href="john-malcuit.html">John Malcuit</a> (dates unknown)
-                </div>
-            </div>
-        </div>
+    <div class="info-section">
+        <h2>Family Relationships</h2>
+        <div class="info-row"><div class="info-label">Father:</div><div class="info-value">Guiseppe Favini</div></div>
+        <div class="info-row"><div class="info-label">Mother:</div><div class="info-value">[Unknown]</div></div>
+        <div class="info-row"><div class="info-label">Spouse:</div><div class="info-value"><a href="maurice-malcuit.html">Maurice Malcuit</a> (1897–1966)</div></div>
+        <div class="info-row"><div class="info-label">Children:</div><div class="info-value"><a href="jeannette-commerford.html">Jeannette Angela Malcuit Commerford</a><br><a href="#">John Malcuit</a></div></div>
+    </div>
 
-        <div class="info-section">
-            <h2>Historical Notes</h2>
-            <div class="notes">
-                <p><strong>[Entry into the United States]</strong> </p>
-                
-                <p>Maria Favini was born in 1901 in Varallo Pombia, a small town in the province of Novara, northern Italy. She immigrated to the United States on <strong>July 19, 1913</strong> aboard the ship <em>Napoli</em>, which departed from the Port of Genoa on June 30, 1913.</p>
-                <p>Her immigration records indicate that her father, <strong>Guiseppe Favini</strong>, was her listed relative in Italy. She traveled with a 16-year-old boy, <strong>Stefano Albertalli</strong>, most likely a relative, and both listed <strong>Enrico Albertalli</strong> in West Hoboken, New Jersey, as their final U.S. destination.</p>
-                <p>She married <strong>Maurice Malcuit</strong>, a French immigrant originally from the Paris region, and settled in New Jersey. Together they had at least two children: <strong>Jeannette Angela Malcuit</strong> (later Commerford) and <strong>John Malcuit</strong>.</p>
-                <p>Records describe her as a <em>“house woman”</em> in her immigration manifest. Her listed height was 5 ft 1 in (155 cm), with brown hair and brown eyes — details that provide a vivid glimpse into her early life as an Italian immigrant to America in the early 20th century.</p>
-            </div>
-        </div>
-
-        <div class="family-tree-link">
-            <a href="family-directory.html" class="tree-button">View Full Family Directory</a>
+    <div class="info-section">
+        <h2>Historical Notes</h2>
+        <div class="notes">
+            <p>Maria “Mary” Favini was born in 1901 in Varallo Pombia, a small town in northern Italy’s Piedmont region. In 1913, at the age of 24, she immigrated to the United States aboard the ship <em>Napoli</em>, departing from the Port of Genoa on June 30th and arriving in New York on July 19th, 1913.</p>
+            <p>She traveled with a 16-year-old companion named Stefano Albertalli from her hometown, both listing their cousin Enrico Albertalli in West Hoboken, New Jersey, as their final destination. Maria’s occupation was recorded as “house woman.”</p>
+            <p>She later married <strong>Maurice Malcuit</strong>, who had emigrated from France as a child. The couple settled in New Jersey, where they raised their family—including daughter <strong>Jeannette Angela Malcuit</strong>, who married <strong>Edward Bradley “Pali” Commerford</strong>.</p>
+            <p>Maria passed away in Harrington Park, New Jersey, in 1986 at the age of 85, leaving behind a legacy of courage and family continuity across continents.</p>
         </div>
     </div>
+
+    <div class="info-section">
+        <h2>Historical Records & Documentation</h2>
+        <div class="notes">
+            <p><strong>U.S. Census Records:</strong></p>
+            <ul style="list-style:none; padding-left:0; margin-top:10px; margin-bottom:25px;">
+                <li style="margin:8px 0;"><span style="color:var(--success-green); margin-right:8px;">✓</span><a href="[URL_TO_1950_CENSUS]" target="_blank">1950 Census</a></li>
+                <li style="margin:8px 0;"><span style="color:var(--success-green); margin-right:8px;">✓</span><a href="[URL_TO_1940_CENSUS]" target="_blank">1940 Census</a></li>
+                <li style="margin:8px 0;"><span style="color:var(--success-green); margin-right:8px;">✓</span><a href="[URL_TO_1930_CENSUS]" target="_blank">1930 Census</a></li>
+                <li style="margin:8px 0;"><span style="color:var(--muted-gray); margin-right:8px;">☐</span><span style="color:var(--muted-gray);">1920 Census (record not located)</span></li>
+                <li style="margin:8px 0;"><span style="color:var(--muted-gray); margin-right:8px;">☐</span><span style="color:var(--muted-gray);">1910 Census (before immigration)</span></li>
+            </ul>
+
+            <p><strong>Immigration Records:</strong></p>
+            <ul style="list-style:none; padding-left:0; margin-top:10px; margin-bottom:25px;">
+                <li style="margin:8px 0;"><span style="color:var(--success-green); margin-right:8px;">✓</span><a href="https://heritage.statueofliberty.org/passenger-details/czoxMjoiMTAyMTczMDIwMTQxIjs=/czo4OiJtYW5pZmVzdCI7#passengerListAnchor" target="_blank">Ellis Island Passenger Record (1913)</a></li>
+                <li style="margin:8px 0;"><span style="color:var(--success-green); margin-right:8px;">✓</span><a href="#" target="_blank">Ship Manifest - <em>Napoli</em> (1913)</a></li>
+                <li style="margin:8px 0;"><span style="color:var(--muted-gray); margin-right:8px;">☐</span><span style="color:var(--muted-gray);">Naturalization Papers (not found)</span></li>
+                <li style="margin:8px 0;"><span style="color:var(--muted-gray); margin-right:8px;">☐</span><span style="color:var(--muted-gray);">Passport/Travel Documents (not found)</span></li>
+            </ul>
+
+            <p><strong>Other Records:</strong></p>
+            <ul style="list-style:none; padding-left:0; margin-top:10px; margin-bottom:25px;">
+                <li style="margin:8px 0;"><span style="color:var(--muted-gray); margin-right:8px;">☐</span><span style="color:var(--muted-gray);">Birth Certificate (Italian record not located)</span></li>
+                <li style="margin:8px 0;"><span style="color:var(--success-green); margin-right:8px;">✓</span><a href="#" target="_blank">Marriage Certificate (to Maurice Malcuit, [YEAR])</a></li>
+                <li style="margin:8px 0;"><span style="color:var(--success-green); margin-right:8px;">✓</span><a href="#" target="_blank">Death Certificate</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="family-tree-link">
+        <a href="family-directory.html" class="tree-button">View Full Family Directory</a>
+    </div>
+</div>
 </body>
 </html>
