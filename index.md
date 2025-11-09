@@ -41,7 +41,7 @@ This project yielded unexpected volumes of information: both on family history a
 
 *   [List of family members](family-directory.html)
 *   [Etymology](etymology.md)
-*   [Surname History](surnamehistory.md)
+*   
 
 
 
@@ -58,7 +58,8 @@ This project yielded unexpected volumes of information: both on family history a
 </div>
 
 
-**US Census Data** - Since 1790, the US census has been significant for its role in apportioning political representation, federal funding allocation, and (most importantly in this case) as a rich genealogical and demographic record of the American people. Census data is collected every 10 years, once 72 years have passed, the census records become publicly accessible. The 1950 census is the most recent one to be made public.
+**US Census Data** - Since 1790, the US census has been significant for its role in apportioning political representation, federal funding allocation, and (most importantly in this case) as a rich genealogical and demographic record of the American people. Census data is collected every 10 years, once 72 years have passed, the census records become publicly accessible. The 1950 census is the most recent one to be made public. <div style="overflow: auto;">
+  <img src="/genealogysite/assets/images/clipboard.png" alt="USCENSUS" width="120" style="float: left; margin: 10px 0 10px 20px; border-radius: 6px;" />
 
 ### Header 3
 
