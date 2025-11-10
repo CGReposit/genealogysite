@@ -16,9 +16,12 @@ With that being said, the Commerford surname is by far the most interesting (mos
 
 **Etymology** is the study of the origin and history of words, tracing how their meanings have changed over time. It examines a word's historical development, including its sources, forms, and evolution through different languages and periods.
 
-Last names like "_Favini_" (Italian) or "_O'Niell_" (Irish) have more intuitive origins. _Commerford_, however, is a little more ambiguous. It was never clear to me whether it was from Great Britain or the island of Ireland. 
+**Spelling variants and why they vary**
 
-<img src="/assets/images/british-isles-map.png" alt="Maps showing Ireland, Great Britain, and the British Isles" width="500">
+
+Last names like "_Favini_" or "_O'Niell_" have origins that are easier to guess. _Commerford_, however, is a little more ambiguous. It was never clear to me whether it was from Great Britain or the island of Ireland. 
+
+<img src="/assets/images/british-isles-map.png" alt="Maps showing Ireland, Great Britain, and the British Isles" width="400">
 
 
 We have ancestors from both, but the original individual (or individuals) who brought that surname to the United States from the British Isles is unclear. What is likely, though, is that it was brought over _before_ the Declaration of Independance in 1776. 
@@ -29,13 +32,9 @@ We have ancestors from both, but the original individual (or individuals) who br
 
 # Commerford
 
----
-
 **Overview** 
 
 The surname Commerford (commonly seen today also as _Comerford_, _Comberford_, _Quemerford_ and several other spellings) is a family name with mixed English and Irish connections.
-
-**Spelling variants and why they vary**
 
 Spelling variation is a constant in medieval and early-modern records. Variants you will commonly encounter include: _Comerford, Commerford, Comberford, Quemerford, Comford, Cummerford_ and occasional corruptions like _Compford/Compfort_ in very early documents. Variant spellings can reflect regional dialect, the scribe’s ear, the process of anglicising Irish forms, and later standardization. By the 16th–17th centuries the spelling Comerford became common in Irish records, with Commerford appearing as a recognized variant in Britain and in emigrant records.
 
