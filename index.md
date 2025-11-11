@@ -18,7 +18,7 @@ title: Commerford Lineage
 
 This project yielded unexpected volumes of information: both on family history and American History. Overall, this family is quite truly the Forrest Gump of American families. Wherever there is a historic, era-defining event unfolding, this family is <em>THERE</em> ✊🏻 Highly interesting shit. 
 
-*   [Personal Note 📝 (Dani)] (personalnote.md)
+*    [Personal Notes 📝 (Dani)](personalnote.md)
 *   [List of family members](family-directory.html)
 *   [Etymology](etymology.md)
 *   
