@@ -21,6 +21,7 @@ Mainly, this webpage served as an enormous personal project to learn the HTML co
 
 This project yielded unexpected volumes of information: both on family history and American History. Highly interesting shit. 
 
+
 <div style="text-align: center; margin-bottom: 20px;">
   <!-- First row -->
   <div style="margin-bottom: 30px;">
