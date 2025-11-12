@@ -12,9 +12,7 @@ title: Commerford Lineage
 ![Statue of Liberty](/genealogysite/assets/images/statue-of-liberty.jpg)
 
 
-
-
-Mainly, this webpage served as an enormous personal project to learn the HTML coding basics behind creating a website - and to give my Dad and siblings this repository of information I believe they should also have access to.
+I always disliked family trees (see [Personal Note](personalnote.md) for rant on the matter). But recently I started collecting information about my personal genealogy and I was intrigued (mostly by how well document it already was). Since existing genealogy-tracking websites couldn't fully integrate all the information I was gathering from multiple sources, I decided to get creative and just build my own repository for this information 🗃️ Mainly, this website serves as an enormous personal project to learn the HTML coding basics behind creating a website (which i think went well!🤞🏼) - and to give my Dad and siblings this repository of information I believe they should also have access to. 
 
 
 ## Index
