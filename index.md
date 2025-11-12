@@ -3,14 +3,6 @@ layout: default
 title: Commerford Lineage
 ---
 
-<div style="text-align: center; margin-bottom: 20px;">
-  <a href="family-directory.html" style="display: inline-block; margin: 0 20px;">
-    <img src="/genealogysite/assets/images/familysearch.png" alt="Registry" width="120" style="border-radius: 6px;" />
-  </a>
-  <a href="https://www.familyecho.com/?c=mtxabsk6nikjbuvu&f=195144334703685164" style="display: inline-block; margin: 0 20px;">
-    <img src="/genealogysite/assets/images/tree.png" alt="Family Tree" width="120" style="border-radius: 6px;" />
-  </a>
-</div>
 
 > Remember, remember always, that all of us, and you and I especially, are descended from immigrants and revolutionists"
 
@@ -32,7 +24,17 @@ This project yielded unexpected volumes of information: both on family history a
 
 *   [Personal Note 📝](personalnote.md)
 *   [Etymology](etymology.md)
-*   
+
+<div style="text-align: center; margin-bottom: 20px;">
+  <a href="family-directory.html" style="display: inline-block; margin: 0 20px; text-decoration: none;">
+    <img src="/genealogysite/assets/images/familysearch.png" alt="Registry" width="120" style="border-radius: 6px; display: block;" />
+    <span style="display: block; margin-top: 8px; color: #333; font-size: 14px;">Family Registry</span>
+  </a>
+  <a href="https://www.familyecho.com/?c=mtxabsk6nikjbuvu&f=195144334703685164" style="display: inline-block; margin: 0 20px; text-decoration: none;">
+    <img src="/genealogysite/assets/images/tree.png" alt="Family Tree" width="120" style="border-radius: 6px; display: block;" />
+    <span style="display: block; margin-top: 8px; color: #333; font-size: 14px;">Interactive Tree</span>
+  </a>
+</div>
 
 
 
