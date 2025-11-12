@@ -4,6 +4,7 @@ title: Etymology
 permalink: /projects/
 ---
 
+- [Back to Mainpage 🏠](index.md)
 
 ## Note 📝
 One conclusion I have come to while tracking the lineage and origins of so many people I had never heard of is that the <u>last name you inherit is a matter of complete chance</u>. 
