@@ -12,7 +12,9 @@ title: Commerford Lineage
 ![Statue of Liberty](/genealogysite/assets/images/statue-of-liberty.jpg)
 
 
-I always disliked family trees (see [Personal Note](personalnote.md) for rant on the matter). But recently I started collecting information about my personal genealogy and I was intrigued (mostly by how well document it already was). Since existing genealogy-tracking websites couldn't fully integrate all the information I was gathering from multiple sources, I decided to get creative and just build my own repository for this information 🗃️ Mainly, this website serves as an enormous personal project to learn the HTML coding basics behind creating a website (which i think went well!🤞🏼) - and to give my Dad and siblings this repository of information I believe they should also have access to. 
+I always disliked family trees (see [Personal Note📝](personalnote.md) for rant on the matter). But recently I started collecting information about my personal genealogy. 
+
+Since existing genealogy-tracking websites couldn't fully integrate all the information I was gathering from multiple sources, I decided to get creative and just build my own repository for this information 🗃️ Mainly, this website serves as an enormous personal project to learn the HTML coding basics behind creating a website (which i think went well!🤞🏼) - and to give my Dad and siblings this repository of information I believe they should also have access to. 
 
 
 ## Index
@@ -37,11 +39,11 @@ This project yielded unexpected volumes of information: both on family history a
   <div>
     <a href="etymology.md" style="display: inline-block; margin: 0 20px; text-decoration: none;">
       <img src="/genealogysite/assets/images/book.png" alt="Description 1" width="120" style="border-radius: 6px; display: block;" />
-      <span style="display: block; margin-top: 8px; color: #333; font-size: 14px;">Surname etymology</span>
+      <span style="display: block; margin-top: 8px; color: #333; font-size: 14px;">Etymology of surnames</span>
     </a>
-    <a href="personalnote.md" style="display: inline-block; margin: 0 20px; text-decoration: none;">
-      <img src="/genealogysite/assets/images/note.png" alt="Description 2" width="120" style="border-radius: 6px; display: block;" />
-      <span style="display: block; margin-top: 8px; color: #333; font-size: 14px;">Personal Note (Dani)</span>
+    <a href="history.md" style="display: inline-block; margin: 0 20px; text-decoration: none;">
+      <img src="/genealogysite/assets/images/USA.png" alt="USA" width="120" style="border-radius: 6px; display: block;" />
+      <span style="display: block; margin-top: 8px; color: #333; font-size: 14px;">Family & US history</span>
     </a>
   </div>
 </div>
