@@ -3,28 +3,45 @@ layout: default
 title: Commerford Lineage
 ---
 
+<div style="overflow: auto; margin-bottom: 20px;">
+  <a href="/genealogysite/census-records.html">
+    <img src="/genealogysite/assets/images/clipboard.png" alt="US Census Icon" width="120" style="float: left; margin: 10px 20px 10px 0; border-radius: 6px;" />
+  </a>
+  <a href="/genealogysite/ellis-island.html">
+    <img src="/genealogysite/assets/images/statueicon.png" alt="Ellis Island Icon" width="120" style="float: right; margin: 10px 0 10px 20px; border-radius: 6px;" />
+  </a>
+</div>
+
 > Remember, remember always, that all of us, and you and I especially, are descended from immigrants and revolutionists"
 
 - _Franklin D. Roosevelt (1938)_ - 32nd President of the United States
 
-
-
 ![Statue of Liberty](/genealogysite/assets/images/statue-of-liberty.jpg)
 
+### Personal Note 📝
 
+Let me preface this by saying I always thought family trees were <ins>dumb</ins> 
 
+I never felt compelled to create one. It's something I always thought of as cringy. 
+
+Thanks to modern technology, however, tracing one's lineage has become considerably easier; often requiring nothing more than a simple search of the last name in the correct database 🕵🏻‍♂️ 
+
+For all of my cynicism, I have to admit that to now have a family tree made is quite cool - especially because what I found out about my lineage and the people who comprise it is not what I had expected.
+
+Part of the reason I had no interest in geneaology is because I believed (and still do) that it has no practical effect on the present. Life does not change simply because you found out what year your ancestor entered through Ellis Island 🗽 
+
+Nonetheless, researching personal family history connects you to wider historical events, like wars, migrations, or social movements. This a personal, human-scale perspective on the past that is entirely different to reading about it in textbooks.
+
+Easy research quickly yielded an unmanageable volume of data. Since existing genealogy-tracking websites couldn't fully integrate all the information I was gathering from multiple sources, I decided to get creative and just build my own repository for this information. 
+
+Mainly, this webpage served as an enormous personal project to learn the HTML coding basics behind creating a website - and to give my Dad and siblings this repository of information I believe they should also have access to.
 
 ## Index
 
-This project yielded unexpected volumes of information: both on family history and American History. Overall, this family is quite truly the Forrest Gump of American families. Wherever there is a historic, era-defining event unfolding, this family is <em>THERE</em> ✊🏻 Highly interesting shit. 
+This project yielded unexpected volumes of information: both on family history and American History. Highly interesting shit. 
 
-*    [Personal Notes 📝 (Dani)](personalnote.md)
 *   [List of family members](family-directory.html)
 *   [Etymology](etymology.md)
-*   
-
-
-
 
 ### Resources used for research:
 
@@ -38,25 +55,7 @@ This project yielded unexpected volumes of information: both on family history a
   This repository is open to the public (but requires making a free account).
 </div>
 
-
 <div style="overflow: auto;">
   <img src="/genealogysite/assets/images/clipboard.png" alt="US Census Icon" width="100" style="float: left; margin: 10px 20px 10px 0; border-radius: 6px;" />
   <strong>US Census Data</strong> — Since 1790, the US census has been significant for its role in apportioning political representation, federal funding allocation, and (most importantly in this case) as a rich genealogical and demographic record of the American people. Census data is collected every 10 years. Once 72 years have passed, the census records become publicly accessible. The 1950 census is the most recent one to be made public.
 </div>
-
-### American History
-
-In 2026, The United States of America will celebrate the 250th annversary of its founding on July 4th 1776. As far as nations go, the US is quite a recent and unique one. The many nations of the Old World have legacies that span millenea. At most, the events leading to the founding of the modern United States can be traced to the 1500s-1600s; as a byproduct of European colonization on the continent. Regardless, in that short amount of time (250 years) the United States managed to become one of the most influential nations of contemporary history - pioneering a consitutional republic that serves as the basis for most modern democracies today. Despite the many (many) grievences we may have with current events in the United States, its achievements in such a remarklably short amount of time can be considered "great"... in my opinion. 
-
-Namely, for the purposes of geneaological research, we can be quite thankful our lineage can be traced in America because of the US Census. The United States Census is special because it is one of the oldest and most comprehensive population counts in the world, mandated by the U.S. Constitution itself - it is a foundational part of American democracy. 
-
-Conducted every ten years since 1790, the census directly determines political representation by deciding how seats in the House of Representatives are apportioned among the states. It also guides the distribution of hundreds of billions of federal dollars for schools, infrastructure, healthcare, and other public services. Beyond its governmental role, the census provides an invaluable historical record and a detailed snapshot of the American people. 
-
-
-To my knowledge, both of my paternal grandparents were first-generation Americans. While that is true for one, the story could not be more different for the other. 
-
-
-
-- First item
-- Second item
-- Third item
