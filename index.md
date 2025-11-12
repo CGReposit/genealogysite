@@ -38,7 +38,7 @@ This project yielded unexpected volumes of information: both on family history a
   <div>
     <a href="etymology.md" style="display: inline-block; margin: 0 20px; text-decoration: none;">
       <img src="/genealogysite/assets/images/book.png" alt="Description 1" width="120" style="border-radius: 6px; display: block;" />
-      <span style="display: block; margin-top: 8px; color: #333; font-size: 14px;">Etymology</span>
+      <span style="display: block; margin-top: 8px; color: #333; font-size: 14px;">Surname etymology</span>
     </a>
     <a href="personalnote.md" style="display: inline-block; margin: 0 20px; text-decoration: none;">
       <img src="/genealogysite/assets/images/note.png" alt="Description 2" width="120" style="border-radius: 6px; display: block;" />
