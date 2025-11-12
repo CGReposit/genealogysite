@@ -3,11 +3,11 @@ layout: default
 title: Commerford Lineage
 ---
 
-<div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 20px;">
-  <a href="family-directory.html">
+<div style="text-align: center; margin-bottom: 20px;">
+  <a href="family-directory.html" style="display: inline-block; margin: 0 20px;">
     <img src="/assets/images/familysearch.png" alt="Registry" width="120" style="border-radius: 6px;" />
   </a>
-  <a href="https://www.familyecho.com/?c=mtxabsk6nikjbuvu&f=195144334703685164">
+  <a href="https://www.familyecho.com/?c=mtxabsk6nikjbuvu&f=195144334703685164" style="display: inline-block; margin: 0 20px;">
     <img src="/assets/images/tree.png" alt="Family Tree" width="120" style="border-radius: 6px;" />
   </a>
 </div>
