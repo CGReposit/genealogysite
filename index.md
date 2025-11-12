@@ -3,12 +3,12 @@ layout: default
 title: Commerford Lineage
 ---
 
-<div style="overflow: auto; margin-bottom: 20px;">
-  <a href="/genealogysite/census-records.html">
-    <img src="/genealogysite/assets/images/clipboard.png" alt="US Census Icon" width="120" style="float: left; margin: 10px 20px 10px 0; border-radius: 6px;" />
+<div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 20px;">
+  <a href="family-directory.html">
+    <img src="/assets/images/familysearch.png" alt="Registry" width="120" style="border-radius: 6px;" />
   </a>
-  <a href="/genealogysite/ellis-island.html">
-    <img src="/genealogysite/assets/images/statueicon.png" alt="Ellis Island Icon" width="120" style="float: right; margin: 10px 0 10px 20px; border-radius: 6px;" />
+  <a href="https://www.familyecho.com/?c=mtxabsk6nikjbuvu&f=195144334703685164">
+    <img src="/assets/images/tree.png" alt="Family Tree" width="120" style="border-radius: 6px;" />
   </a>
 </div>
 
