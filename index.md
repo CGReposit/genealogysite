@@ -37,7 +37,7 @@ This project yielded unexpected volumes of information: both on family history a
   
   <!-- Second row -->
   <div>
-  <a href="etymology.html" style="display: inline-block; margin: 0 20px; text-decoration: none;">
+<a href="etymology.md" style="display: inline-block; margin: 0 20px; text-decoration: none;">
       <img src="/genealogysite/assets/images/book.png" alt="etymology" width="120" style="border-radius: 6px; display: block;" />
       <span style="display: block; margin-top: 8px; color: #333; font-size: 14px;">Etymology of surnames</span>
     </a>
@@ -68,5 +68,4 @@ This project yielded unexpected volumes of information: both on family history a
   <img src="/genealogysite/assets/images/clipboard.png" alt="US Census Icon" width="100" style="float: left; margin: 10px 20px 10px 0; border-radius: 6px;" />
   <strong>US Census Data</strong> — Since 1790, the US census has been significant for its role in apportioning political representation, federal funding allocation, and (most importantly in this case) as a rich genealogical and demographic record of the American people. Census data is collected every 10 years. Once 72 years have passed, the census records become publicly accessible. The 1950 census is the most recent one to be made public.
 </div>
-
 
