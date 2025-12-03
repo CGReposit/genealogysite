@@ -37,7 +37,7 @@ This project yielded unexpected volumes of information: both on family history a
   
   <!-- Second row -->
   <div>
-<a href="etymology.md" style="display: inline-block; margin: 0 20px; text-decoration: none;">
+<a href="etymology.hmtl" style="display: inline-block; margin: 0 20px; text-decoration: none;">
       <img src="/genealogysite/assets/images/book.png" alt="etymology" width="120" style="border-radius: 6px; display: block;" />
       <span style="display: block; margin-top: 8px; color: #333; font-size: 14px;">Etymology of surnames</span>
     </a>
