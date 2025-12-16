@@ -1,71 +1,69 @@
----
-layout: default
-title: Commerford Lineage
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Family Genealogy</title>
 
-> Remember, remember always, that all of us, and you and I especially, are descended from immigrants and revolutionists"
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-- _Franklin D. Roosevelt (1938)_ - 32nd President of the United States
+  <!-- Site Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
 
+<body>
 
+  <header class="site-header">
+    <div class="container">
+      <h1>Family Genealogy</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="family-directory.html">Family Directory</a>
+        <a href="surnamehistory.html">Surname History</a>
+        <a href="etymology.html">Etymology</a>
+      </nav>
+    </div>
+  </header>
 
-![Statue of Liberty](/genealogysite/assets/images/statue-of-liberty.jpg)
+  <main class="container">
 
+    <section class="card">
+      <h2>Welcome</h2>
+      <p>
+        This site documents our family’s genealogy, history, and origins.
+        It serves as a shared reference for relatives, preserving names,
+        stories, and lineage across generations.
+      </p>
+    </section>
 
-I always disliked family trees (see [Personal Note📝](personalnote.md) for rant on the matter). But recently I started collecting information about my personal genealogy. 
+    <section class="card">
+      <h2>Purpose of This Site</h2>
+      <p>
+        The goal is to centralize family information in a clear, accessible
+        format — including ancestral roots, surname evolution, and
+        biographical records — for both present and future generations.
+      </p>
+    </section>
 
-Since existing genealogy-tracking websites couldn't fully integrate all the information I was gathering from multiple sources, I decided to get creative and just build my own repository for this information 🗃️ Mainly, this website serves as an enormous personal project to learn the HTML coding basics behind creating a website (which i think went well!🤞🏼) - and to give my Dad and siblings this repository of information I believe they should also have access to. 
+    <section class="card">
+      <h2>How to Use</h2>
+      <ul>
+        <li>Browse the <strong>Family Directory</strong> to see individual records</li>
+        <li>Explore <strong>Surname History</strong> for historical context</li>
+        <li>Read <strong>Etymology</strong> for linguistic origins</li>
+      </ul>
+    </section>
 
+  </main>
 
-## Index
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Family Genealogy Archive</p>
+    </div>
+  </footer>
 
-This project yielded unexpected volumes of information: both on family history and American History. Highly interesting shit. 
-
-
-<div style="text-align: center; margin-bottom: 20px;">
-  <!-- First row -->
-  <div style="margin-bottom: 30px;">
-    <a href="family-directory.html" style="display: inline-block; margin: 0 20px; text-decoration: none;">
-      <img src="/genealogysite/assets/images/familysearch.png" alt="Registry" width="120" style="border-radius: 6px; display: block;" />
-      <span style="display: block; margin-top: 8px; color: #333; font-size: 14px;">Family Registry</span>
-    </a>
-    <a href="https://www.familyecho.com/?c=mtxabsk6nikjbuvu&f=195144334703685164" style="display: inline-block; margin: 0 20px; text-decoration: none;">
-      <img src="/genealogysite/assets/images/tree.png" alt="Family Tree" width="120" style="border-radius: 6px; display: block;" />
-      <span style="display: block; margin-top: 8px; color: #333; font-size: 14px;">Interactive Tree</span>
-    </a>
-  </div>
-  
-  <!-- Second row -->
-  <div>
-<a href="etymology.html" style="display: inline-block; margin: 0 20px; text-decoration: none;">
-      <img src="/genealogysite/assets/images/book.png" alt="etymology" width="120" style="border-radius: 6px; display: block;" />
-      <span style="display: block; margin-top: 8px; color: #333; font-size: 14px;">Etymology of surnames</span>
-    </a>
- <a href="history.html" style="display: inline-block; margin: 0 20px; text-decoration: none;">
-      <img src="/genealogysite/assets/images/USA.png" alt="USA" width="120" style="border-radius: 6px; display: block;" />
-      <span style="display: block; margin-top: 8px; color: #333; font-size: 14px;">Family & US history</span>
-    </a>
-  </div>
-</div>
-
-
-
-### Resources used for research:
-
-**FamilySearch** - is a free website sponsored by The Church of Jesus Christ of Latter-day Saints (the Mormons) that provides genealogical software to help people discover their family history. It is one of the world's largest genealogical resources, with millions of historical records and a vast, collaborative family tree that helps users establush a lineage. The service is free for the public to use (log in required). 
-
-<div style="overflow: auto;">
-  <img src="/genealogysite/assets/images/statueicon.png" alt="Ellis Island Icon" width="120" style="float: right; margin: 10px 0 10px 20px; border-radius: 6px;" />
-  
-  <strong>Ellis Island records</strong> — The Statue of Liberty-Ellis Island Foundation maintains a searchable database of approximately 65 million passenger records for the Port of New York from 1820 to 1957.  
-  The records include ship manifests with details like name, age, nationality, and port of departure, as well as other details of interest.  
-  This repository is open to the public (but requires making a free account).
-</div>
-
-
-
-<div style="overflow: auto;">
-  <img src="/genealogysite/assets/images/clipboard.png" alt="US Census Icon" width="100" style="float: left; margin: 10px 20px 10px 0; border-radius: 6px;" />
-  <strong>US Census Data</strong> — Since 1790, the US census has been significant for its role in apportioning political representation, federal funding allocation, and (most importantly in this case) as a rich genealogical and demographic record of the American people. Census data is collected every 10 years. Once 72 years have passed, the census records become publicly accessible. The 1950 census is the most recent one to be made public.
-</div>
-
+</body>
+</html>
