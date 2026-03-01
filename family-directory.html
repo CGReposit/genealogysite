@@ -142,14 +142,12 @@ h1 {
     font-family: 'Crimson Pro', serif;
 }
 
-/* CARD GRID */
 .family-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 18px;
 }
 
-/* PARCHMENT CARDS */
 .family-card {
     background: linear-gradient(145deg, rgba(255,255,255,0.7), var(--parchment-dark));
     border: 1px solid var(--border);
@@ -275,7 +273,6 @@ h1 {
     font-family: 'Crimson Pro', serif;
 }
 
-/* SEARCH BAR */
 .search-bar-wrap {
     margin-bottom: 30px;
     display: flex;
@@ -324,13 +321,12 @@ h1 {
   <p class="subtitle">(in)Complete Genealogical Records</p>
 </header>
 
-<div class="stats"><p>Total ancestors fully or partially identified: <span>72</span></p></div>
+<div class="stats"><p>Total ancestors fully or partially identified: <span>80</span></p></div>
 
 <div class="reference-note">
   <p>This directory comprises all ancestors identified through lineage research. The biographical data in each profile is what can be <i>inferred</i> from available historical documentation and personal accounts about their lives.</p><br>
-  <p>Since paternal lineage is the one we are trying to track, this registry begins with <strong>Dad</strong> as the reference point: 
-      
-      </p>Dad → Parents → Grandparents → Great Grandparents → etc.</p><br>
+  <p>Since paternal lineage is the one we are trying to track, this registry begins with <strong>Dad</strong> as the reference point:
+      <br>Dad → Parents → Grandparents → Great Grandparents → etc.</p><br>
   <p>Relationship depth is measured through generational distance, not calendar time. An ancestor is classified as "5x great" because they are five parent-child links away from the reference person — ancestors at the same generational level may belong to very different historical periods.</p><br>
   <p>Each individual listed here represents a necessary link in a biological chain. This lineage continues only because <i>each</i> of these people existed, survived, and had a child who continued the line.</p>
 </div>
@@ -339,20 +335,20 @@ h1 {
   <input class="search-input" type="text" id="search" placeholder="Search by name, place, date, or keyword…" oninput="filterCards()" autocomplete="off">
 </div>
 
+<!-- PARENTS -->
 <div class="generation-section">
   <h2 class="generation-title">Parents</h2>
-  
   <div class="family-grid">
-    
+
 <div class="family-card" onclick="window.location.href='ancestors/jeannette-commerford.html'">
   <div class="card-flags">🇺🇸</div>
-  <h3>Jeannette  Commerford <span class="surname-birth">née Malcuit</span></h3>
+  <h3>Jeannette Commerford <span class="surname-birth">née Malcuit</span></h3>
   <div class="card-dates">b. 26 Oct 1926 — d. 11 Apr 2020 (age 94) †</div>
   <hr class="card-divider">
   <div class="detail"><strong>Mother:</strong> Maria "Mary" Favini</div>
   <div class="detail"><strong>Father:</strong> Maurice Malcuit</div>
   <div class="detail"><strong>Partner:</strong> Edward Bradley "Pali" Commerford</div>
-  <div class="detail"><strong>Birth:</strong> NJ </div>
+  <div class="detail"><strong>Birth:</strong> NJ</div>
 </div>
 
 <div class="family-card" onclick="window.location.href='ancestors/edward-bradley-commerford.html'">
@@ -365,16 +361,18 @@ h1 {
   <div class="detail"><strong>Partner:</strong> Jeannette Commerford</div>
   <div class="detail"><strong>Birth:</strong> Jersey City, New Jersey</div>
   <hr class="card-divider">
-        <div class="bio-preview">When Edward Bradley Commerford was born on 17 July 1918, in Jersey City, Hudson, New Jersey, United States, his father, John Rowe Commerford, was 34 and his mother, Ellen Mae "Ella" Youmans, was 26. H…</div>
+  <div class="bio-preview">When Edward Bradley Commerford was born on 17 July 1918, in Jersey City, Hudson, New Jersey, United States, his father, John Rowe Commerford, was 34 and his mother, Ellen Mae "Ella" Youmans, was 26.</div>
   <span class="read-more">Read more ↓</span>
 </div>
+
   </div>
 </div>
+
+<!-- GRANDPARENTS -->
 <div class="generation-section">
   <h2 class="generation-title">Grandparents</h2>
-  
   <div class="family-grid">
-    
+
 <div class="family-card" onclick="window.location.href='ancestors/maria-favini.html'">
   <div class="card-flags">🇺🇸🇮🇹</div>
   <h3>Maria "Mary" Malcuit <span class="nickname">née Favini</span></h3>
@@ -398,13 +396,13 @@ h1 {
   <div class="detail"><strong>Birth:</strong> Paris, France 🇫🇷</div>
   <div class="detail"><strong>Death:</strong> US 🇺🇸</div>
   <hr class="card-divider">
-        <div class="bio-preview">According to immigration records, the family lived in the Paris Region. Their ship "La Touraine" departed France on January 20th from the Port of Le Havre. Seven days later, it arrived at the Port of …</div>
+  <div class="bio-preview">According to immigration records, the family lived in the Paris Region. Their ship "La Touraine" departed France on January 20th from the Port of Le Havre. Seven days later, it arrived at the Port of New York.</div>
   <span class="read-more">Read more ↓</span>
 </div>
 
 <div class="family-card" onclick="window.location.href='ancestors/ellen-commerford.html'">
   <div class="card-flags">🇺🇸</div>
-  <h3>Ellen Mae  Commerford <span class="nickname">"Ella"</span> <span class="surname-birth">née Youmans</span></h3>
+  <h3>Ellen Mae Commerford <span class="nickname">"Ella"</span> <span class="surname-birth">née Youmans</span></h3>
   <div class="card-dates">b. 17 May 1892 — d. 21 Jan 1973 (age 81) †</div>
   <hr class="card-divider">
   <div class="detail"><strong>Mother:</strong> Fanny O'Neill Youmans</div>
@@ -421,13 +419,16 @@ h1 {
   <div class="detail"><strong>Father:</strong> Charles C Commerford</div>
   <div class="detail"><strong>Partner:</strong> Grace Truman Duvall</div>
 </div>
+
   </div>
 </div>
+
+<!-- GREAT GRANDPARENTS -->
 <div class="generation-section">
   <h2 class="generation-title">Great Grandparents</h2>
   <p class="generation-note">The parents of your grandparents. There are 8 in total. Pedigree collapse likely first occurs here.</p>
   <div class="family-grid">
-    
+
 <div class="family-card" onclick="window.location.href='ancestors/fannyoneill.html'">
   <div class="card-flags">🇺🇸</div>
   <h3>Fanny Youmans <span class="surname-birth">née O'Neill</span></h3>
@@ -438,7 +439,7 @@ h1 {
   <div class="detail"><strong>Partner:</strong> George E. Youmans</div>
   <div class="detail"><strong>Birth:</strong> New Jersey</div>
   <hr class="card-divider">
-        <div class="bio-preview">Fanny (or Francis) O'Neill was born on 20 December 1864, in Bergen, New Jersey  Her father, Dennis O'Neill, was 24 and her mother, Mary Jane Ring, was 32.  Born during the American Civil War (1861-186…</div>
+  <div class="bio-preview">Fanny (or Francis) O'Neill was born on 20 December 1864, in Bergen, New Jersey. Her father, Dennis O'Neill, was 24 and her mother, Mary Jane Ring, was 32. Born during the American Civil War (1861–1865).</div>
   <span class="read-more">Read more ↓</span>
 </div>
 
@@ -453,7 +454,7 @@ h1 {
   <div class="detail"><strong>Birth:</strong> Jersey City, NJ</div>
   <div class="detail"><strong>Death:</strong> Jersey City, NJ</div>
   <hr class="card-divider">
-        <div class="bio-preview">When George E. Youmans was born on 21 January 1866, in Jersey City, Hudson, New Jersey, United States, his father, Aaron William Youmans, was 23 and his mother, Rachel Sliker, was 23. He married Fanny…</div>
+  <div class="bio-preview">When George E. Youmans was born on 21 January 1866, in Jersey City, Hudson, New Jersey, his father, Aaron William Youmans, was 23 and his mother, Rachel Sliker, was 23. He married Fanny O'Neill.</div>
   <span class="read-more">Read more ↓</span>
 </div>
 
@@ -476,7 +477,7 @@ h1 {
   <div class="detail"><strong>Father:</strong> John Commerford</div>
   <div class="detail"><strong>Partner:</strong> Elizabeth (Lizzie) Hamilton</div>
   <hr class="card-divider">
-        <div class="bio-preview">One of the nation'</div>
+  <div class="bio-preview">One of the nation's notable figures of his era.</div>
   <span class="read-more">Read more ↓</span>
 </div>
 
@@ -487,21 +488,20 @@ h1 {
   <hr class="card-divider">
   <div class="detail"><strong>Mother:</strong> Marie Thérèse Deval</div>
   <div class="detail"><strong>Father:</strong> Charles Malcuit</div>
-  <div class="detail"><strong>Wife:</strong> Marie Séverine Colmar (married on 15 Jan 1898 in Paris)</div>
-  <div class="detail"><strong>Birth:</strong> Challand-Saint-Victor, Vallée d'Aoste, Italy</div>
+  <div class="detail"><strong>Wife:</strong> Marie Séverine Colmar (married 15 Jan 1898 in Paris)</div>
+  <div class="detail"><strong>Birth:</strong> Challand-Saint-Victor, Vallée d'Aoste, Italy 🇮🇹</div>
 </div>
 
 <div class="family-card" onclick="window.location.href='ancestors/marieseverinecolmar.html'">
-  <div class="card-flags"></div>
+  <div class="card-flags">🇮🇹🇺🇸</div>
   <h3>Marie Séverine Colmar</h3>
   <div class="card-dates">b. 21 Aug 1867 — † date unknown</div>
   <hr class="card-divider">
   <div class="detail"><strong>Mother:</strong> Marie Marguerite Machet</div>
   <div class="detail"><strong>Father:</strong> François Cyprien Colmar</div>
-  <div class="detail"><strong>Husband:</strong> Jean Malcuit (married on 15 Jan 1898 in Paris)</div>
-
+  <div class="detail"><strong>Husband:</strong> Jean Malcuit (married 15 Jan 1898 in Paris)</div>
   <hr class="card-divider">
-        <div class="bio-preview">Arrived in the United States on January 27th 1906 with her two children.   The amount of cash they had in hand when they arrived is hard to decipher in the Immigration sheet - possibly $12. Notes indi…</div>
+  <div class="bio-preview">Arrived in the United States on January 27th 1906 with her two children. The amount of cash they had in hand when they arrived is hard to decipher in the immigration sheet — possibly $12.</div>
   <span class="read-more">Read more ↓</span>
 </div>
 
@@ -510,15 +510,18 @@ h1 {
   <h3>Guiseppe Favini</h3>
   <div class="card-dates">† date unknown</div>
   <hr class="card-divider">
-  <div class="detail"><strong>Birth:</strong> Varallo-Pombia, Milan, Italy </div>
+  <div class="detail"><strong>Birth:</strong> Varallo-Pombia, Milan, Italy</div>
 </div>
+
   </div>
 </div>
+
+<!-- GREAT GREAT GRANDPARENTS -->
 <div class="generation-section">
   <h2 class="generation-title">Great Great Grandparents</h2>
   <p class="generation-note">A person has a total of 16 great great grandparents. In our case, 8 have been (partially) identified.</p>
   <div class="family-grid">
-    
+
 <div class="family-card" onclick="window.location.href='ancestors/maryjanering.html'">
   <div class="card-flags">🇺🇸🇮🇪</div>
   <h3>Mary Jane O'Neill <span class="surname-birth">née Ring</span></h3>
@@ -528,7 +531,7 @@ h1 {
   <div class="detail"><strong>Birth:</strong> County Kilkenny, Ireland 🇮🇪</div>
   <div class="detail"><strong>Death:</strong> Westwood, NJ 🇺🇸</div>
   <hr class="card-divider">
-        <div class="bio-preview">She lived in Washington Township, Bergen, New Jersey, United States in 1880 and Hillsdale, Bergen, New Jersey, United States for about 15 years. She died on 2 February 1926, in Westwood, Bergen, New J…</div>
+  <div class="bio-preview">She lived in Washington Township, Bergen, New Jersey in 1880 and Hillsdale, Bergen, New Jersey for about 15 years. She died on 2 February 1926, in Westwood, Bergen, New Jersey.</div>
   <span class="read-more">Read more ↓</span>
 </div>
 
@@ -540,17 +543,16 @@ h1 {
   <div class="detail"><strong>Mother:</strong> Mary Byrnes</div>
   <div class="detail"><strong>Father:</strong> Joseph O'Neill</div>
   <div class="detail"><strong>Partner:</strong> Mary Jane O'Neill</div>
-  <div class="detail"><strong>Birth:</strong> Ireland🇮🇪</div>
+  <div class="detail"><strong>Birth:</strong> Ireland 🇮🇪</div>
   <div class="detail"><strong>Death:</strong> USA 🇺🇸</div>
   <hr class="card-divider">
-        <div class="bio-preview">Dennis O'Neill was born on 9 June 1840, in Ireland as the son of joseph o'neill and mary byrnes. He had at least 3 sons and 6 daughters with Mary Jane Ring. He lived in Hillsdale, Bergen, New Jersey, …</div>
+  <div class="bio-preview">Dennis O'Neill was born on 9 June 1840 in Ireland. He had at least 3 sons and 6 daughters with Mary Jane Ring. He lived in Hillsdale, Bergen, New Jersey.</div>
   <span class="read-more">Read more ↓</span>
 </div>
 
 <div class="family-card" onclick="window.location.href='ancestors/rachelsliker.html'">
   <div class="card-flags"></div>
   <h3>Rachel Sliker</h3>
-  
   <hr class="card-divider">
 </div>
 
@@ -563,7 +565,7 @@ h1 {
   <div class="detail"><strong>Father:</strong> George Youmans</div>
   <div class="detail"><strong>Partner:</strong> Rachel Sliker</div>
   <div class="detail"><strong>Birth:</strong> New York 🇺🇸</div>
-  <div class="detail"><strong>Profession:</strong> "Hard wood finisher" as stated occupation in the 1905 NJ census. The 1870 Census lists his occupation as a "varnisher". This was mostly likely his father's business or ocupation as he is listed as the same. As of 1880, he (along with his brother), his occupation is listed as "farmer"</div>
+  <div class="detail"><strong>Profession:</strong> "Hard wood finisher" (1905 NJ census); "varnisher" (1870 census); "farmer" (1880 census)</div>
 </div>
 
 <div class="family-card" onclick="window.location.href='ancestors/johncommerford.html'">
@@ -571,8 +573,6 @@ h1 {
   <h3>John Commerford</h3>
   <div class="card-dates">b. 1800 — d. 1878 (age 78) †</div>
   <hr class="card-divider">
-  <div class="detail"><strong>Mother:</strong> Commerford</div>
-  <div class="detail"><strong>Father:</strong> Commerford</div>
   <div class="detail"><strong>Partner:</strong> Maria Commerford</div>
 </div>
 
@@ -592,11 +592,8 @@ h1 {
   <div class="card-dates">b. 19 Oct 1832 — d. 8 Apr 1888 (age 56) †</div>
   <hr class="card-divider">
   <div class="detail"><strong>Partner:</strong> Marie Marguerite Machet</div>
-  <div class="detail"><strong>Birth:</strong> Saint Denis, Aosta, Italia</div>
-  <div class="detail"><strong>Death:</strong> Saint Denis, Aosta, Italia</div>
-  <hr class="card-divider">
-        <div class="bio-preview">https://gw.geneanet.org/megadeath?n=colmar&oc=&p=francois+cyprien+abbandonato&_gl=1*1ltthhc*_gcl_aw*R0NMLjE3NjE0MjU0NzQuQ2p3S0NBanc2dkhIQmhCd0Vpd0FxNHp2QV9kNWFGdkJDeVBnTUNGdUhnZ1dYQmpfZF9nYTU0d2RUSDR3…</div>
-  <span class="read-more">Read more ↓</span>
+  <div class="detail"><strong>Birth:</strong> Saint-Denis, Aosta Valley, Italy 🇮🇹</div>
+  <div class="detail"><strong>Death:</strong> Saint-Denis, Aosta Valley, Italy 🇮🇹</div>
 </div>
 
 <div class="family-card" onclick="window.location.href='ancestors/marie-marguerite-machet.html'">
@@ -607,16 +604,19 @@ h1 {
   <div class="detail"><strong>Mother:</strong> Marie Joseph Orsieres</div>
   <div class="detail"><strong>Father:</strong> Jean Martin Machet</div>
   <div class="detail"><strong>Partner:</strong> François Cyprien Colmar</div>
-  <div class="detail"><strong>Birth:</strong> Saint Denis, Aosta, Italia </div>
-  <div class="detail"><strong>Death:</strong> Saint Denis, Aosta, Italia</div>
+  <div class="detail"><strong>Birth:</strong> Saint-Denis, Aosta Valley, Italy 🇮🇹</div>
+  <div class="detail"><strong>Death:</strong> Saint-Denis, Aosta Valley, Italy 🇮🇹</div>
 </div>
+
   </div>
 </div>
+
+<!-- 3x GREAT GRANDPARENTS -->
 <div class="generation-section">
   <h2 class="generation-title">Great Great Great Grandparents (3x)</h2>
   <p class="generation-note">32 total ancestors of this kind; many have been either partially or fully identified.</p>
   <div class="family-grid">
-    
+
 <div class="family-card" onclick="window.location.href='ancestors/richard-r-ferris.html'">
   <div class="card-flags">🇺🇸</div>
   <h3>Richard R Ferris</h3>
@@ -634,9 +634,6 @@ h1 {
   <div class="detail"><strong>Father:</strong> Jacob Purdy</div>
   <div class="detail"><strong>Partner:</strong> Richard R Ferris</div>
   <div class="detail"><strong>Birth:</strong> North Castle, Westchester County, New York</div>
-  <hr class="card-divider">
-        <div class="bio-preview">siblings; Mujer Levina Purdy 1765-1834 Hombre Henry Purdy 1767-1837..1839 Mujer Susannah Purdy 1770-1807 Mujer Winifred Purdy 1773-1820 Mujer Abigail Purdy 1775-1853 Hombre Jacob Purdy, Jr. 1777-1866 …</div>
-  <span class="read-more">Read more ↓</span>
 </div>
 
 <div class="family-card" onclick="window.location.href='ancestors/margaret-stryker.html'">
@@ -655,12 +652,9 @@ h1 {
   <h3>George Youmans</h3>
   <div class="card-dates">b. Aug 1823 — d. 2 Jul 1902 (age 79) †</div>
   <hr class="card-divider">
-  <div class="detail"><strong>Mother:</strong> Youmans</div>
-  <div class="detail"><strong>Father:</strong> Youmans</div>
   <div class="detail"><strong>Partner:</strong> Margaret Stryker</div>
   <div class="detail"><strong>Birth:</strong> Rockland, New York</div>
   <div class="detail"><strong>Death:</strong> Jersey City, NJ</div>
-
 </div>
 
 <div class="family-card" onclick="window.location.href='ancestors/mary-byrnes.html'">
@@ -720,8 +714,7 @@ h1 {
   <div class="card-dates">b. 1836 — † date unknown</div>
   <hr class="card-divider">
   <div class="detail"><strong>Partner:</strong> Alexander James Ferris Hamilton</div>
-    <div class="detail"><strong>Birth:</strong> New York, NY</div>
-  <div class="detail"><strong>Death:</strong> </div>
+  <div class="detail"><strong>Birth:</strong> New York, NY</div>
 </div>
 
 <div class="family-card" onclick="window.location.href='ancestors/jean-martin-machet.html'">
@@ -732,23 +725,26 @@ h1 {
   <div class="detail"><strong>Mother:</strong> Marie Christine Junod</div>
   <div class="detail"><strong>Father:</strong> Jean André Machet</div>
   <div class="detail"><strong>Partner:</strong> Marie Joseph Orsieres</div>
-  <div class="detail"><strong>Birth:</strong> Torgnon, Aosta, Valle d'Aosta, Italia 🇮🇹</div>
+  <div class="detail"><strong>Birth:</strong> Torgnon, Aosta Valley, Italy 🇮🇹</div>
 </div>
 
 <div class="family-card" onclick="window.location.href='ancestors/marie-joseph-orsieres.html'">
-  <div class="card-flags"></div>
+  <div class="card-flags">🇮🇹</div>
   <h3>Marie Joseph Orsieres</h3>
   <div class="card-dates">† date unknown</div>
   <hr class="card-divider">
   <div class="detail"><strong>Partner:</strong> Jean Martin Machet</div>
 </div>
+
   </div>
 </div>
+
+<!-- 4x GREAT GRANDPARENTS -->
 <div class="generation-section">
   <h2 class="generation-title">Great Great Great Great Grandparents (4x)</h2>
   <p class="generation-note">A person has 64 total ancestors of this kind.</p>
   <div class="family-grid">
-    
+
 <div class="family-card" onclick="window.location.href='ancestors/elizabeth-striker.html'">
   <div class="card-flags">🇺🇸</div>
   <h3>Elizabeth Striker</h3>
@@ -826,14 +822,17 @@ h1 {
   <hr class="card-divider">
   <div class="detail"><strong>Mother:</strong> Mary Deane</div>
   <div class="detail"><strong>Father:</strong> Alexander James Hamilton</div>
-  <div class="detail"><strong>Partner:</strong> Elizabeth Ann (or Ann Eliza) Hamilton</div>
-  <div class="detail"><strong>Birth:</strong> Westchester, New York</div>
+  <div class="detail"><strong>Partner:</strong> Elizabeth Ann (or Ann Eliza) Ferris</div>
+  <div class="detail"><strong>Birth:</strong> New York, New York</div>
   <div class="detail"><strong>Death:</strong> Bergen, New Jersey</div>
+  <hr class="card-divider">
+  <div class="bio-preview">Married Eliza A. Ferris on 14 March 1816 in New York. Son of the British officer Alexander James Hamilton who chose to remain in America after the Revolutionary War.</div>
+  <span class="read-more">Read more ↓</span>
 </div>
 
 <div class="family-card" onclick="window.location.href='ancestors/elizabeth-ferris.html'">
-  <div class="card-flags"></div>
-  <h3>Elizabeth Ann (or Ann Eliza) Hamilton <span class="surname-birth">née Ferris</span></h3>
+  <div class="card-flags">🇺🇸</div>
+  <h3>Elizabeth Ann Hamilton <span class="surname-birth">née Ferris</span></h3>
   <div class="card-dates">b. 10 Jun 1791 — d. 18 Apr 1877 (age 86) †</div>
   <hr class="card-divider">
   <div class="detail"><strong>Mother:</strong> Sarah Oakley</div>
@@ -848,8 +847,8 @@ h1 {
   <hr class="card-divider">
   <div class="detail"><strong>Mother:</strong> Catherine Gal</div>
   <div class="detail"><strong>Father:</strong> Pantaleon Machet</div>
-  <div class="detail"><strong>Wife:</strong> Marie Christine Junod (married on 1742)</div>
-  <div class="detail"><strong>Birth:</strong> Torgnon, Aosta, Valle d'Aosta, Italia</div>
+  <div class="detail"><strong>Wife:</strong> Marie Christine Junod (married 1742)</div>
+  <div class="detail"><strong>Birth:</strong> Torgnon, Aosta Valley, Italy 🇮🇹</div>
 </div>
 
 <div class="family-card" onclick="window.location.href='ancestors/marie-christine-junod.html'">
@@ -857,16 +856,19 @@ h1 {
   <h3>Marie Christine Junod</h3>
   <div class="card-dates">† date unknown</div>
   <hr class="card-divider">
-  <div class="detail"><strong>Husband:</strong> Jean André Machet (married on 1742)</div>
-  <div class="detail"><strong>Birth:</strong> Torgnon, Aosta, Valle d'Aosta, Italia</div>
+  <div class="detail"><strong>Husband:</strong> Jean André Machet (married 1742)</div>
+  <div class="detail"><strong>Birth:</strong> Torgnon, Aosta Valley, Italy 🇮🇹</div>
 </div>
+
   </div>
 </div>
+
+<!-- 5x GREAT GRANDPARENTS -->
 <div class="generation-section">
   <h2 class="generation-title">Great Great Great Great Great Grandparents (5x)</h2>
-  <p class="generation-note">A person has 128 ancestors of this kind. This generation witnessed the American Revolution and the formation of the United States. Very few have been found.</p>
+  <p class="generation-note">A person has 128 ancestors of this kind. This generation witnessed the American Revolution and the formation of the United States.</p>
   <div class="family-grid">
-    
+
 <div class="family-card" onclick="window.location.href='ancestors/samuel-purdy-jr.html'">
   <div class="card-flags">🇺🇸</div>
   <h3>Samuel Purdy Jr.</h3>
@@ -904,23 +906,36 @@ h1 {
   <div class="detail"><strong>Partner:</strong> James Ferris</div>
 </div>
 
+<!-- UPDATED: Alexander James Hamilton — the British officer -->
 <div class="family-card" onclick="window.location.href='ancestors/alexander-hamilton-sr.html'">
-  <div class="card-flags">🇺🇸</div>
+  <div class="card-flags">🏴󠁧󠁢󠁥󠁮󠁧󠁿🇺🇸</div>
   <h3>Alexander James Hamilton</h3>
-  <div class="card-dates">† date unknown</div>
+  <div class="card-dates">b. c. 1750, Scotland — d. after 1809, New York †</div>
   <hr class="card-divider">
+  <div class="detail"><strong>Mother:</strong> Miss Daes</div>
+  <div class="detail"><strong>Father:</strong> James Hamilton, Esq.</div>
   <div class="detail"><strong>Partner:</strong> Mary Deane</div>
+  <div class="detail"><strong>Birth:</strong> Scotland 🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
+  <div class="detail"><strong>Death:</strong> New York, USA 🇺🇸</div>
+  <hr class="card-divider">
+  <div class="bio-preview">British Army Lieutenant, 45th Regiment of Foot, commissioned May 1775. Served in America 1776–78 during the Revolutionary War and never returned. Married Mary Deane in occupied New York on 11 Feb 1778. Member and 2nd Vice-President of St. Andrew's Society of New York (1801–09). Only son of James Hamilton, Esq., Keeper of His Majesty's Stores at Woolwich.</div>
+  <span class="read-more">Read more ↓</span>
 </div>
 
+<!-- UPDATED: Mary Deane -->
 <div class="family-card" onclick="window.location.href='ancestors/mary-deane.html'">
-  <div class="card-flags">🇮🇪</div>
+  <div class="card-flags">🇮🇪🇺🇸</div>
   <h3>Mary Deane</h3>
-  <div class="card-dates">b. 22 Sep 1759 — d. 8 May 1851 (age 92) †</div>
+  <div class="card-dates">b. 22 Sep 1759, Ireland — d. 8 May 1851 (age 92) †</div>
   <hr class="card-divider">
-  <div class="detail"><strong>Mother:</strong> Mary Dolum</div>
-  <div class="detail"><strong>Father:</strong> Richard Dean</div>
+  <div class="detail"><strong>Mother:</strong> Mary Odlum</div>
+  <div class="detail"><strong>Father:</strong> Richard Deane</div>
   <div class="detail"><strong>Partner:</strong> Alexander James Hamilton</div>
-  <div class="detail"><strong>Birth:</strong> Ireland</div>
+  <div class="detail"><strong>Birth:</strong> Fullamore, Kings County, Ireland 🇮🇪</div>
+  <div class="detail"><strong>Death:</strong> New York, USA 🇺🇸</div>
+  <hr class="card-divider">
+  <div class="bio-preview">Born in Ireland; arrived in New York with her family on 23 October 1763, aged four. Married British officer Alexander James Hamilton on 11 February 1778 during the British occupation of New York. Together they had 13 children. Lived to age 92.</div>
+  <span class="read-more">Read more ↓</span>
 </div>
 
 <div class="family-card" onclick="window.location.href='ancestors/pantaleon-machet.html'">
@@ -929,7 +944,7 @@ h1 {
   <div class="card-dates">b. 1676 — † date unknown</div>
   <hr class="card-divider">
   <div class="detail"><strong>Partner:</strong> Catherine Gal</div>
-  <div class="detail"><strong>Birth:</strong> Torgnon, Aosta, Valle d'Aosta, Italia</div>
+  <div class="detail"><strong>Birth:</strong> Torgnon, Aosta Valley, Italy 🇮🇹</div>
 </div>
 
 <div class="family-card" onclick="window.location.href='ancestors/catherine-gal.html'">
@@ -938,15 +953,18 @@ h1 {
   <div class="card-dates">† date unknown</div>
   <hr class="card-divider">
   <div class="detail"><strong>Partner:</strong> Pantaleon Machet</div>
-  <div class="detail"><strong>Birth:</strong> Torgnon, Aosta, Valle d'Aosta, Italia</div>
+  <div class="detail"><strong>Birth:</strong> Torgnon, Aosta Valley, Italy 🇮🇹</div>
 </div>
+
   </div>
 </div>
+
+<!-- ★ NEW: 6x GREAT GRANDPARENTS -->
 <div class="generation-section">
   <h2 class="generation-title">Great Great Great Great Great Great Grandparents (6x)</h2>
   <p class="generation-note">A total of 256 ancestors for this category — born during the colonial and early independence eras.</p>
   <div class="family-grid">
-    
+
 <div class="family-card" onclick="window.location.href='ancestors/samuel-purdy.html'">
   <div class="card-flags"></div>
   <h3>Samuel Purdy</h3>
@@ -965,7 +983,7 @@ h1 {
   <div class="detail"><strong>Mother:</strong> Charlotte Lamaistre</div>
   <div class="detail"><strong>Father:</strong> Daniel Strang</div>
   <div class="detail"><strong>Partner:</strong> Samuel Purdy</div>
-  <div class="detail"><strong>Birth:</strong> Boston, Suffolk County Massachusetts 🏴󠁧󠁢󠁥󠁮󠁧󠁿🇺🇸</div>
+  <div class="detail"><strong>Birth:</strong> Boston, Massachusetts 🏴󠁧󠁢󠁥󠁮󠁧󠁿🇺🇸</div>
   <div class="detail"><strong>Death:</strong> Rye, Westchester County, Province of New York 🇬🇧🇺🇸</div>
 </div>
 
@@ -986,28 +1004,70 @@ h1 {
   <div class="detail"><strong>Partner:</strong> James Ferris</div>
 </div>
 
+<!-- ★ NEW CARD: Richard Deane -->
 <div class="family-card" onclick="window.location.href='ancestors/richard-dean.html'">
-  <div class="card-flags"></div>
-  <h3>Richard Dean</h3>
-  <div class="card-dates">b. 1730 — d. 4 Dec 1787 (age 57) †</div>
+  <div class="card-flags">🇮🇪🇺🇸</div>
+  <h3>Richard Deane</h3>
+  <div class="card-dates">b. c. 1730, Ireland — d. 4 Dec 1787 (age ~57) †</div>
   <hr class="card-divider">
-  <div class="detail"><strong>Partner:</strong> Mary Dolum</div>
+  <div class="detail"><strong>Partner:</strong> Mary Odlum</div>
+  <div class="detail"><strong>Birth:</strong> Ireland 🇮🇪</div>
+  <div class="detail"><strong>Death:</strong> USA 🇺🇸</div>
+  <hr class="card-divider">
+  <div class="bio-preview">Married Mary Odlum on 3 April 1755 in Fullamore, Kings County, Ireland. On 23 October 1763, he, his wife, and children Elizabeth, Mary, and Henry arrived in New York. Had 7 children: Mary Ann (1756), Elizabeth (1757), Mary (1759), Elkanah Prussia (1761), Henry (1763), Ann (1764), and Richard (1766). His Bible records are a primary source for the Hamilton family history.</div>
+  <span class="read-more">Read more ↓</span>
 </div>
 
-<div class="family-card" onclick="window.location.href='ancestors/mary-dolum.html'">
-  <div class="card-flags"></div>
-  <h3>Mary Dolum</h3>
+<!-- ★ NEW CARD: Mary Odlum -->
+<div class="family-card" onclick="window.location.href='ancestors/mary-odlum.html'">
+  <div class="card-flags">🇮🇪🇺🇸</div>
+  <h3>Mary Odlum</h3>
   <div class="card-dates">† date unknown</div>
   <hr class="card-divider">
-  <div class="detail"><strong>Partner:</strong> Richard Dean</div>
+  <div class="detail"><strong>Partner:</strong> Richard Deane</div>
+  <div class="detail"><strong>Birth:</strong> Fullamore, Kings County (now County Offaly), Ireland 🇮🇪</div>
+  <hr class="card-divider">
+  <div class="bio-preview">Married Richard Deane on 3 April 1755 in Fullamore, Kings County, Ireland. Emigrated to New York in 1763. The Odlum name is an old Anglo-Irish family from the Irish Midlands, suggesting Protestant Anglo-Irish origins. Mother of Mary Deane, who married British officer Alexander James Hamilton in 1778.</div>
+  <span class="read-more">Read more ↓</span>
 </div>
+
+<!-- ★ NEW CARD: James Hamilton, Esq. -->
+<div class="family-card" onclick="window.location.href='ancestors/james-hamilton-esq.html'">
+  <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
+  <h3>James Hamilton, Esq.</h3>
+  <div class="card-dates">† date unknown</div>
+  <hr class="card-divider">
+  <div class="detail"><strong>Mother:</strong> Lady Mary Kerr</div>
+  <div class="detail"><strong>Father:</strong> Alexander Hamilton of Ballincrieff</div>
+  <div class="detail"><strong>Partner:</strong> Miss Daes</div>
+  <div class="detail"><strong>Birth:</strong> Scotland</div>
+  <hr class="card-divider">
+  <div class="bio-preview">Keeper of His Majesty's Stores, appointed at Chatham, later at Woolwich — one of Britain's most important military arsenals. This was a prestigious Crown appointment. Eldest son of Alexander Hamilton of Ballincrieff. Father of Lt. Alexander James Hamilton, who served in the American Revolutionary War and chose to remain in New York.</div>
+  <span class="read-more">Read more ↓</span>
+</div>
+
+<!-- ★ NEW CARD: Miss Daes -->
+<div class="family-card" onclick="window.location.href='ancestors/miss-daes.html'">
+  <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿󠁧󠁿</div>
+  <h3>Miss Daes</h3>
+  <div class="card-dates">† date unknown</div>
+  <hr class="card-divider">
+  <div class="detail"><strong>Partner:</strong> James Hamilton, Esq.</div>
+  <div class="detail"><strong>Birth:</strong> Scotland (presumed) 🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
+  <hr class="card-divider">
+  <div class="bio-preview">Mother of Alexander James Hamilton, the British officer who remained in America after the Revolutionary War. Her first name is not recorded in surviving documents; she is identified only as "Miss Daes" in the family records. Further research may reveal her full identity.</div>
+  <span class="read-more">Read more ↓</span>
+</div>
+
   </div>
 </div>
+
+<!-- ★ NEW: 7x GREAT GRANDPARENTS -->
 <div class="generation-section">
   <h2 class="generation-title">Great Great Great Great Great Great Great Grandparents (7x)</h2>
   <p class="generation-note">A person has 512 ancestors of this kind.</p>
   <div class="family-grid">
-    
+
 <div class="family-card" onclick="window.location.href='ancestors/joseph-purdy-1653.html'">
   <div class="card-flags"></div>
   <h3>Joseph Purdy</h3>
@@ -1032,13 +1092,44 @@ h1 {
   <div class="card-dates">b. 1649 — d. 1715 (age 66) †</div>
   <hr class="card-divider">
 </div>
+
+<!-- ★ NEW CARD: Alexander Hamilton of Ballincrieff -->
+<div class="family-card" onclick="window.location.href='ancestors/alexander-hamilton-ballincrieff.html'">
+  <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
+  <h3>Alexander Hamilton of Ballincrieff</h3>
+  <div class="card-dates">b. c. 1690, Scotland — d. after 1720 †</div>
+  <hr class="card-divider">
+  <div class="detail"><strong>Partner:</strong> Lady Mary Kerr</div>
+  <div class="detail"><strong>Birth:</strong> Ballincrieff, East Lothian, Scotland</div>
+  <hr class="card-divider">
+  <div class="bio-preview">Described as the "undoubted male representative of the ancient family of Innerwick," with a charter under the Great Seal of Scotland for his lands at Ballincrieff, dated 1720. The Hamiltons of Innerwick were a branch of one of Scotland's most powerful noble dynasties. His marriage to Lady Mary Kerr, daughter of the Marquess of Lothian, connected the family to the highest levels of Scottish aristocracy.</div>
+  <span class="read-more">Read more ↓</span>
+</div>
+
+<!-- ★ NEW CARD: Lady Mary Kerr -->
+<div class="family-card" onclick="window.location.href='ancestors/lady-mary-kerr.html'">
+  <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
+  <h3>Lady Mary Kerr</h3>
+  <div class="card-dates">b. c. 1701, Scotland — d. 17 Nov 1768 (age ~67) †</div>
+  <hr class="card-divider">
+  <div class="detail"><strong>Mother:</strong> Lady Jane Campbell, Marchioness of Lothian</div>
+  <div class="detail"><strong>Father:</strong> Lt.-Gen. William Kerr, 2nd Marquess of Lothian</div>
+  <div class="detail"><strong>Partner:</strong> Alexander Hamilton of Ballincrieff</div>
+  <div class="detail"><strong>Birth:</strong> Midlothian, Scotland</div>
+  <hr class="card-divider">
+  <div class="bio-preview">Daughter of the 2nd Marquess of Lothian, one of Scotland's great noble titles. Married Alexander Hamilton of Innerwick and Ballincrieff c. 1723 in Bathgate, West Lothian. They were parents of at least 6 sons and 1 daughter. Her aristocratic Kerr lineage traces back through the Earls and Marquesses of Lothian to the powerful Scottish nobility of the 17th century.</div>
+  <span class="read-more">Read more ↓</span>
+</div>
+
   </div>
 </div>
+
+<!-- ★ NEW: 8x GREAT GRANDPARENTS -->
 <div class="generation-section">
   <h2 class="generation-title">Great Great Great Great Great Great Great Great Grandparents (8x)</h2>
   <p class="generation-note">A person has 1024 ancestors of this kind.</p>
   <div class="family-grid">
-    
+
 <div class="family-card" onclick="window.location.href='ancestors/john-ogden.html'">
   <div class="card-flags"></div>
   <h3>John Ogden</h3>
@@ -1055,7 +1146,7 @@ h1 {
   <div class="detail"><strong>Mother:</strong> Katherine Browne</div>
   <div class="detail"><strong>Father:</strong> John Budd III</div>
   <div class="detail"><strong>Partner:</strong> John Ogden</div>
-  <div class="detail"><strong>Birth:</strong> Long Island, Suffolk County, Province of New York 🏴󠁧󠁢󠁥󠁮󠁧󠁿🇺🇸</div>
+  <div class="detail"><strong>Birth:</strong> Long Island, Suffolk County, Province of New York</div>
 </div>
 
 <div class="family-card" onclick="window.location.href='ancestors/joseph-purdy-sr.html'">
@@ -1073,13 +1164,48 @@ h1 {
   <hr class="card-divider">
   <div class="detail"><strong>Partner:</strong> Joseph Purdy</div>
 </div>
+
+<!-- ★ NEW CARD: Lt.-Gen. William Kerr, 2nd Marquess of Lothian -->
+<div class="family-card" onclick="window.location.href='ancestors/william-kerr-marquess.html'">
+  <div class="card-flags">󠁧󠁿🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
+  <h3>Lt.-Gen. William Kerr <span class="nickname">2nd Marquess of Lothian</span></h3>
+  <div class="card-dates">b. 1661, Dalkeith — d. 28 Feb 1722, London (age 61) †</div>
+  <hr class="card-divider">
+  <div class="detail"><strong>Mother:</strong> Lady Jean Campbell of Argyll</div>
+  <div class="detail"><strong>Father:</strong> Robert Kerr, 4th Earl of Lothian</div>
+  <div class="detail"><strong>Partner:</strong> Lady Jane Campbell</div>
+  <div class="detail"><strong>Birth:</strong> Dalkeith, Midlothian, Scotland </div>
+  <div class="detail"><strong>Death:</strong> London, England, United Kingdom </div>
+  <hr class="card-divider">
+  <div class="bio-preview">Soldier and Scottish nobleman. Married Lady Jane Campbell on 30 June 1685. They were parents of at least 3 sons and 6 daughters. Died in London and was buried in Westminster Abbey — one of the most honored burial sites in Britain. His daughter Lady Mary Kerr married into the Hamilton of Ballincrieff line.</div>
+  <span class="read-more">Read more ↓</span>
+</div>
+
+<!-- ★ NEW CARD: Lady Jane Campbell, Marchioness of Lothian -->
+<div class="family-card" onclick="window.location.href='ancestors/lady-jane-campbell.html'">
+  <div class="card-flags">󠁧󠁿🏴󠁧󠁢󠁳󠁣󠁴󠁿󠁧󠁢󠁳󠁣</div>
+  <h3>Lady Jane Campbell <span class="nickname">Marchioness of Lothian</span></h3>
+  <div class="card-dates">b. 17 Jul 1657, Inverness-shire — d. 31 Jul 1712 (age 55) †</div>
+  <hr class="card-divider">
+  <div class="detail"><strong>Mother:</strong> Lady Mary Stewart, Countess of Argyll</div>
+  <div class="detail"><strong>Father:</strong> Archibald Campbell, 9th Earl of Argyll</div>
+  <div class="detail"><strong>Partner:</strong> Lt.-Gen. William Kerr, 2nd Marquess of Lothian</div>
+  <div class="detail"><strong>Birth:</strong> Inverness-shire, Scotland󠁮󠁧󠁿</div>
+  <div class="detail"><strong>Death:</strong> Newbottle, Durham, England󠁧󠁢󠁥󠁮󠁧󠁿</div>
+  <hr class="card-divider">
+  <div class="bio-preview">Daughter of Archibald Campbell, 9th Earl of Argyll — one of the most powerful nobles in Scotland. Married Lt.-Gen. William Kerr, 2nd Marquess of Lothian on 30 June 1685. Parents of at least 3 sons and 6 daughters. Her lineage connects this family to the great Campbell clan and the Earls of Argyll, a dynasty central to Scottish history.</div>
+  <span class="read-more">Read more ↓</span>
+</div>
+
   </div>
 </div>
+
+<!-- 9x GREAT GRANDPARENTS -->
 <div class="generation-section">
   <h2 class="generation-title">Great Great Great Great Great Great Great Great Great Grandparents (9x)</h2>
   <p class="generation-note">A person has 2048 ancestors of this kind.</p>
   <div class="family-grid">
-    
+
 <div class="family-card" onclick="window.location.href='ancestors/john-budd-iii.html'">
   <div class="card-flags">🏴󠁧󠁢󠁥󠁮󠁧󠁿🇺🇸</div>
   <h3>John Budd III</h3>
@@ -1101,13 +1227,32 @@ h1 {
   <div class="detail"><strong>Birth:</strong> Chichester, Sussex, England 🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
   <div class="detail"><strong>Death:</strong> Rye, Westchester County, Province of New York 🏴󠁧󠁢󠁥󠁮󠁧󠁿🇺🇸</div>
 </div>
+
+<!-- Archibald Campbell, 9th Earl of Argyll — now traceable from Lady Jane Campbell -->
+<div class="family-card" onclick="window.location.href='ancestors/archibald-campbell-9th-earl.html'">
+  <div class="card-flags">󠁧󠁿🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
+  <h3>Archibald Campbell <span class="nickname">9th Earl of Argyll</span></h3>
+  <div class="card-dates">b. 26 Feb 1629 — d. 30 Jun 1685 (age 56) †</div>
+  <hr class="card-divider">
+  <div class="detail"><strong>Mother:</strong> Lady Margaret Douglas, Countess of Argyll</div>
+  <div class="detail"><strong>Father:</strong> Sir Archibald Campbell</div>
+  <div class="detail"><strong>Partner:</strong> Lady Mary Stewart, Countess of Argyll</div>
+  <div class="detail"><strong>Birth:</strong> Dalkeith, Midlothian, Scotland </div>
+  <div class="detail"><strong>Death:</strong> Edinburgh, Scotland󠁧󠁢󠁥󠁮󠁧󠁿</div>
+  <hr class="card-divider">
+  <div class="bio-preview">One of the most powerful and controversial Scottish nobles of the 17th century. A leader of the Covenanting movement and opponent of King Charles II's religious policies. Executed in Edinburgh in 1685 after a failed rebellion. His daughter Lady Jane Campbell married the 2nd Marquess of Lothian, continuing this line.</div>
+  <span class="read-more">Read more ↓</span>
+</div>
+
   </div>
 </div>
+
+<!-- 10x GREAT GRANDPARENTS -->
 <div class="generation-section">
   <h2 class="generation-title">Great Great Great Great Great Great Great Great Great Great Grandparents (10x)</h2>
   <p class="generation-note">A person has 4096 ancestors of this kind.</p>
   <div class="family-grid">
-    
+
 <div class="family-card" onclick="window.location.href='ancestors/anthony-browne-iv.html'">
   <div class="card-flags">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
   <h3>Anthony Browne IV</h3>
@@ -1125,13 +1270,16 @@ h1 {
   <hr class="card-divider">
   <div class="detail"><strong>Partner:</strong> Anthony Browne IV</div>
 </div>
+
   </div>
 </div>
+
+<!-- 11x GREAT GRANDPARENTS -->
 <div class="generation-section">
   <h2 class="generation-title">Great Great Great Great Great Great Great Great Great Great Great Grandparents (11x)</h2>
   <p class="generation-note">A person has 8192 ancestors of this kind.</p>
   <div class="family-grid">
-    
+
 <div class="family-card" onclick="window.location.href='ancestors/anthony-browne-iii.html'">
   <div class="card-flags">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
   <h3>Anthony Browne III</h3>
@@ -1147,8 +1295,10 @@ h1 {
   <hr class="card-divider">
   <div class="detail"><strong>Partner:</strong> Anthony Browne III</div>
 </div>
+
   </div>
 </div>
+
 </div>
 </div>
 
@@ -1158,21 +1308,11 @@ function filterCards() {
   document.querySelectorAll('.family-card').forEach(card => {
     card.style.display = card.textContent.toLowerCase().includes(q) ? '' : 'none';
   });
-  // Hide empty sections
   document.querySelectorAll('.generation-section').forEach(sec => {
     const visible = [...sec.querySelectorAll('.family-card')].some(c => c.style.display !== 'none');
     sec.style.display = visible ? '' : 'none';
   });
 }
 </script>
-</body>
-</html>
-
-</div>
-</div>
-
-
-</div>
-</div>
 </body>
 </html>
