@@ -273,32 +273,6 @@ h1 {
     font-family: 'Crimson Pro', serif;
 }
 
-.search-bar-wrap {
-    margin-bottom: 30px;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.search-input {
-    flex: 1;
-    min-width: 200px;
-    padding: 10px 16px;
-    border: 1.5px solid var(--border-strong);
-    border-radius: 6px;
-    background: rgba(255,255,255,0.6);
-    font-family: 'Crimson Pro', serif;
-    font-size: 1rem;
-    color: var(--ink);
-    outline: none;
-}
-.search-input:focus {
-    border-color: var(--sepia-light);
-    box-shadow: 0 0 0 3px rgba(196,154,53,0.15);
-}
-.search-input::placeholder { color: var(--ink-faded); }
-
 @media screen and (max-width: 768px) {
     .container { width: 95%; padding: 25px 20px; }
     .generation-title { font-size: 1.3em; }
@@ -321,7 +295,7 @@ h1 {
   <p class="subtitle">(in)Complete Genealogical Records</p>
 </header>
 
-<div class="stats"><p>Total ancestors fully or partially identified: <span>116</span></p></div>
+<div class="stats"><p>Total ancestors fully or partially identified: <span>123</span></p></div>
 
 <div class="reference-note">
   <p>This directory comprises all ancestors identified through lineage research. The biographical data in each profile is what can be <i>inferred</i> from available historical documentation and personal accounts about their lives.</p><br>
@@ -329,10 +303,6 @@ h1 {
       <br>Dad → Parents → Grandparents → Great Grandparents → etc.</p><br>
   <p>Relationship depth is measured through generational distance, not calendar time. An ancestor is classified as "5x great" because they are five parent-child links away from the reference person — ancestors at the same generational level may belong to very different historical periods.</p><br>
   <p>Each individual listed here represents a necessary link in a biological chain. This lineage continues only because <i>each</i> of these people existed, survived, and had a child who continued the line.</p>
-</div>
-
-<div class="search-bar-wrap">
-  <input class="search-input" type="text" id="search" placeholder="Search by name, place, date, or keyword…" oninput="filterCards()" autocomplete="off">
 </div>
 
 <!-- PARENTS -->
@@ -906,7 +876,6 @@ h1 {
   <div class="detail"><strong>Partner:</strong> James Ferris</div>
 </div>
 
-<!-- UPDATED: Alexander James Hamilton — the British officer -->
 <div class="family-card" onclick="window.location.href='ancestors/alexander-hamilton-sr.html'">
   <div class="card-flags">🏴󠁧󠁢󠁥󠁮󠁧󠁿🇺🇸</div>
   <h3>Alexander James Hamilton</h3>
@@ -922,7 +891,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- UPDATED: Mary Deane -->
 <div class="family-card" onclick="window.location.href='ancestors/mary-deane.html'">
   <div class="card-flags">🇮🇪🇺🇸</div>
   <h3>Mary Deane</h3>
@@ -959,7 +927,7 @@ h1 {
   </div>
 </div>
 
-<!-- ★ NEW: 6x GREAT GRANDPARENTS -->
+<!-- 6x GREAT GRANDPARENTS -->
 <div class="generation-section">
   <h2 class="generation-title">Great Great Great Great Great Great Grandparents (6x)</h2>
   <p class="generation-note">A total of 256 ancestors for this category — born during the colonial and early independence eras.</p>
@@ -1004,7 +972,6 @@ h1 {
   <div class="detail"><strong>Partner:</strong> James Ferris</div>
 </div>
 
-<!-- ★ NEW CARD: Richard Deane -->
 <div class="family-card" onclick="window.location.href='ancestors/richard-dean.html'">
   <div class="card-flags">🇮🇪🇺🇸</div>
   <h3>Richard Deane</h3>
@@ -1018,7 +985,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ NEW CARD: Mary Odlum -->
 <div class="family-card" onclick="window.location.href='ancestors/mary-odlum.html'">
   <div class="card-flags">🇮🇪🇺🇸</div>
   <h3>Mary Odlum</h3>
@@ -1031,7 +997,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ NEW CARD: James Hamilton, Esq. -->
 <div class="family-card" onclick="window.location.href='ancestors/james-hamilton-esq.html'">
   <div class="card-flags">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
   <h3>James Hamilton, Esq.</h3>
@@ -1046,7 +1011,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- Agnes Daes - formerly "Miss Daes", now identified -->
 <div class="family-card" onclick="window.location.href='ancestors/agnes-daes.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>Agnes Daes</h3>
@@ -1060,8 +1024,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-
-<!-- ★ James Daes -->
 <div class="family-card" onclick="window.location.href='ancestors/james-daes.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>James Daes</h3>
@@ -1107,7 +1069,6 @@ h1 {
   <hr class="card-divider">
 </div>
 
-<!-- ★ NEW CARD: Alexander Hamilton of Ballincrieff -->
 <div class="family-card" onclick="window.location.href='ancestors/alexander-hamilton-ballincrieff.html'">
   <div class="card-flags">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
   <h3>Alexander Hamilton of Ballincrieff</h3>
@@ -1120,7 +1081,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ NEW CARD: Lady Mary Kerr -->
 <div class="family-card" onclick="window.location.href='ancestors/lady-mary-kerr.html'">
   <div class="card-flags">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
   <h3>Lady Mary Kerr</h3>
@@ -1134,7 +1094,7 @@ h1 {
   <div class="bio-preview">Daughter of the 2nd Marquess of Lothian, one of Scotland's great noble titles. Married Alexander Hamilton of Innerwick and Ballincrieff c. 1723 in Bathgate, West Lothian. They were parents of at least 6 sons and 1 daughter. Her aristocratic Kerr lineage traces back through the Earls and Marquesses of Lothian to the powerful Scottish nobility of the 17th century.</div>
   <span class="read-more">Read more ↓</span>
 </div>
-<!-- ★ James Hamilton of Ballencrief -->
+
 <div class="family-card" onclick="window.location.href='ancestors/james-hamilton-ballencrief.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>James Hamilton of Ballencrief</h3>
@@ -1150,7 +1110,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ Margaret Nicolson Hamilton -->
 <div class="family-card" onclick="window.location.href='ancestors/margaret-nicolson-hamilton.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>Margaret Nicolson Hamilton</h3>
@@ -1165,7 +1124,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ Charlotte Lamaistre -->
 <div class="family-card" onclick="window.location.href='ancestors/charlotte-lamaistre.html'">
   <div class="card-flags"></div>
   <h3>Charlotte Lamaistre</h3>
@@ -1177,7 +1135,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ Daniel Strang -->
 <div class="family-card" onclick="window.location.href='ancestors/daniel-strang.html'">
   <div class="card-flags"></div>
   <h3>Daniel Strang</h3>
@@ -1192,7 +1149,7 @@ h1 {
   </div>
 </div>
 
-<!-- ★ NEW: 8x GREAT GRANDPARENTS -->
+<!-- 8x GREAT GRANDPARENTS -->
 <div class="generation-section">
   <h2 class="generation-title">Great Great Great Great Great Great Great Great Grandparents (8x)</h2>
   <p class="generation-note">A person has 1024 ancestors of this kind.</p>
@@ -1233,7 +1190,6 @@ h1 {
   <div class="detail"><strong>Partner:</strong> Joseph Purdy</div>
 </div>
 
-<!-- ★ NEW CARD: Lt.-Gen. William Kerr, 2nd Marquess of Lothian -->
 <div class="family-card" onclick="window.location.href='ancestors/william-kerr-marquess.html'">
   <div class="card-flags">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
   <h3>Lt.-Gen. William Kerr <span class="nickname">2nd Marquess of Lothian</span></h3>
@@ -1243,13 +1199,12 @@ h1 {
   <div class="detail"><strong>Father:</strong> Robert Kerr, 4th Earl of Lothian</div>
   <div class="detail"><strong>Partner:</strong> Lady Jane Campbell</div>
   <div class="detail"><strong>Birth:</strong> Dalkeith, Midlothian, Scotland </div>
-  <div class="detail"><strong>Death:</strong> London, England  — buried Westminster Abbey</div>
+  <div class="detail"><strong>Death:</strong> London, England — buried Westminster Abbey</div>
   <hr class="card-divider">
   <div class="bio-preview">Soldier and Scottish nobleman. Married Lady Jane Campbell on 30 June 1685. They were parents of at least 3 sons and 6 daughters. Died in London and was buried in Westminster Abbey — one of the most honored burial sites in Britain. His daughter Lady Mary Kerr married into the Hamilton of Ballincrieff line.</div>
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ NEW CARD: Lady Jane Campbell, Marchioness of Lothian -->
 <div class="family-card" onclick="window.location.href='ancestors/lady-jane-campbell.html'">
   <div class="card-flags">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
   <h3>Lady Jane Campbell <span class="nickname">Marchioness of Lothian</span></h3>
@@ -1264,7 +1219,7 @@ h1 {
   <div class="bio-preview">Daughter of Archibald Campbell, 9th Earl of Argyll — one of the most powerful nobles in Scotland. Married Lt.-Gen. William Kerr, 2nd Marquess of Lothian on 30 June 1685. Parents of at least 3 sons and 6 daughters. Her lineage connects this family to the great Campbell clan and the Earls of Argyll, a dynasty central to Scottish history.</div>
   <span class="read-more">Read more ↓</span>
 </div>
-<!-- ★ Jean Hamilton -->
+
 <div class="family-card" onclick="window.location.href='ancestors/jean-hamilton.html'">
   <div class="card-flags">🇮🇪</div>
   <h3>Jean Hamilton</h3>
@@ -1280,7 +1235,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ Sir Thomas Nicholson of Carnock -->
 <div class="family-card" onclick="window.location.href='ancestors/sir-thomas-nicholson-carnock.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>Sir Thomas Nicholson of Carnock</h3>
@@ -1296,7 +1250,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ Lady Margaret Livingstone -->
 <div class="family-card" onclick="window.location.href='ancestors/lady-margaret-livingstone.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>Lady Margaret Livingstone</h3>
@@ -1340,7 +1293,6 @@ h1 {
   <div class="detail"><strong>Death:</strong> Rye, Westchester County, Province of New York </div>
 </div>
 
-<!-- Robert Kerr, 4th Earl of Lothian — father of William Kerr 2nd Marquess -->
 <div class="family-card" onclick="window.location.href='ancestors/robert-kerr-4th-earl.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>Robert Kerr <span class="nickname">4th Earl of Lothian</span></h3>
@@ -1354,7 +1306,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- Lady Jean Campbell of Argyll — mother of William Kerr 2nd Marquess -->
 <div class="family-card" onclick="window.location.href='ancestors/lady-jean-campbell-argyll.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>Lady Jean Campbell of Argyll</h3>
@@ -1367,7 +1318,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- Lady Mary Stewart, Countess of Argyll — partner of Archibald 9th Earl -->
 <div class="family-card" onclick="window.location.href='ancestors/lady-mary-stewart-argyll.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>Lady Mary Stewart <span class="nickname">Countess of Argyll</span></h3>
@@ -1380,7 +1330,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- Archibald Campbell, 9th Earl of Argyll — now traceable from Lady Jane Campbell -->
 <div class="family-card" onclick="window.location.href='ancestors/archibald-campbell-9th-earl.html'">
   <div class="card-flags">🏴󠁧󠁢󠁥󠁮󠁧󠁿</div>
   <h3>Archibald Campbell <span class="nickname">9th Earl of Argyll</span></h3>
@@ -1395,7 +1344,7 @@ h1 {
   <div class="bio-preview">One of the most powerful and controversial Scottish nobles of the 17th century. A leader of the Covenanting movement and opponent of King Charles II's religious policies. Executed in Edinburgh in 1685 after a failed rebellion. His daughter Lady Jane Campbell married the 2nd Marquess of Lothian, continuing this line.</div>
   <span class="read-more">Read more ↓</span>
 </div>
-<!-- ★ Hugh Hamilton -->
+
 <div class="family-card" onclick="window.location.href='ancestors/hugh-hamilton.html'">
   <div class="card-flags">🇮🇪</div>
   <h3>Hugh Hamilton</h3>
@@ -1410,7 +1359,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ Mary Ann Hamilton -->
 <div class="family-card" onclick="window.location.href='ancestors/mary-ann-hamilton.html'">
   <div class="card-flags">🇮🇪</div>
   <h3>Mary Ann Hamilton</h3>
@@ -1423,7 +1371,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ John Hamilton -->
 <div class="family-card" onclick="window.location.href='ancestors/john-hamilton-killyleagh.html'">
   <div class="card-flags">🇮🇪</div>
   <h3>John Hamilton</h3>
@@ -1436,7 +1383,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ Jane Echlin -->
 <div class="family-card" onclick="window.location.href='ancestors/jane-echlin.html'">
   <div class="card-flags">🇮🇪</div>
   <h3>Jane Echlin</h3>
@@ -1450,7 +1396,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ Sir Thomas Nicholson 1st Baronet of Carnock -->
 <div class="family-card" onclick="window.location.href='ancestors/sir-thomas-nicholson-1st-baronet.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>Sir Thomas Nicholson <span class="nickname">1st Baronet of Carnock</span></h3>
@@ -1466,7 +1411,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ Isabel Henderson -->
 <div class="family-card" onclick="window.location.href='ancestors/isabel-henderson.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>Isabel Henderson</h3>
@@ -1508,7 +1452,6 @@ h1 {
   <div class="detail"><strong>Partner:</strong> Anthony Browne IV</div>
 </div>
 
-<!-- Sir Archibald Campbell, 8th Earl of Argyll — father of 9th Earl -->
 <div class="family-card" onclick="window.location.href='ancestors/sir-archibald-campbell-8th-earl.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>Sir Archibald Campbell <span class="nickname">8th Earl of Argyll</span></h3>
@@ -1523,7 +1466,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- Lady Margaret Douglas, Countess of Argyll — mother of 9th Earl -->
 <div class="family-card" onclick="window.location.href='ancestors/lady-margaret-douglas-argyll.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>Lady Margaret Douglas <span class="nickname">Countess of Argyll</span></h3>
@@ -1535,7 +1477,7 @@ h1 {
   <div class="bio-preview">Wife of Archibald Campbell, 8th Earl of Argyll. Mother of Archibald Campbell, 9th Earl of Argyll. The Douglas name was one of the most storied in Scottish noble history, associated with the great Douglas clan whose power rivaled that of the Scottish crown itself.</div>
   <span class="read-more">Read more ↓</span>
 </div>
-<!-- ★ James Hamilton (Scotland/Ireland, b.1520) -->
+
 <div class="family-card" onclick="window.location.href='ancestors/james-hamilton-1520.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿🇮🇪</div>
   <h3>James Hamilton</h3>
@@ -1548,7 +1490,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ Helen Jean Maitland Cunningham -->
 <div class="family-card" onclick="window.location.href='ancestors/helen-maitland-cunningham.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>Helen Jean Maitland Cunningham</h3>
@@ -1561,7 +1502,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ John Nicholson of Lasswade -->
 <div class="family-card" onclick="window.location.href='ancestors/john-nicholson-lasswade.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>John Nicholson of Lasswade</h3>
@@ -1576,7 +1516,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ Elizabeth Henderson -->
 <div class="family-card" onclick="window.location.href='ancestors/elizabeth-henderson.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>Elizabeth Henderson</h3>
@@ -1589,7 +1528,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ Walter Henderson -->
 <div class="family-card" onclick="window.location.href='ancestors/walter-henderson.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>Walter Henderson</h3>
@@ -1602,7 +1540,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ Isabel Melville -->
 <div class="family-card" onclick="window.location.href='ancestors/isabel-melville.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>Isabel Melville</h3>
@@ -1615,7 +1552,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ William Douglas 7th Earl of Morton -->
 <div class="family-card" onclick="window.location.href='ancestors/william-douglas-7th-earl-morton.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>William Douglas <span class="nickname">7th Earl of Morton</span></h3>
@@ -1631,7 +1567,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ Anne Agnes Keith -->
 <div class="family-card" onclick="window.location.href='ancestors/anne-agnes-keith.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>Anne Agnes Keith</h3>
@@ -1668,7 +1603,7 @@ h1 {
   <hr class="card-divider">
   <div class="detail"><strong>Partner:</strong> Anthony Browne III</div>
 </div>
-<!-- ★ James Nicholson -->
+
 <div class="family-card" onclick="window.location.href='ancestors/james-nicholson.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>James Nicholson</h3>
@@ -1681,7 +1616,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ Janet Swinton -->
 <div class="family-card" onclick="window.location.href='ancestors/janet-swinton.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>Janet Swinton</h3>
@@ -1697,7 +1631,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ Robert Douglas Master of Morton -->
 <div class="family-card" onclick="window.location.href='ancestors/robert-douglas-master-morton.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>Robert Douglas <span class="nickname">Master of Morton</span></h3>
@@ -1713,7 +1646,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ Jean Lyon Countess of Angus -->
 <div class="family-card" onclick="window.location.href='ancestors/jean-lyon-countess-angus.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>Jean Lyon <span class="nickname">Countess of Angus</span></h3>
@@ -1729,13 +1661,12 @@ h1 {
   </div>
 </div>
 
-<!-- ★ NEW: 12x GREAT GRANDPARENTS -->
+<!-- 12x GREAT GRANDPARENTS -->
 <div class="generation-section">
   <h2 class="generation-title">Great × 12 Grandparents (12x)</h2>
   <p class="generation-note">A person has 16,384 ancestors of this kind. This generation lived in early 16th-century Scotland and the Scottish Borders.</p>
   <div class="family-grid">
 
-<!-- ★ William Douglas 6th Earl of Morton -->
 <div class="family-card" onclick="window.location.href='ancestors/william-douglas-6th-earl-morton.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>William Douglas <span class="nickname">6th Earl of Morton</span></h3>
@@ -1749,7 +1680,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ Agnes Leslie Countess of Morton -->
 <div class="family-card" onclick="window.location.href='ancestors/agnes-leslie-countess-morton.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>Agnes Leslie <span class="nickname">Countess of Morton</span></h3>
@@ -1762,7 +1692,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ Sir John Swinton 18th of That Ilk -->
 <div class="family-card" onclick="window.location.href='ancestors/sir-john-swinton-18th.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>Sir John Swinton <span class="nickname">18th of That Ilk</span></h3>
@@ -1778,7 +1707,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ Margaret Home of Wedderburn -->
 <div class="family-card" onclick="window.location.href='ancestors/margaret-home-wedderburn.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>Margaret Home of Wedderburn</h3>
@@ -1795,13 +1723,12 @@ h1 {
   </div>
 </div>
 
-<!-- ★ NEW: 13x GREAT GRANDPARENTS -->
+<!-- 13x GREAT GRANDPARENTS -->
 <div class="generation-section">
   <h2 class="generation-title">Great × 13 Grandparents (13x)</h2>
   <p class="generation-note">A person has 32,768 ancestors of this kind. This generation lived in the late 15th and early 16th century — the era of the Scottish Reformation and the reign of James V.</p>
   <div class="family-grid">
 
-<!-- ★ Sir John Swinton 17th of That Ilk -->
 <div class="family-card" onclick="window.location.href='ancestors/sir-john-swinton-17th.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>Sir John Swinton <span class="nickname">17th of That Ilk</span></h3>
@@ -1814,7 +1741,6 @@ h1 {
   <span class="read-more">Read more ↓</span>
 </div>
 
-<!-- ★ Catherine Lauder -->
 <div class="family-card" onclick="window.location.href='ancestors/catherine-lauder.html'">
   <div class="card-flags">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
   <h3>Catherine Lauder</h3>
@@ -1833,17 +1759,5 @@ h1 {
 </div>
 </div>
 
-<script>
-function filterCards() {
-  const q = document.getElementById('search').value.toLowerCase();
-  document.querySelectorAll('.family-card').forEach(card => {
-    card.style.display = card.textContent.toLowerCase().includes(q) ? '' : 'none';
-  });
-  document.querySelectorAll('.generation-section').forEach(sec => {
-    const visible = [...sec.querySelectorAll('.family-card')].some(c => c.style.display !== 'none');
-    sec.style.display = visible ? '' : 'none';
-  });
-}
-</script>
 </body>
 </html>
