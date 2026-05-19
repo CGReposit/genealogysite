@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commerford Lineage — Surname Etymology Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1408;
+    --parchment: #f5ede0;
+    --parchment-dark: #e8dcc8;
+    --gold: #9a7b2e;
+    --gold-light: #c9a84c;
+    --rust: #7a3b1e;
+    --muted: #6b5c45;
+    --line: #c9b89a;
+    --accent-green: #2d4a35;
+    --accent-blue: #1e3a52;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.7;
+    background-image:
+      radial-gradient(ellipse at 20% 0%, rgba(154,123,46,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 100%, rgba(122,59,30,0.06) 0%, transparent 60%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  }
+
+  .page-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 40px 100px;
+  }
+
+  header {
+    text-align: center;
+    padding-bottom: 50px;
+    border-bottom: 2px solid var(--line);
+    margin-bottom: 60px;
+  }
+  .ornament {
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 18px;
+    opacity: 0.8;
+  }
+  header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(28px, 5vw, 46px);
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  header .subtitle {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 19px;
+    color: var(--muted);
+  }
+  .header-rule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 28px 0 0;
+    color: var(--gold);
+    font-size: 20px;
+  }
+  .header-rule::before, .header-rule::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold-light), transparent);
+  }
+
+  /* ── CALLOUT BLOCKS ── */
+  .callout {
+    margin-bottom: 40px;
+    padding: 28px 36px;
+    background: rgba(232,220,200,0.5);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 4px 4px 0;
+  }
+  .callout-label {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+    display: block;
+  }
+  .callout p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #2a2010;
+    margin-bottom: 10px;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+
+  /* ── COLLAPSIBLE SECTIONS ── */
+  .section-header {
+    margin: 56px 0 0;
+    cursor: pointer;
+    user-select: none;
+  }
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 8px 0;
+    transition: opacity 0.15s;
+  }
+  .section-header:hover .section-title { opacity: 0.72; }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, var(--line), transparent);
+  }
+  .section-flag { font-size: 17px; margin-right: 2px; }
+  .section-chevron {
+    font-size: 10px;
+    color: var(--gold-light);
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+  }
+  .section-header.collapsed .section-chevron { transform: rotate(-90deg); }
+
+  .section-body {
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    max-height: 9999px;
+    opacity: 1;
+  }
+  .section-body.collapsed {
+    max-height: 0;
+    opacity: 0;
+  }
+
+  /* ── FEATURED CARDS (full detail) ── */
+  .surname-grid { display: grid; gap: 20px; padding-top: 22px; }
+
+  .surname-card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 24px 30px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    gap: 24px;
+    transition: box-shadow 0.2s;
+  }
+  .surname-card:hover { box-shadow: 0 4px 24px rgba(154,123,46,0.12); }
+  .surname-card.featured {
+    border-color: var(--gold-light);
+    background: linear-gradient(135deg, #fffdf8 0%, white 100%);
+  }
+
+  .card-left {
+    border-right: 1px solid var(--line);
+    padding-right: 22px;
+  }
+  .surname-name {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+  .surname-type {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+  }
+  .type-locative    { background: #e8f0e8; color: var(--accent-green); border: 1px solid #b5ccb8; }
+  .type-patronymic  { background: #e8eef4; color: var(--accent-blue);  border: 1px solid #b5c8d8; }
+  .type-occupational{ background: #f4ece0; color: var(--rust);          border: 1px solid #d4b898; }
+  .type-descriptive { background: #f5e8e8; color: #7a2020;              border: 1px solid #d4a8a8; }
+  .type-nickname    { background: #f0e8f4; color: #5a2880;              border: 1px solid #c8a8d4; }
+  .surname-origin {
+    font-size: 13px;
+    color: var(--muted);
+    font-style: italic;
+  }
+  .surname-origin span {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .etymology-text {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #2a2010;
+    margin-bottom: 12px;
+  }
+  .roots-line {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--muted);
+    padding-top: 10px;
+    border-top: 1px dashed var(--line);
+  }
+  .roots-line strong {
+    font-style: normal;
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+  }
+
+  /* ── COMPACT CARDS ── */
+  .compact-grid { display: grid; gap: 10px; padding-top: 14px; }
+  .compact-card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 14px 22px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.03);
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .compact-name {
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    flex-shrink: 0;
+  }
+  .compact-meta {
+    font-size: 13px;
+    color: var(--muted);
+    font-style: italic;
+    flex: 1;
+  }
+  .compact-roots {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--muted);
+    width: 100%;
+    padding-top: 7px;
+    border-top: 1px dashed var(--line);
+    margin-top: 2px;
+  }
+  .compact-roots strong {
+    font-style: normal;
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+  }
+  /* remove bottom margin on type badges inside compact cards */
+  .compact-card .surname-type { margin-bottom: 0; }
+
+  /* ── CLOSING ── */
+  .closing {
+    margin-top: 80px;
+    padding: 36px 40px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: rgba(232,220,200,0.4);
+    text-align: center;
+  }
+  .closing .big-letter {
+    font-family: 'Cinzel', serif;
+    font-size: 48px;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 10px;
+    opacity: 0.6;
+  }
+  .closing p {
+    font-style: italic;
+    color: var(--muted);
+    max-width: 560px;
+    margin: 0 auto;
+    font-size: 16px;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 13px;
+    color: var(--line);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif;
+  }
+
+  @media (max-width: 650px) {
+    .page-wrap { padding: 32px 20px 60px; }
+    .surname-card { grid-template-columns: 1fr; }
+    .card-left { border-right: none; border-bottom: 1px solid var(--line); padding-right: 0; padding-bottom: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <header>
+    <span class="ornament">Commerford Lineage · Genealogical Study</span>
+    <h1>A Report on Surnames</h1>
+    <div class="subtitle">Etymology, Origin &amp; Meaning of the Family Names</div>
+    <div class="header-rule">✦</div>
+  </header>
+
+  <!-- PERSONAL NOTE -->
+  <div class="callout">
+    <span class="callout-label">A Note on the Lineage</span>
+    <p>One conclusion I have come to while tracking the lineage and origins of so many people I had never heard of is that the last name you inherit is a matter of complete chance.</p>
+    <p>The circumstances of history are visible in a lot of these individuals' lives when you research them. Many have been drafted into wars, escaped famines, and lived through some very difficult social conditions both while coming to and living in America. Our last name could have been Commerford as easily as it could have been anything else.</p>
+    <p>With that being said, the Commerford surname is by far the most interesting (mostly because of the persons who carried it). Its linguistic origins are still pretty unclear after some research. But this is what I found about the name's etymology (in addition to others) and its history in America.</p>
+  </div>
+
+  <!-- ETYMOLOGY DEFINITION -->
+  <div class="callout">
+    <span class="callout-label">On Etymology</span>
+    <p><strong>Etymology</strong> is the study of the origin and history of words, tracing how their meanings have changed over time. It examines a word's historical development, including its sources, forms, and evolution through different languages and periods.</p>
+    <p>Surnames as a hereditary convention emerged across Europe between roughly the 10th and 15th centuries, though the process varied significantly by region. Four main mechanisms gave rise to European surnames: <em>locative</em> names (from a place), <em>patronymic</em> names (from a father's name), <em>occupational</em> names (from a trade), and <em>descriptive</em> names (from a physical or personal trait).</p>
+  </div>
+
+  <!-- ═══════════ IRISH ═══════════ -->
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-title">
+      <span class="section-flag">🇮🇪</span> Irish &amp; Anglo-Norman Irish
+      <span class="section-chevron">▼</span>
+    </div>
+  </div>
+  <div class="section-body">
+    <div class="surname-grid">
+
+      <div class="surname-card featured">
+        <div class="card-left">
+          <div class="surname-name">Commerford</div>
+          <span class="surname-type type-locative">Locative</span>
+          <div class="surname-origin">Origin: <span>Anglo-Norman Irish</span><br>c. 12th–13th century</div>
+        </div>
+        <div class="card-right">
+          <p class="etymology-text">Commerford — also spelled <em>Comerford</em> and occasionally <em>Comberford</em> — derives from the Anglo-Norman settlement of Ireland following the 1169 invasion. The name almost certainly originates from <strong>Comberford</strong>, a hamlet in Staffordshire, England, itself from Old English <em>cumbre</em> (Briton, Cumbrian) + <em>ford</em> (river crossing) — "the ford of the Britons." The family arrived in County Kilkenny and Wexford and became one of the notable Anglo-Norman settler families of the Pale. By the 16th century <em>Comerford</em> was the dominant form in Leinster records.</p>
+          <div class="roots-line"><strong>Roots:</strong> Old English <em>cumbre</em> (Cumbrian Briton) + <em>ford</em> (river crossing) → "the Briton's ford"</div>
+        </div>
+      </div>
+
+      <div class="surname-card featured">
+        <div class="card-left">
+          <div class="surname-name">Ferris</div>
+          <span class="surname-type type-patronymic">Patronymic</span>
+          <div class="surname-origin">Origin: <span>Irish / Norman</span><br>c. 12th century</div>
+        </div>
+        <div class="card-right">
+          <p class="etymology-text">Ferris in an American context is typically the anglicisation of Irish <em>Mac Fearghais</em> — "son of Fearghus" (Fergus), from Old Irish <em>fear</em> (man) + <em>gus</em> (vigour, force) — "man of vigour." It was also independently a Norman surname from Old French <em>ferrier</em> (farrier, horseshoe-smith), from Latin <em>ferrarius</em> (iron-worker), which merged with the Irish form in anglicised records.</p>
+          <div class="roots-line"><strong>Roots:</strong> Irish <em>Mac Fearghais</em> → "man of vigour" or Norman <em>ferrier</em> (iron-smith)</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="compact-grid" style="padding-top:18px;">
+      <div class="compact-card">
+        <span class="surname-type type-patronymic">Patronymic</span>
+        <span class="compact-name">O'Neill</span>
+        <span class="compact-meta">Gaelic Irish · c. 10th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Irish <em>ó</em> (descendant) + <em>Niall</em> (champion) → "grandson of Niall"</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-patronymic">Patronymic</span>
+        <span class="compact-name">Griffin</span>
+        <span class="compact-meta">Welsh / Anglo-Norman · c. 11th–12th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Old Welsh <em>grip</em> (strength) + <em>udd</em> (lord) → "strong prince"</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-patronymic">Patronymic</span>
+        <span class="compact-name">Byrnes</span>
+        <span class="compact-meta">Gaelic Irish · c. 10th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Irish <em>Ó Broin</em> → <em>bran</em> (raven) → "descendant of the raven"</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-locative">Locative</span>
+        <span class="compact-name">Odlum</span>
+        <span class="compact-meta">Anglo-Norman Irish · c. 13th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Probable Anglo-Norman locative; exact Old French antecedent uncertain</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-patronymic">Patronymic</span>
+        <span class="compact-name">Ring</span>
+        <span class="compact-meta">Gaelic Irish / Norse · c. 10th–11th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Irish <em>rinn</em> (point/headland) or Old Norse <em>hringr</em> (ring/circle)</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-locative">Locative</span>
+        <span class="compact-name">Echlin</span>
+        <span class="compact-meta">Scots settler in Ireland · c. 17th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Scots place-name Echline; Brittonic/Cumbric, possible equine reference</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ SCOTTISH ═══════════ -->
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-title">
+      <span class="section-flag">🏴󠁧󠁢󠁳󠁣󠁴󠁿</span> Scottish
+      <span class="section-chevron">▼</span>
+    </div>
+  </div>
+  <div class="section-body">
+    <div class="surname-grid">
+
+      <div class="surname-card featured">
+        <div class="card-left">
+          <div class="surname-name">Hamilton</div>
+          <span class="surname-type type-locative">Locative</span>
+          <div class="surname-origin">Origin: <span>English → Scotland</span><br>c. 13th century</div>
+        </div>
+        <div class="card-right">
+          <p class="etymology-text">One of the great Scottish noble surnames, Hamilton originates from <strong>Hambleton</strong> in Leicestershire or Yorkshire — from Old English <em>hamel</em> (blunt, crooked hill) + <em>tun</em> (settlement, farmstead). Walter Fitz Gilbert of Hambledon came to Scotland in the 13th century; his descendants became the powerful Hamiltons of Lanarkshire. The family appears in the tree in multiple variants including <em>Hamilton of Ballencrief</em> and <em>Nicolson Hamilton</em>, indicating junior branches or women who married into the line.</p>
+          <div class="roots-line"><strong>Roots:</strong> Old English <em>hamel</em> (crooked hill) + <em>tun</em> (farmstead) → "settlement on the crooked hill"</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="compact-grid" style="padding-top:18px;">
+      <div class="compact-card">
+        <span class="surname-type type-locative">Locative</span>
+        <span class="compact-name">Swinton</span>
+        <span class="compact-meta">Old English / Scots · c. 12th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Old English <em>swin</em> (pig) + <em>tun</em> (farm) → "the pig farm"</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-locative">Locative</span>
+        <span class="compact-name">Maitland</span>
+        <span class="compact-meta">Norman French → Scotland · c. 12th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Norman French <em>mautalent</em> → "ill-will" (Norman place-name)</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-locative">Locative</span>
+        <span class="compact-name">Kerr</span>
+        <span class="compact-meta">Old Norse / Scots · c. 12th–13th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Old Norse <em>kjarr</em> (marsh, brushwood) → "dweller by the marsh"</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-locative">Locative</span>
+        <span class="compact-name">Melville</span>
+        <span class="compact-meta">Norman French → Scotland · c. 11th–12th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Old French <em>mal</em> (bad) + <em>ville</em> (settlement) → "poor town" (Norman place-name)</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-locative">Locative</span>
+        <span class="compact-name">Livingstone</span>
+        <span class="compact-meta">Old English → Scotland · c. 12th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Personal name Lewin ("dear friend") + <em>tun</em> (farm) → "Lewin's farmstead"</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-descriptive">Descriptive</span>
+        <span class="compact-name">Pettigrew</span>
+        <span class="compact-meta">Old French → Scotland · c. 13th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Old French <em>pied de grue</em> (crane's foot) — same root as English "pedigree"</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-patronymic">Patronymic</span>
+        <span class="compact-name">Henderson</span>
+        <span class="compact-meta">Middle English / Scots · c. 14th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Old German <em>heim</em> (home) + <em>rīc</em> (ruler) → Henry → "son of Henry"</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-locative">Locative</span>
+        <span class="compact-name">Lauder</span>
+        <span class="compact-meta">Scots Borders · c. 12th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Place-name Lauder, Berwickshire; probable Brittonic stream-name origin</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-descriptive">Descriptive</span>
+        <span class="compact-name">Strang</span>
+        <span class="compact-meta">Old Norse / Middle English · c. 12th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Old Norse <em>strangr</em> (strong, powerful) → nickname for a strong man</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-patronymic">Patronymic</span>
+        <span class="compact-name">Nicholson</span>
+        <span class="compact-meta">Middle English · c. 14th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Greek <em>nikē</em> (victory) + <em>laós</em> (people) → Nicholas → "son of Nicholas"</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ ENGLISH ═══════════ -->
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-title">
+      <span class="section-flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span> English
+      <span class="section-chevron">▼</span>
+    </div>
+  </div>
+  <div class="section-body">
+    <div class="compact-grid">
+      <div class="compact-card">
+        <span class="surname-type type-descriptive">Descriptive</span>
+        <span class="compact-name">Browne</span>
+        <span class="compact-meta">Old English · c. 11th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Old English <em>brūn</em> (brown, dark) → nickname for a dark-complexioned person</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-locative">Locative</span>
+        <span class="compact-name">Dormer</span>
+        <span class="compact-meta">Norman French → England · c. 12th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Old French <em>dormeor</em> (dormitory) from Latin <em>dormire</em> (to sleep)</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-locative">Locative</span>
+        <span class="compact-name">Radcliff</span>
+        <span class="compact-meta">Old English · c. 12th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Old English <em>rēad</em> (red) + <em>clif</em> (cliff) → "the red cliff"</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-descriptive">Descriptive</span>
+        <span class="compact-name">Purdy</span>
+        <span class="compact-meta">Anglo-French · c. 13th–14th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Anglo-French <em>par Dieu</em> ("by God") → habitual-oath surname</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-patronymic">Patronymic</span>
+        <span class="compact-name">Thomas</span>
+        <span class="compact-meta">Aramaic / Greek · c. 13th–14th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Aramaic <em>tě'ōmā</em> (twin) → Greek Thōmâs → "son of Thomas"</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-occupational">Occupational</span>
+        <span class="compact-name">Smith</span>
+        <span class="compact-meta">Old English · c. 11th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Old English <em>smið</em> (metalworker) from Proto-Germanic <em>*smiþaz</em> (to strike)</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-occupational">Occupational</span>
+        <span class="compact-name">Youmans</span>
+        <span class="compact-meta">Middle English · c. 14th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Middle English <em>yeman</em> (free commoner, freeholder)</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-nickname">Nickname</span>
+        <span class="compact-name">Budd</span>
+        <span class="compact-meta">Middle English / Old English · c. 13th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Middle English <em>budde</em> (plant bud) or Old English <em>budda</em> (beetle) → affectionate nickname</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-locative">Locative</span>
+        <span class="compact-name">Brundage</span>
+        <span class="compact-meta">Old English · c. 13th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Old English <em>brende</em> (burnt) + <em>āc</em> (oak) → probable "burnt oak" place-name</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-locative">Locative</span>
+        <span class="compact-name">Dean / Deane</span>
+        <span class="compact-meta">Old English · c. 13th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Old English <em>denu</em> (valley) or Old French <em>deien</em> (church dean, from Latin <em>decanus</em>)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ AMERICAN COLONIAL ═══════════ -->
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-title">
+      <span class="section-flag">🇺🇸</span> American Colonial &amp; Dutch-American
+      <span class="section-chevron">▼</span>
+    </div>
+  </div>
+  <div class="section-body">
+    <div class="compact-grid">
+      <div class="compact-card">
+        <span class="surname-type type-occupational">Occupational</span>
+        <span class="compact-name">Striker / Stryker</span>
+        <span class="compact-meta">Dutch / Low German · c. 17th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Dutch <em>strijker</em> (one who strikes/smooths cloth) → occupational surname</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-descriptive">Descriptive</span>
+        <span class="compact-name">Sliker</span>
+        <span class="compact-meta">Dutch / Low German · c. 17th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Dutch <em>slijker</em> (one who smooths/plasters) → occupational surname</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-locative">Locative</span>
+        <span class="compact-name">Southwick</span>
+        <span class="compact-meta">Old English · c. 12th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Old English <em>sūþ</em> (south) + <em>wīc</em> (farm/settlement) → "the southern farm"</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-locative">Locative</span>
+        <span class="compact-name">Ogden</span>
+        <span class="compact-meta">Old English · c. 13th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Old English <em>āc</em> (oak) + <em>denu</em> (valley) → "the oak valley"</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-locative">Locative</span>
+        <span class="compact-name">Swazey</span>
+        <span class="compact-meta">French → American · c. 18th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> French <em>Suisses</em> (Swiss) or locative French place-name; americanised phonetically</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-locative">Locative</span>
+        <span class="compact-name">Oakley</span>
+        <span class="compact-meta">Old English · c. 13th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Old English <em>āc</em> (oak) + <em>lēah</em> (woodland clearing) → "oak clearing"</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-locative">Locative</span>
+        <span class="compact-name">Bradley</span>
+        <span class="compact-meta">Old English · c. 12th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Old English <em>brād</em> (broad) + <em>lēah</em> (clearing) → "the wide woodland clearing"</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ FRENCH / SWISS ═══════════ -->
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-title">
+      <span class="section-flag">🇫🇷</span> French &amp; Swiss-French
+      <span class="section-chevron">▼</span>
+    </div>
+  </div>
+  <div class="section-body">
+    <div class="compact-grid">
+      <div class="compact-card">
+        <span class="surname-type type-occupational">Occupational</span>
+        <span class="compact-name">Charlier</span>
+        <span class="compact-meta">Old French · c. 13th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Old French <em>charlier</em> (carter) from Latin <em>carrus</em> (wheeled vehicle)</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-patronymic">Patronymic</span>
+        <span class="compact-name">Junod</span>
+        <span class="compact-meta">Swiss-French / Burgundian · c. 14th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Diminutive of French <em>Jean</em> (John) from Hebrew <em>Yōḥānān</em> ("God is gracious")</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-occupational">Occupational</span>
+        <span class="compact-name">Lamaistre</span>
+        <span class="compact-meta">Middle French · c. 13th–14th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Latin <em>magister</em> (master, teacher, leader)</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-patronymic">Patronymic</span>
+        <span class="compact-name">Machet</span>
+        <span class="compact-meta">Middle French · c. 13th–14th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Diminutive of Matthew, from Hebrew <em>Mattityahu</em> ("gift of God")</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-locative">Locative</span>
+        <span class="compact-name">Deval</span>
+        <span class="compact-meta">French / Belgian · c. 14th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Old French <em>de val</em> → Latin <em>vallis</em> (valley) → "of the valley"</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-locative">Locative</span>
+        <span class="compact-name">Malcuit</span>
+        <span class="compact-meta">Belgian / Walloon French · c. 14th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Old French <em>mal</em> (bad) + <em>cuit</em> (baked/cooked) → occupational nickname</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-locative">Locative</span>
+        <span class="compact-name">Colmar</span>
+        <span class="compact-meta">French (Alsace) · c. 14th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Name of the city of Colmar, Alsace; Old High German personal name Columbarius</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-locative">Locative</span>
+        <span class="compact-name">Orsieres</span>
+        <span class="compact-meta">Swiss (Valais) · c. 14th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Latin <em>ursus</em> (bear) → commune of Orsières, Canton of Valais → "place of bears"</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ ITALIAN ═══════════ -->
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-title">
+      <span class="section-flag">🇮🇹</span> Italian
+      <span class="section-chevron">▼</span>
+    </div>
+  </div>
+  <div class="section-body">
+    <div class="surname-grid">
+
+      <div class="surname-card featured">
+        <div class="card-left">
+          <div class="surname-name">Favini</div>
+          <span class="surname-type type-locative">Locative</span>
+          <div class="surname-origin">Origin: <span>Northern Italian</span><br>c. 14th–15th century</div>
+        </div>
+        <div class="card-right">
+          <p class="etymology-text">An Italian surname from the northern regions, deriving from <em>fava</em> (broad bean, from Latin <em>faba</em>) with the suffix <em>-ini</em> (diminutive/patronymic). The name likely refers to a family associated with bean cultivation or a place where beans were grown — a common type of agricultural surname in medieval Italy. Found in Lombardy, Veneto, and Piedmont.</p>
+          <div class="roots-line"><strong>Roots:</strong> Italian <em>fava</em> (broad bean) from Latin <em>faba</em> + diminutive suffix <em>-ini</em></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="compact-grid" style="padding-top:18px;">
+      <div class="compact-card">
+        <span class="surname-type type-descriptive">Descriptive</span>
+        <span class="compact-name">Gal</span>
+        <span class="compact-meta">Italian / French · c. 14th–15th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Latin <em>gallus</em> (rooster/cockerel) → nickname for a proud or ostentatious person</span>
+      </div>
+      <div class="compact-card">
+        <span class="surname-type type-locative">Locative</span>
+        <span class="compact-name">Daes</span>
+        <span class="compact-meta">Italian / French · c. 14th–15th century</span>
+        <span class="compact-roots"><strong>Roots:</strong> Uncertain; possible variant of Italian <em>D'Este</em> or French <em>des</em> (of the)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLOSING -->
+  <div class="closing">
+    <div class="big-letter">✦</div>
+    <p>These surnames together map a family history spanning the Irish Sea, the Scottish Borders, the Anglo-Norman world, the Swiss Alps, and the colonial Atlantic seaboard — united across generations in the Commerford Lineage.</p>
+  </div>
+
+  <footer>Commerford Lineage · Etymology Report · May 2026</footer>
+
+</div>
+
+<script>
+  function toggleSection(header) {
+    const body = header.nextElementSibling;
+    const isCollapsed = body.classList.contains('collapsed');
+    body.classList.toggle('collapsed', !isCollapsed);
+    header.classList.toggle('collapsed', !isCollapsed);
+  }
+</script>
+</body>
+</html>
