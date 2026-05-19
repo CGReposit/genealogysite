@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Commerford Lineage — Surname Etymology Report</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
 <style>
   :root {
     --ink: #1a1408;
@@ -324,9 +326,120 @@
   }
 
   @media (max-width: 650px) {
-    .page-wrap { padding: 32px 20px 60px; }
-    .surname-card { grid-template-columns: 1fr; }
+    .page-wrap { padding: 24px 16px 60px; }
+    .surname-card { grid-template-columns: 1fr; gap: 16px; }
     .card-left { border-right: none; border-bottom: 1px solid var(--line); padding-right: 0; padding-bottom: 16px; }
+    header h1 { font-size: clamp(24px, 7vw, 38px); }
+    header { padding-bottom: 32px; margin-bottom: 36px; }
+    .callout { padding: 20px 20px; }
+    .section-header { margin-top: 40px; }
+    .section-title { font-size: 11px; letter-spacing: 0.22em; }
+    .compact-card { padding: 14px 16px; gap: 10px; }
+    .surname-card { padding: 18px 18px; }
+    .closing { padding: 24px 20px; margin-top: 56px; }
+  }
+
+  /* ── ANCESTRAL MAP ── */
+  .map-container {
+    padding-top: 18px;
+    position: relative;
+  }
+  .map-legend {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 14px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+  .map-legend-items {
+    display: flex;
+    gap: 10px 18px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .map-legend-items span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+  }
+  .map-legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .map-hint {
+    font-size: 12px;
+    color: var(--line);
+    font-style: italic;
+    white-space: nowrap;
+    padding-top: 2px;
+  }
+  #ancestral-map-svg {
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    display: block;
+    background: #d6e3ef;
+    /* Prevent the SVG from growing too tall on mobile */
+    max-height: 60vw;
+    min-height: 220px;
+  }
+  #ancestral-map-svg svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  #map-tooltip {
+    position: fixed;
+    background: var(--parchment);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 9px 14px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.12s;
+    z-index: 9999;
+    max-width: 220px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+  }
+  #map-tooltip .tt-name {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--ink);
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+  }
+  #map-tooltip .tt-detail {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+  /* Mobile tap label shown instead of hover tooltip */
+  .map-tap-label {
+    text-align: center;
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--line);
+    margin-top: 10px;
+    min-height: 18px;
+  }
+  @media (max-width: 650px) {
+    .map-hint { display: none; }
+    .map-legend-items { font-size: 13px; gap: 8px 14px; }
+    #ancestral-map-svg { max-height: 70vw; border-radius: 4px; }
   }
 </style>
 </head>
@@ -354,6 +467,195 @@
     <p><strong>Etymology</strong> is the study of the origin and history of words, tracing how their meanings have changed over time. It examines a word's historical development, including its sources, forms, and evolution through different languages and periods.</p>
     <p>Surnames as a hereditary convention emerged across Europe between roughly the 10th and 15th centuries, though the process varied significantly by region. Four main mechanisms gave rise to European surnames: <em>locative</em> names (from a place), <em>patronymic</em> names (from a father's name), <em>occupational</em> names (from a trade), and <em>descriptive</em> names (from a physical or personal trait).</p>
   </div>
+
+  <!-- ═══════════ ANCESTRAL MAP ═══════════ -->
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-title">
+      <span class="section-flag">🗺️</span> Ancestral Birth &amp; Death Locations
+      <span class="section-chevron">▼</span>
+    </div>
+  </div>
+  <div class="section-body">
+    <div class="map-container">
+      <div class="map-legend">
+        <div class="map-legend-items">
+          <span><span class="map-legend-dot" style="background:#5DCAA5;"></span>Scotland</span>
+          <span><span class="map-legend-dot" style="background:#85B7EB;"></span>Ireland</span>
+          <span><span class="map-legend-dot" style="background:#F0997B;"></span>Italy</span>
+          <span><span class="map-legend-dot" style="background:#B4B2A9;"></span>England / France</span>
+          <span><span class="map-legend-dot" style="background:#AFA9EC;"></span>USA</span>
+        </div>
+        <span class="map-hint">circle size = frequency · hover for details</span>
+      </div>
+      <div id="ancestral-map-svg"></div>
+      <div id="map-tooltip"><div class="tt-name"></div><div class="tt-detail"></div></div>
+      <div class="map-tap-label" id="map-tap-label">Tap a circle to see location details</div>
+    </div>
+  </div>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const places = [
+      { name:"Dalkeith, Midlothian", lat:55.893, lon:-3.057, count:4, region:"Scotland", type:"both" },
+      { name:"Lasswade, Midlothian", lat:55.877, lon:-3.098, count:3, region:"Scotland", type:"both" },
+      { name:"Edinburgh", lat:55.953, lon:-3.188, count:4, region:"Scotland", type:"both" },
+      { name:"Ballencrieff, East Lothian", lat:55.961, lon:-2.878, count:3, region:"Scotland", type:"birth" },
+      { name:"Stirlingshire", lat:56.116, lon:-3.935, count:2, region:"Scotland", type:"birth" },
+      { name:"Berwickshire", lat:55.766, lon:-2.350, count:2, region:"Scotland", type:"both" },
+      { name:"Moray / Darnaway", lat:57.614, lon:-3.618, count:3, region:"Scotland", type:"both" },
+      { name:"Inveraray, Argyll", lat:56.232, lon:-5.078, count:1, region:"Scotland", type:"birth" },
+      { name:"Morton, Dumfriesshire", lat:55.353, lon:-3.698, count:1, region:"Scotland", type:"birth" },
+      { name:"Rothesay, Bute", lat:55.837, lon:-5.054, count:1, region:"Scotland", type:"birth" },
+      { name:"Hamilton, Lanarkshire", lat:55.777, lon:-4.039, count:3, region:"Scotland", type:"both" },
+      { name:"Kirkwall, Orkney", lat:58.981, lon:-2.960, count:1, region:"Scotland", type:"death" },
+      { name:"Kemnay, Aberdeenshire", lat:57.250, lon:-2.454, count:1, region:"Scotland", type:"death" },
+      { name:"Grange, Banffshire", lat:57.568, lon:-3.063, count:1, region:"Scotland", type:"death" },
+      { name:"Dunbar, East Lothian", lat:56.001, lon:-2.514, count:1, region:"Scotland", type:"birth" },
+      { name:"Eckford, Roxburghshire", lat:55.557, lon:-2.526, count:1, region:"Scotland", type:"birth" },
+      { name:"Swinton, Berwickshire", lat:55.728, lon:-2.289, count:1, region:"Scotland", type:"birth" },
+      { name:"Renfrewshire", lat:55.846, lon:-4.533, count:1, region:"Scotland", type:"death" },
+      { name:"Ireland (general)", lat:53.300, lon:-8.200, count:7, region:"Ireland", type:"birth" },
+      { name:"Killyleagh, Co. Down", lat:54.400, lon:-5.651, count:2, region:"Ireland", type:"death" },
+      { name:"Comber, Co. Down", lat:54.550, lon:-5.742, count:1, region:"Ireland", type:"birth" },
+      { name:"County Kilkenny", lat:52.654, lon:-7.250, count:1, region:"Ireland", type:"birth" },
+      { name:"Torgnon, Aosta Valley", lat:45.767, lon:7.576, count:5, region:"Italy", type:"birth" },
+      { name:"Saint Denis, Aosta", lat:45.720, lon:7.363, count:4, region:"Italy", type:"both" },
+      { name:"Challand-Saint-Victor", lat:45.736, lon:7.680, count:1, region:"Italy", type:"birth" },
+      { name:"Varallo Pombia, Novara", lat:45.645, lon:8.628, count:2, region:"Italy", type:"birth" },
+      { name:"Stepney / Tower Hamlets, London", lat:51.517, lon:-0.046, count:2, region:"England/France", type:"both" },
+      { name:"Chichester, Sussex", lat:50.837, lon:-0.775, count:1, region:"England/France", type:"birth" },
+      { name:"Paris Region", lat:48.864, lon:2.349, count:1, region:"England/France", type:"birth" },
+      { name:"Jersey City, NJ", lat:40.719, lon:-74.043, count:5, region:"USA", type:"both" },
+      { name:"Rye, Westchester County, NY", lat:40.981, lon:-73.687, count:4, region:"USA", type:"both" },
+      { name:"New Jersey (general)", lat:40.100, lon:-74.500, count:6, region:"USA", type:"both" },
+      { name:"Manhattan, New York", lat:40.783, lon:-73.966, count:3, region:"USA", type:"both" },
+      { name:"Rockland County, NY", lat:41.149, lon:-74.021, count:1, region:"USA", type:"birth" },
+      { name:"Harrington Park, NJ", lat:40.988, lon:-74.002, count:1, region:"USA", type:"death" },
+      { name:"Westwood, NJ", lat:40.990, lon:-74.031, count:1, region:"USA", type:"death" },
+      { name:"White Plains, NY", lat:41.034, lon:-73.763, count:1, region:"USA", type:"both" },
+      { name:"North Castle, Westchester, NY", lat:41.130, lon:-73.726, count:1, region:"USA", type:"both" },
+      { name:"Morris County, NJ", lat:40.796, lon:-74.666, count:2, region:"USA", type:"birth" },
+      { name:"Eastern Long Island, NY", lat:41.030, lon:-72.440, count:1, region:"USA", type:"birth" },
+      { name:"Boston, MA", lat:42.360, lon:-71.059, count:1, region:"USA", type:"birth" },
+      { name:"Bergen, NJ", lat:40.926, lon:-74.074, count:1, region:"USA", type:"death" },
+    ];
+
+    const regionColor = {
+      "Scotland":      "#5DCAA5",
+      "Ireland":       "#85B7EB",
+      "Italy":         "#F0997B",
+      "England/France":"#B4B2A9",
+      "USA":           "#AFA9EC"
+    };
+
+    const W = 720, H = 480;
+    const isMobile = () => window.matchMedia('(max-width: 650px)').matches;
+
+    const svg = d3.select('#ancestral-map-svg').append('svg')
+      .attr('viewBox', `0 0 ${W} ${H}`)
+      .attr('width', '100%')
+      .attr('height', 'auto')
+      .style('display','block')
+      .style('background', '#d6e3ef');
+
+    const projection = d3.geoMercator()
+      .center([-35, 50])
+      .scale(440)
+      .translate([W / 2, H / 2]);
+
+    const path = d3.geoPath().projection(projection);
+    const ttEl  = document.getElementById('map-tooltip');
+    const ttName   = ttEl.querySelector('.tt-name');
+    const ttDetail = ttEl.querySelector('.tt-detail');
+    const tapLabel = document.getElementById('map-tap-label');
+
+    // Hide tap label on desktop
+    if (!isMobile()) tapLabel.style.display = 'none';
+
+    d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(world => {
+      const countries = topojson.feature(world, world.objects.countries);
+
+      svg.append('g').selectAll('path')
+        .data(countries.features)
+        .join('path')
+        .attr('d', path)
+        .attr('fill', '#ede9e1')
+        .attr('stroke', '#cdc8be')
+        .attr('stroke-width', 0.5);
+
+      const sizeScale = d3.scaleSqrt().domain([1, 10]).range([6, 22]);
+      const markers = svg.append('g');
+
+      places.forEach(p => {
+        const [x, y] = projection([p.lon, p.lat]);
+        if (!x || !y || x < -20 || x > W+20 || y < -20 || y > H+20) return;
+        const r = sizeScale(p.count);
+        const col = regionColor[p.region];
+        const typeLabel = p.type === 'birth' ? 'births only' : p.type === 'death' ? 'deaths only' : 'births & deaths';
+
+        // Glow ring
+        markers.append('circle')
+          .attr('cx', x).attr('cy', y).attr('r', r + 7)
+          .attr('fill', col).attr('opacity', 0.10);
+
+        // Main circle — larger touch target on mobile via pointer-events area
+        const circle = markers.append('circle')
+          .attr('cx', x).attr('cy', y).attr('r', r)
+          .attr('fill', col).attr('opacity', 0.80)
+          .attr('stroke', 'rgba(255,255,255,0.80)')
+          .attr('stroke-width', 1.4)
+          .style('cursor', 'pointer');
+
+        // Invisible larger hit area for fat fingers
+        markers.append('circle')
+          .attr('cx', x).attr('cy', y).attr('r', Math.max(r + 8, 18))
+          .attr('fill', 'transparent')
+          .attr('stroke', 'none')
+          .style('cursor', 'pointer')
+          // Mouse events
+          .on('mouseover', function(event) {
+            if (isMobile()) return;
+            circle.attr('opacity', 1).attr('r', r + 2);
+            ttName.textContent = p.name;
+            ttDetail.textContent = `${p.count} record${p.count > 1 ? 's' : ''} · ${typeLabel}`;
+            ttEl.style.opacity = '1';
+          })
+          .on('mousemove', function(event) {
+            if (isMobile()) return;
+            ttEl.style.left = (event.clientX + 16) + 'px';
+            ttEl.style.top  = (event.clientY - 44) + 'px';
+          })
+          .on('mouseout', function() {
+            if (isMobile()) return;
+            circle.attr('opacity', 0.80).attr('r', r);
+            ttEl.style.opacity = '0';
+          })
+          // Touch event for mobile
+          .on('touchstart', function(event) {
+            event.preventDefault();
+            // Reset any previously highlighted circle
+            markers.selectAll('circle').filter(function() {
+              return d3.select(this).attr('data-active') === 'true';
+            }).attr('data-active', null).attr('opacity', function() {
+              return d3.select(this).attr('fill') === 'transparent' ? undefined : 0.80;
+            });
+            circle.attr('opacity', 1).attr('r', r + 2).attr('data-active', 'true');
+            tapLabel.textContent = `${p.name} — ${p.count} record${p.count > 1 ? 's' : ''} · ${typeLabel}`;
+            tapLabel.style.color = col;
+          });
+      });
+
+      // Watermark
+      svg.append('text')
+        .attr('x', 10).attr('y', H - 8)
+        .attr('fill', 'rgba(0,0,0,0.15)')
+        .attr('font-size', '9px')
+        .attr('font-family', 'Cinzel, serif')
+        .attr('letter-spacing', '0.08em')
+        .text('Commerford Lineage · ancestral birth & death locations');
+    });
+  });
+  </script>
 
   <!-- ═══════════ IRISH ═══════════ -->
   <div class="section-header" onclick="toggleSection(this)">
